@@ -1,0 +1,93 @@
+include ../mixins
+<!DOCTYPE html>
+html(lang="ru-RU")
+	head
+		//- meta
+		meta(charset="utf-8")
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		title
+			block title
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		meta(name="description" content="Муниципальное учреждение здравохранения 'Центральная районная больница' волгодонского района Ростовской области")
+
+		//- favicon
+		link(rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png")
+		link(rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png")
+		link(rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png")
+		link(rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png")
+		link(rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png")
+		link(rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png")
+		link(rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png")
+		link(rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png")
+		link(rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png")
+		link(rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png")
+		link(rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png")
+		link(rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png")
+		link(rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png")
+		link(rel="manifest" href="/manifest.json")
+		meta(name="msapplication-TileColor" content="#ffffff")
+		meta(name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png")
+
+		//- Apple specific meta
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style" content="black")
+		meta(name="format-detection" content="telephone=no")
+
+		//- fonts
+		link(href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet")
+		
+		//- Style
+		link(rel="stylesheet" href="css/main.min.css?v=" + Date.now())
+
+		//- Facebook Open Graph
+		//- TODO добавить url, img
+		meta(name="description" property="og:description" content=" Сайт районной больницы в ст. Романовская")
+		meta(property="og:site_name" content="больница Романовская")
+		meta(property="og:title" content="Информация о больнице в ст.Романовская")
+		meta(property="og:type" content="article")
+		meta(property="og:url" content="url")
+		meta(property="og:image" content="img")
+		meta(property="og:locale" content="ru_RU")
+		
+		//- Twitter card
+		//- TODO Добавить img
+		meta(name="twitter:card" content="summary")
+		meta(name="twitter:title" content="Районная больница стюРомановская")
+		meta(name="twitter:description" content="Информация о больнице в ст.Романовская")
+		meta(name="twitter:image" content="img")
+
+		//- Для задания цвета браузера(окно url) на mobile
+		//- Chrome, Firefox OS and Opera 
+		meta(name="theme-color" content="#1a1a1a")
+		//- Windows Phone
+		meta(name="msapplication-navbutton-color" content="#1a1a1a")
+		//-  iOS Safari
+		meta(name="apple-mobile-web-app-status-bar-style" content="#1a1a1a")
+		//- IE style
+		+if-ie("lt IE 10") 
+			h1 Вы используете старый браузер
+			style.
+				body {
+					background-color: lightblue;
+				}
+				body * {
+					opacity: 0;
+				}
+				h1 {
+					opacity: 1;
+					font-size: 30px;
+					text-align: center;
+					padding: 100px
+				}
+
+		style(body{opacity: 0, overflow-x: hidden}, html{background-color: #1a1a1a})
+	body
+		include ../modules/aside
+		include ../modules/header
+
+		block content
+
+		include ../modules/footer
+
+		script(src="js/scripts.min.js")

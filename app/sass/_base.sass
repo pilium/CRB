@@ -1,0 +1,48 @@
+body
+    font-family: $font-family, Arial, sans-serif
+    font-size: $font-size
+    line-height: $line-height
+    font-weight: $font-weight
+    color: $color
+
+.main-wrapper
+    position: relative    
+    overflow: hidden
+    min-width: 320px
+    margin: 0 auto
+    padding: 0
+    opacity: 1
+
+.container
+    display: flex
+    justify-content: space-around
+    max-width: 75%
+    margin: 0 auto
+    padding: 15px 10px
+
+img
+    display: block
+    max-width: 100%
+    height: auto
+    &.cover
+        background-size: cover
+
+a
+    color: inherit
+.clearfix::after
+  content: ""
+  display: table
+  clear: both
+
+// Кнопка
+.btn 
+    background-color: #2c7ebb
+    padding: 10px 20px
+    color: #ffffff
+    text-align: center
+    font-family: "SFUIDisplayBold"
+    text-transform: uppercase
+    transition: 0.3s ease
+    cursor: pointer
+    display: inline-block
+    border: none
