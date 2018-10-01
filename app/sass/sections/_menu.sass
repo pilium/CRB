@@ -1,18 +1,9 @@
 .main-menu
     &__item
-        padding: 0 25px
-        font-size: rem(16)
-        color: $main
-        position: relative
-        &-link
-            display: block
-            padding: 12px 0 14px
-            color: inherit
-            border-bottom: 1px solid #efefef
-            cursor: pointer
+        +menu-item
         &:hover ul
             display: block
-    .submenu
+    .sub-menu
         width: 100%
         display: none
         padding: 10px 0
@@ -22,3 +13,5 @@
         background-color: #fff
         box-shadow: 0 0 15.7px 2.3px rgba(74, 88, 94, 0.05)
         z-index: 2
+        &__item
+            +menu-item

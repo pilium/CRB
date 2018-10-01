@@ -18,28 +18,82 @@
                 margin-left: 15px
                 color: $accent
                 font-size: rem(18)
+                &:visited
+                    color: darken($accent, 20%)
+                    border-bottom-color: darken($accent, 20%)
                 &:hover
                     border-bottom: 2px dotted $accent
-        &__tel a
-            color: $main
-            padding-left: 15px
-            font-size: rem(18)
-            text-transform: uppercase
-            line-height: 1
-            font-weight: bold
-            &:hover
-                color: $accent
+                &:active
+                    color: darken($accent, 80%)
+                    border-bottom-color: darken($accent, 40%)
+        &__tel
+            .header-info__item-link
+                color: $main
+                padding-left: 15px
+                font-size: rem(18)
+                text-transform: uppercase
+                line-height: 1
+                font-weight: bold
+                border-bottom: none
+                &:visited
+                    color: darken($accent, 20%)
+                &:hover
+                    color: $accent
+                &:active
+                        color: darken($accent, 80%)
     &-actions
         display: flex
         align-items: center
         justify-content: space-between
-        button
-            width: 48px
+        &__search
+            width: 0px
             height: 48px
-            border: none
-            margin-right: 8px
-            border-radius: 50%
-            box-shadow: 0.2px 2px 27.6px 1.5px rgba(138, 137, 137, 0.16)
-            background-color: #ffffff
+            background: #fff
+            text-align: center
+            line-height: 45px
+            padding-right: 50px
+            transition: all 0.5s ease
+            border-radius: 5px
+            position: relative
+            color: $accent
+            box-shadow: 0 0 10px rgba($accent, 0.3)
             svg
+                position: absolute
+                display: block
+                width: 27px
+                height: 27px
+                top: 10.5px
+                right: 11.5px
+                fill: currentColor
+            input
+                border: 0px
+                border-bottom: 2px solid $accent
+                background: transparent
+                width: 0%
+                padding: 5px 0
+                outline: none
                 color: $accent
+                font-weight: bold
+                transition: all 0.3s ease
+            &.active
+                width: 350px
+                padding-left: 25px
+                box-shadow: 0 0 10px rgba($accent, 0.8)
+                transition: all 0.5s ease
+                input
+                    width: 98%
+                    padding-left: 5px
+                    transition: all 0.5s 0.8s ease
+                    +placeholder
+                        color: $accent
+        &__starblind
+            button
+                width: 48px
+                height: 48px
+                border: none
+                margin-left: 8px
+                box-shadow: 0.2px 2px 27.6px 1.5px rgba(138, 137, 137, 0.16)
+                background-color: #ffffff
+                box-shadow: 0 0 10px rgba($accent, 0.3)
+                svg
+                    color: $accent

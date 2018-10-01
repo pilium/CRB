@@ -1,64 +1,38 @@
 nav
     ul.main-menu
         li.main-menu__item
-            a.main-menu__item-link(href="#") О клинике
-            ul.submenu
-                li.submenu-item
-                    a.submenu-item__link(href="#") Администрация
-                li.submenu-item
-                    a.submenu-item__link(href="#") История больницы
-                li.submenu-item
-                    a.submenu-item__link(href="#") Лицензии
-                li.submenu-item
-                    a.submenu-item__link(href="#") Специалисты
-                li.submenu-item
-                    a.submenu-item__link(href="#") Новости
-                li.submenu-item
-                    a.submenu-item__link(href="#") Мероприятия
-                li.submenu-item
-                    a.submenu-item__link(href="#") Противодействие коррупции
-                li.submenu-item
-                    a.submenu-item__link(href="#") Вакансии
-                li.submenu-item
-                    a.submenu-item__link(href="#") Отзывы
-                li.submenu-item
-                    a.submenu-item__link(href="#") Обратная связь
-                li.submenu-item
-                    a.submenu-item__link(href="#") Нормативная база
+            a.main-menu__item-link(href="#") О больнице
+            ul.sub-menu
+                +main-menu('sub', '#', 'Администрация')
+                +main-menu('sub', '#', 'История больницы')
+                +main-menu('sub', '#', 'Лицензии')
+                +main-menu('sub', '#', 'Специалисты')
+                +main-menu('sub', '#', 'Новости')
+                +main-menu('sub', '#', 'Мероприятия')
+                +main-menu('sub', '#', 'Противодействие коррупции')
+                +main-menu('sub', '#', 'Вакансии')
+                +main-menu('sub', '#', 'Обратная связь')
         li.main-menu__item
             a.main-menu__item-link(href="#") Пациентам
-            ul.submenu
-                li.submenu-item
-                    a(href="#") Правила записи на прием
-                li.submenu-item
-                    a.submenu-item__link(href="#") Госпитализация в стационар
-                li.submenu-item
-                    a.submenu-item__link(href="#") Правила внутреннего распорядка
-                li.submenu-item
-                    a.submenu-item__link(href="#") Нормативная база
-                li.submenu-item
-                    a.submenu-item__link(href="#") Перечень страховых компаний
-                li.submenu-item
-                    a.submenu-item__link(href="#") Часто задаваемые вопросы
-                li.submenu-item
-                    a.submenu-item__link(href="#") Отзывы
-                li.submenu-item
-                    a.submenu-item__link(href="#") Фотогалерея
-                li.submenu-item
-                    a.submenu-item__link(href="#") Полезные статьи
+            ul.sub-menu
+                +main-menu('sub', '#', 'Правила записи на прием')
+                +main-menu('sub', '#', 'Госпитализация в стационар')
+                +main-menu('sub', '#', 'Правила внутреннего распорядка')
+                +main-menu('sub', '#', 'Нормативная база')
+                +main-menu('sub', '#', 'Перечень страховых компаний')
+                +main-menu('sub', '#', 'Часто задаваемые вопросы')
+                +main-menu('sub', '#', 'Отзывы')
+                +main-menu('sub', '#', 'Фотогалерея')
+                +main-menu('sub', '#', 'Полезные статьи')
         li.main-menu__item
             a.main-menu__item-link(href="#") Платные услуги
-            ul.submenu
-                li.submenu-item
-                    a.submenu-item__link(href="#") Прейскурант
-                li.submenu-item
-                    a.submenu-item__link(href="#") Норматив.submenu-item__linkные документы
-                li.submenu-item
-                    a.submenu-item__link(href="#") Приказы о плвтных услугах
-                li.submenu-item
-                    a.submenu-item__link(href="#") Профосмотры для организаций
-        +main-menu('#', 'Новости')
-        +main-menu('#', 'Контакты')
-        +main-menu('#', 'placeholder')
-        +main-menu('#', 'placeholder')
-        +main-menu('#', 'placeholder')
+            ul.sub-menu
+                +main-menu('sub', '#', 'Прейскурант')
+                +main-menu('sub', '#', 'Нормативные документы')
+                +main-menu('sub', '#', 'Приказы о плвтных услугах')
+                +main-menu('sub', '#', 'Профосмотры для организаций')
+        +main-menu('main', '#', 'Новости')
+        +main-menu('main', '#', 'Контакты')
+        +main-menu('main', '#', 'placeholder')
+        +main-menu('main', '#', 'placeholder')
+        +main-menu('main', '#', 'placeholder')
