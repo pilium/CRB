@@ -7,3 +7,13 @@ mixin if-ie(condition, showInNonIeBrowser)
 	if showInNonIeBrowser
 		!= "<!--"
 	!= "<![endif]-->"
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="../img/sprite/sprite.svg#" + name)
+mixin main-menu(link, text)
+	li.main-menu__item
+		a.main-menu__item-link(href= link)=text
+		
+				
+			

@@ -14,6 +14,10 @@ var gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   spritesmith = require('gulp.spritesmith'),
   cache = require('gulp-cache'),
+  svgSprite = require('gulp-svg-sprite'),
+	svgmin = require('gulp-svgmin'),
+	cheerio = require('gulp-cheerio'),
+	replace = require('gulp-replace'),
   autoprefixer = require('gulp-autoprefixer'),
   ftp = require('vinyl-ftp'),
   critical = require('critical'),
@@ -83,7 +87,10 @@ gulp.task('watch', ['pug', 'sass', 'js', 'browser-sync'], function() {
 });
 
 gulp.task('imagemin', function() {
-  return gulp.src('app/img/**/*')
+  return gulp.src([
+    'app/img/**/*',
+    '!app/img/sprite/**/*.*'
+    ])
 		.pipe(cache(imagemin()))
 		.pipe(gulp.dest('dist/img'));
 });
@@ -95,7 +102,7 @@ gulp.task('cleansprite', function() {
 
 gulp.task('spritemade', function() {
   var spriteData =
-			gulp.src('app/img/sprite/*.*')
+			gulp.src('app/img/sprite/png/*.*')
 				.pipe(spritesmith({
   imgName: '../img/sprite/sprite.png',
   cssName: '_sprite.sass',
@@ -110,6 +117,42 @@ gulp.task('spritemade', function() {
 });
 gulp.task('sprite', ['cleansprite', 'spritemade']);
 
+// Сборка спрайтов SVG
+gulp.task('Scleansprite', function() {
+  return del.sync('app/img/sprite/sprite.svg');
+});
+gulp.task('svg-spritemade', function() {
+  return gulp.src('app/img/icons/svg/**/*.svg')
+  .pipe(svgmin({
+    js2svg: {
+      pretty: true
+    }
+  }))
+  .pipe(cheerio({
+    run: function ($) {
+      $('[fill]').removeAttr('fill');
+      $('[stroke]').removeAttr('stroke');
+      $('[style]').removeAttr('style');
+    },
+    parserOptions: {xmlMode: true}
+  }))
+  .pipe(replace('&gt;', '>'))
+  .pipe(svgSprite({
+    mode: {
+      symbol: {
+        sprite: "../sprite.svg",
+        render: {
+          sass: {
+            dest:'../../../sass/_sprite.sass',
+            template: "app/sass/_sprite_template.sass"
+          }
+        }
+      }
+    }
+  }))
+  .pipe(gulp.dest('app/img/sprite/'));
+});
+gulp.task('svg-sprite', ['Scleansprite', 'svg-spritemade']);
 
 gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 

@@ -1,63 +1,64 @@
-nav.main-menu
-    ul
-        li
-            a(href="#") О клинике
+nav
+    ul.main-menu
+        li.main-menu__item
+            a.main-menu__item-link(href="#") О клинике
             ul.submenu
-                li
-                    a(href="#") Администрация
-                li
-                    a(href="#") История больницы
-                li
-                    a(href="#") Лицензии
-                li
-                    a(href="#") Специалисты
-                li
-                    a(href="#") Новости
-                li
-                    a(href="#") Мероприятия
-                li
-                    a(href="#") Противодействие коррупции
-                li
-                    a(href="#") Вакансии
-                li
-                    a(href="#") Отзывы
-                li
-                    a(href="#") Обратная связь
-                li
-                    a(href="#") Нормативная база
-        li
-            a(href="#") Пациентам
+                li.submenu-item
+                    a.submenu-item__link(href="#") Администрация
+                li.submenu-item
+                    a.submenu-item__link(href="#") История больницы
+                li.submenu-item
+                    a.submenu-item__link(href="#") Лицензии
+                li.submenu-item
+                    a.submenu-item__link(href="#") Специалисты
+                li.submenu-item
+                    a.submenu-item__link(href="#") Новости
+                li.submenu-item
+                    a.submenu-item__link(href="#") Мероприятия
+                li.submenu-item
+                    a.submenu-item__link(href="#") Противодействие коррупции
+                li.submenu-item
+                    a.submenu-item__link(href="#") Вакансии
+                li.submenu-item
+                    a.submenu-item__link(href="#") Отзывы
+                li.submenu-item
+                    a.submenu-item__link(href="#") Обратная связь
+                li.submenu-item
+                    a.submenu-item__link(href="#") Нормативная база
+        li.main-menu__item
+            a.main-menu__item-link(href="#") Пациентам
             ul.submenu
-                li
+                li.submenu-item
                     a(href="#") Правила записи на прием
-                li
-                    a(href="#") Госпитализация в стационар
-                li
-                    a(href="#") Правила внутреннего распорядка
-                li
-                    a(href="#") Нормативная база
-                li
-                    a(href="#") Перечень страховых компаний
-                li
-                    a(href="#") Часто задаваемые вопросы
-                li
-                    a(href="#") Отзывы
-                li
-                    a(href="#") Фотогалерея
-                li
-                    a(href="#") Полезные статьи
-        li
-            a(href="#") Платные услуги
+                li.submenu-item
+                    a.submenu-item__link(href="#") Госпитализация в стационар
+                li.submenu-item
+                    a.submenu-item__link(href="#") Правила внутреннего распорядка
+                li.submenu-item
+                    a.submenu-item__link(href="#") Нормативная база
+                li.submenu-item
+                    a.submenu-item__link(href="#") Перечень страховых компаний
+                li.submenu-item
+                    a.submenu-item__link(href="#") Часто задаваемые вопросы
+                li.submenu-item
+                    a.submenu-item__link(href="#") Отзывы
+                li.submenu-item
+                    a.submenu-item__link(href="#") Фотогалерея
+                li.submenu-item
+                    a.submenu-item__link(href="#") Полезные статьи
+        li.main-menu__item
+            a.main-menu__item-link(href="#") Платные услуги
             ul.submenu
-                li
-                    a(href="#") Прейскурант
-                li
-                    a(href="#") Нормативные документы
-                li
-                    a(href="#") Приказы о плвтных услугах
-                li
-                    a(href="#") Профосмотры для организаций
-        li
-            a(href="#") Новости
-        li
-            a(href="#") Контакты
+                li.submenu-item
+                    a.submenu-item__link(href="#") Прейскурант
+                li.submenu-item
+                    a.submenu-item__link(href="#") Норматив.submenu-item__linkные документы
+                li.submenu-item
+                    a.submenu-item__link(href="#") Приказы о плвтных услугах
+                li.submenu-item
+                    a.submenu-item__link(href="#") Профосмотры для организаций
+        +main-menu('#', 'Новости')
+        +main-menu('#', 'Контакты')
+        +main-menu('#', 'placeholder')
+        +main-menu('#', 'placeholder')
+        +main-menu('#', 'placeholder')

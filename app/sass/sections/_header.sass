@@ -1,0 +1,45 @@
+.header
+    width: 100%
+    &-info
+        display: flex
+        align-items: center
+        justify-content: space-around
+        &__item
+            display: inline-block
+            vertical-align: middle
+            margin-left: 15px
+            &:first:child
+                padding-left: 0
+            &-icon
+                display: inline-block
+                vertical-align: middle
+                color: $accent
+            &-link
+                margin-left: 15px
+                color: $accent
+                font-size: rem(18)
+                &:hover
+                    border-bottom: 2px dotted $accent
+        &__tel a
+            color: $main
+            padding-left: 15px
+            font-size: rem(18)
+            text-transform: uppercase
+            line-height: 1
+            font-weight: bold
+            &:hover
+                color: $accent
+    &-actions
+        display: flex
+        align-items: center
+        justify-content: space-between
+        button
+            width: 48px
+            height: 48px
+            border: none
+            margin-right: 8px
+            border-radius: 50%
+            box-shadow: 0.2px 2px 27.6px 1.5px rgba(138, 137, 137, 0.16)
+            background-color: #ffffff
+            svg
+                color: $accent

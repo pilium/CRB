@@ -1,8 +1,21 @@
 .aside
-    width: 283px
+    width: 285px
     top: 0px
     height: 100vh
     left: 0px
     position: fixed
     z-index: 3
-    border: 1px solid #000
+    &-logo
+        text-align: center
+        padding: 20px 0
+        background-color: rgba($accent, .2)
+    &-info
+        padding: 25px
+        background-color: rgba($accent, .2)
+        &__item
+            display: block
+            padding-left: 45px
+            color: $main
+            font-size: rem(16)
+        &__mail
+            margin-bottom: 23px

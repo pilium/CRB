@@ -1,3 +1,22 @@
-header
+header.header
     .container
-        
+        ul.header-info
+            li.header-info__item.header-info__tel
+                .header-info__item-icon
+                    +icon('phone-symbol-of-an-auricular-inside-a-circle')
+                a.header-info__item-link(href="tel:88639470141") 8 (86394) 7-01-41
+            li.header-info__item.header-info__writeToUs
+                .header-info__item-icon
+                    +icon('email')
+                a.header-info__item-link(href="#") Написать нам
+            li.header-info__item.header-info__contacts
+                .header-info__item-icon
+                    +icon('phone-book')
+                a.header-info__item-link(href="#", title="Контакты больницы") Контакты 
+        .header-actions
+            .header-actions__search
+                button(type="button")
+                    +icon('magnifier-tool')
+            .header-actions__starblind
+                button(type="button")
+                    +icon('glasses')
