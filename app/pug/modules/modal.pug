@@ -1,0 +1,13 @@
+.modal
+	form(action="/" method="post")
+		.modal-user
+			.modal-left-column
+				label(for="modal-login") Ваше имя:
+				input#modal-login(type="text" name="login" placeholder="Представьтесь, пожалуйста" required="")
+			.modal-right-column
+				label(for="modal-email") Ваш e-mail:
+				input#modal-email(type="email" name="email" placeholder="Для отправки ответа" required="")
+		label(for="modal-textarea") Текст письма:
+		textarea#modal-textarea(name="text" placeholder="В свободной форме" required="" rows="5")
+		button.btn.modal-btn(type="submit") Отправить
+		a.modal-circle-btn(href="#")

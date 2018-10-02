@@ -28,7 +28,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta name="format-detection" content="telephone=no"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/main.min.css?v=1538419235239"/>
+    <link rel="stylesheet" href="css/main.min.css?v=1538460068913"/>
     <meta name="description" property="og:description" content=" Сайт районной больницы в ст. Романовская"/>
     <meta property="og:site_name" content="больница Романовская"/>
     <meta property="og:title" content="Информация о больнице в ст.Романовская"/>
@@ -125,7 +125,7 @@
                 <svg class="icon icon-email ">
                   <use xlink:href="img/sprite/sprite.svg#email"></use>
                 </svg>
-              </div><a class="header-info__item-link" href="#">Написать нам</a>
+              </div><a class="header-info__item-link js-header-info__writeToUs-link" href="#">Написать нам</a>
             </li>
             <li class="header-info__item header-info__contacts">
               <div class="header-info__item-icon">
@@ -152,6 +152,23 @@
           </div>
         </div>
       </header>
+    </div>
+    <div class="modal">
+      <form action="/" method="post">
+        <div class="modal-user">
+          <div class="modal-left-column">
+            <label for="modal-login">Ваше имя:</label>
+            <input id="modal-login" type="text" name="login" placeholder="Представьтесь, пожалуйста" required=""/>
+          </div>
+          <div class="modal-right-column">
+            <label for="modal-email">Ваш e-mail:</label>
+            <input id="modal-email" type="email" name="email" placeholder="Для отправки ответа" required=""/>
+          </div>
+        </div>
+        <label for="modal-textarea">Текст письма:</label>
+        <textarea id="modal-textarea" name="text" placeholder="В свободной форме" required="" rows="5"></textarea>
+        <button class="btn modal-btn" type="submit">Отправить</button><a class="modal-circle-btn" href="#"></a>
+      </form>
     </div>
     <script src="js/scripts.min.js"></script>
   </body>
