@@ -1,5 +1,10 @@
 .header
     width: 100%
+    margin-bottom: 20px
+    box-shadow: inset 20px 0px 53px 0px rgba(216, 230, 226, 0.58)
+    .container
+        display: flex
+        justify-content: space-between
     &-info
         display: flex
         align-items: center
@@ -7,15 +12,15 @@
         &__item
             display: inline-block
             vertical-align: middle
-            margin-left: 15px
-            &:first:child
-                padding-left: 0
+            margin-left: 20px
+            &:first-child
+                margin-left: 0
             &-icon
                 display: inline-block
                 vertical-align: middle
                 color: $accent
             &-link
-                margin-left: 15px
+                margin-left: 10px
                 color: $accent
                 font-size: rem(18)
                 &:visited
@@ -29,7 +34,6 @@
         &__tel
             .header-info__item-link
                 color: $main
-                padding-left: 15px
                 font-size: rem(18)
                 text-transform: uppercase
                 line-height: 1

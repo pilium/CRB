@@ -1,6 +1,7 @@
 nav
     ul.main-menu
         li.main-menu__item
+            +icon('menu--hospital')
             a.main-menu__item-link(href="#") О больнице
             ul.sub-menu
                 +main-menu('sub', '#', 'Администрация')
@@ -13,6 +14,7 @@ nav
                 +main-menu('sub', '#', 'Вакансии')
                 +main-menu('sub', '#', 'Обратная связь')
         li.main-menu__item
+            +icon('menu--patient')
             a.main-menu__item-link(href="#") Пациентам
             ul.sub-menu
                 +main-menu('sub', '#', 'Правила записи на прием')
@@ -25,14 +27,15 @@ nav
                 +main-menu('sub', '#', 'Фотогалерея')
                 +main-menu('sub', '#', 'Полезные статьи')
         li.main-menu__item
+            +icon('menu--time')
             a.main-menu__item-link(href="#") Платные услуги
             ul.sub-menu
                 +main-menu('sub', '#', 'Прейскурант')
                 +main-menu('sub', '#', 'Нормативные документы')
                 +main-menu('sub', '#', 'Приказы о плвтных услугах')
                 +main-menu('sub', '#', 'Профосмотры для организаций')
-        +main-menu('main', '#', 'Новости')
-        +main-menu('main', '#', 'Контакты')
-        +main-menu('main', '#', 'placeholder')
-        +main-menu('main', '#', 'placeholder')
-        +main-menu('main', '#', 'placeholder')
+        +main-menu('main', '#', 'Новости', 'exam')
+        +main-menu('main', '#', 'Контакты', 'corruption')
+        +main-menu('main', '#', 'placeholder','geo')
+        +main-menu('main', '#', 'placeholder', 'survey')
+        +main-menu('main', '#', 'placeholder', 'writing')

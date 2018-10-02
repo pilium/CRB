@@ -22,14 +22,14 @@ $baseFontSize : 16
   @return $pixels / $context * 1rem
 
 // main/aubmenu item
-=menu-item
-	padding: 0 25px
+=menu-item($pdt, $pdr, $pdb, $pdl)
+	padding: 2px 25px
 	font-size: rem(16)
 	color: $main
 	position: relative
 	&-link
 		display: block
-		padding: 12px 0 14px
+		padding: $pdt $pdr $pdb $pdl
 		color: inherit
 		border-bottom: 1px solid #efefef
 		cursor: pointer

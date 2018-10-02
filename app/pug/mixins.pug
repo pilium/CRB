@@ -13,6 +13,8 @@ mixin icon(name,mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="img/sprite/sprite.svg#" + name)
 
-mixin main-menu(type, link, text)
+mixin main-menu(type, link, text, icon)
 	li(class=`${type}-menu__item`)
 		a(class=`${type}-menu__item-link` href= link)=text
+		if(type == 'main')
+			+icon(`menu--${icon}`)

@@ -1,13 +1,14 @@
 .modal
-	form(action="/" method="post")
+	form.modal-form(action="/" method="post")
 		.modal-user
-			.modal-left-column
+			.modal-user__login
 				label(for="modal-login") Ваше имя:
-				input#modal-login(type="text" name="login" placeholder="Представьтесь, пожалуйста" required="")
-			.modal-right-column
+				input.modal-user__login-input(type="text" name="login" placeholder="Представьтесь, пожалуйста" required)
+			.modal-user__mail
 				label(for="modal-email") Ваш e-mail:
-				input#modal-email(type="email" name="email" placeholder="Для отправки ответа" required="")
-		label(for="modal-textarea") Текст письма:
-		textarea#modal-textarea(name="text" placeholder="В свободной форме" required="" rows="5")
-		button.btn.modal-btn(type="submit") Отправить
-		a.modal-circle-btn(href="#")
+				input(type="email" name="email" placeholder="Для отправки ответа" required)
+			.modal-user__text
+				label(for="modal-textarea") Текст письма:
+				textarea(name="text" placeholder="В свободной форме" required rows="5")
+		button.btn.modal-user__btn(type="submit") Отправить
+		button.modal-close__btn(type="button")

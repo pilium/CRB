@@ -12,94 +12,78 @@
   pointer-events: none
   will-change: opacity
   transition: opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946)
-
-.modal-left-column
-  margin-bottom: 20px
-
-.modal-user
-  margin-bottom: 20px
-
-.modal
-  textarea
-    width: 100%
-  input
+  &.modal-show
+    opacity: 1
+    pointer-events: auto
+    transition: opacity 0.4s cubic-bezier(0.465, 0.183, 0.153, 0.946)
+  &-user
+    &__login,
+    &__mail
+      margin-bottom: 20px
+  &-close__btn
+    position: absolute
+    top: 10px
+    right: 10px
+    z-index: 10
+    border: none
+    display: block
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background-color: $accent
+    color: #f5f5f5
+    text-align: center
+    font-weight: bold
+    line-height: 40px
+    &:hover
+      background-color: darken($accent, 20%)
+    &:active
+      background-color: darken($accent, 40%)
+    &::after
+      position: absolute
+      top: 17px
+      left: 8px
+      width: 25px
+      height: 5px
+      background: white
+      color: white
+      content: ''
+      font-weight: normal
+      -webkit-transform: rotate(45deg)
+      transform: rotate(45deg)
+    &::before
+      position: absolute
+      top: 17px
+      left: 8px
+      width: 25px
+      height: 5px
+      background: white
+      color: white
+      content: ''
+      font-weight: normal
+      -webkit-transform: rotate(-45deg)
+      transform: rotate(-45deg)
+  input, textarea
     padding: 8px 15px
     width: 100%
     border: 2px solid #d7dcde
     border-radius: 5px
     font-weight: 500
-    font-size: 12px
+    font-size: rem(14)
     font-family: 'Roboto', sans-serif
     line-height: 18px
     margin-top: 10px
+    transition: border .5s ease
+    &:hover
+      border: 2px solid $accent
+      border-radius: 5px
+    &:focus
+      border: 2px solid $accent
+      border-radius: 5px
   textarea
-    padding: 8px 15px
-    margin-top: 10px
-    border: 2px solid #d7dcde
-    border-radius: 5px
-    font-weight: 500
-    font-size: 12px
-    font-family: 'Roboto', sans-serif
-    line-height: 18px
+    margin-bottom: 45px
     padding-bottom: 15px
-  input:hover, textarea:hover
-    border: 2px solid #a2a9ac
-    border-radius: 5px
-  input:focus, textarea:focus
-    border: 2px solid $accent
-    border-radius: 5px
   label
     color: darken($accent, 30%)
+    font-weight: bold
     text-transform: uppercase
-
-.modal textarea
-  margin-bottom: 45px
-
-.modal-circle-btn
-  position: absolute
-  top: 5px
-  right: 5px
-  z-index: 10
-  display: block
-  width: 40px
-  height: 40px
-  border-radius: 50%
-  background-color: $accent
-  color: #f5f5f5
-  text-align: center
-  text-decoration: none
-  font-weight: bold
-  line-height: 40px
-  &:hover
-    background-color: darken($accent, 20%)
-  &:active
-    background-color: darken($accent, 40%)
-  &::after
-    position: absolute
-    top: 17px
-    left: 8px
-    width: 25px
-    height: 5px
-    background: white
-    color: white
-    content: ''
-    font-weight: normal
-    -webkit-transform: rotate(45deg)
-    transform: rotate(45deg)
-  &::before
-    position: absolute
-    top: 17px
-    left: 8px
-    width: 25px
-    height: 5px
-    background: white
-    color: white
-    content: ''
-    font-weight: normal
-    -webkit-transform: rotate(-45deg)
-    transform: rotate(-45deg)
-
-.modal-show
-  opacity: 1
-  pointer-events: auto
-  transition: opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946)
