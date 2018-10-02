@@ -1,20 +1,39 @@
-.link
-    position: relative
-    z-index: 2
-    box-shadow: inset 20px 0px 53px 0px rgba(216, 230, 226, 0.8)
-    &-list
+.service
+    background-color: #eee
+    .container
         display: flex
         align-items: center
-        justify-content: space-between
-        li
-            flex: 0 0 20%
-            a
+        justify-content: space-around
+        flex-wrap: wrap
+    &-item
+        margin: .6em 0
+        border-radius: 5px
+        background: #fff
+        margin-right: 1.25%
+        flex: 0 0 20%
+        &__link
+            position: relative
+            display: block
+            &::before
+                content: ''
+                position: absolute
+                width: 50px
+                left: 0
+                top: 0
+                bottom: 0
+                background-color: $accent
+            svg
+                width: 40px
+                height: 40px
+                position: absolute
                 display: block
-                width: 100%
-                height: 70px
-                text-align: center
+                top: 5px
+                left: 5px
+            span
+                font-size: rem(14)
+                font-weight: 700
+                line-height: 50px
+                padding-left: 80px
+                margin: 0
+                text-transform: uppercase
                 color: $main
-                font-size: rem(16)
-                position: relative
-                span
-                    line-height: 70px
