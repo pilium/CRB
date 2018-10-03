@@ -28,6 +28,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta name="format-detection" content="telephone=no"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/bettertext.css@2.0.x/bettertext.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/css/glide.core.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/glide.min.js"></script>
     <link rel="stylesheet" href="css/main.min.css"/>
@@ -63,7 +64,7 @@
     </style><![endif]-->
     <style body{opacity:="body{opacity:" 0="0" overflow-x:="overflow-x:" hidden}="hidden}" html{background-color:="html{background-color:" #1a1a1a}="#1a1a1a}"></style>
   </head>
-  <body>
+  <body class="home">
     <aside class="aside">
       <div class="aside-logo"><img src="img/logo.jpg" alt="Логотип"/></div>
       <nav>
@@ -398,11 +399,11 @@
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides">
                 <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=46" alt="h"/></li>
-                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=162" alt="h"/></li>
-                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=339" alt="h"/></li>
-                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=46" alt="h"/></li>
-                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=162" alt="h"/></li>
-                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=339" alt="h"/></li>
+                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=1" alt="h"/></li>
+                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=3" alt="h"/></li>
+                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=4" alt="h"/></li>
+                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=2" alt="h"/></li>
+                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=9" alt="h"/></li>
               </ul>
             </div>
             <div class="glide__bullets" data-glide-el="controls[nav]">
@@ -416,8 +417,13 @@
           </div>
         </div>
       </section>
+      <section class="map">
+        <div class="container">
+          <div id="map"></div>
+        </div>
+      </section>
       <footer class="footer">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita, incidunt ex voluptatibus veniam laudantium ullam aliquid? Nobis placeat, culpa sunt sapiente sit eaque dicta, dolorem alias natus repellendus, voluptatibus dignissimos voluptate illo expedita iusto tenetur omnis sint consequuntur architecto fugiat quam cumque quo possimus id? Minus asperiores quidem fuga rem illum obcaecati beatae veritatis voluptatum consequuntur impedit temporibus nesciunt laudantium alias nulla velit non earum saepe praesentium omnis magni, expedita itaque voluptate. Doloribus possimus expedita accusantium vero, tenetur numquam. Itaque, assumenda. Eligendi quidem rem soluta quos, facere reprehenderit error sed, excepturi repellat provident dolor adipisci voluptatem cum mollitia iusto rerum, beatae iste ex. Consectetur provident magni velit perferendis in numquam est tenetur corporis quibusdam sed porro explicabo impedit, distinctio consequatur, incidunt esse vel, eveniet quae quasi minima! Sint excepturi autem tempora nesciunt nihil placeat, recusandae sapiente cum aut ipsa cumque reprehenderit voluptas nobis aliquid quis veritatis quidem harum impedit adipisci fugiat dolor modi beatae inventore? Aliquam, maxime deserunt? Corrupti facilis quidem sed rem unde, doloribus eius consectetur assumenda maiores, similique suscipit sint saepe error in voluptates doloremque laborum molestias quae eveniet minima beatae. Atque odit incidunt fuga obcaecati, voluptatum, dolorem possimus doloribus fugiat exercitationem totam neque reprehenderit sed corrupti!</p>
+        <div class="container"><span class="footer-date"></span></div>
       </footer>
     </div>
     <div class="modal">
@@ -440,6 +446,7 @@
         <button class="modal-close__btn" type="button"></button>
       </form>
     </div>
-    <script src="js/scripts.min.js"></script>
   </body>
+  <script src="js/scripts.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </html>

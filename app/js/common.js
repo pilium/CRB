@@ -111,4 +111,37 @@ document.addEventListener("DOMContentLoaded", function () {
         startAt: 1,
         perView: 6
     }).mount();
+
+
+    
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [47.5396,42.0151],
+            controls: ['typeSelector','fullscreenControl','geolocationControl','rulerControl','routeButtonControl'],
+            zoom: 16
+        });
+        var control = myMap.controls.get('routeButtonControl');
+        control.routePanel.state.set('from', 'Романовская союзный 97а');
+        var myPlacemark = new ymaps.Placemark([47.5398,42.0153], {
+            hintContent: 'Ул. Союзная 97а',
+            balloonContent: 'Поликлиника'
+        },{
+            preset: 'islands#blueMedicalIcon',
+        });
+        myMap.geoObjects.add(myPlacemark);
+    }
+    ymaps.ready(init);
+
+    function addTimeFooter() {
+        const date = new Date();
+        const options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            weekday: 'long'
+          };
+        const container = document.querySelector('.footer-date');
+        container.innerHTML= date.toLocaleString("ru", options);
+    }
+    setTimeout(addTimeFooter, 100);
 });
