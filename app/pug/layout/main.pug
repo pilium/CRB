@@ -39,7 +39,7 @@ html(lang="ru-RU")
 		
 		//- Slider Glide
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/css/glide.core.min.css")
-		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/css/glide.theme.min.css")
+		//- link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/css/glide.theme.min.css")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/glide.min.js")
 		//- Style
 		link(rel="stylesheet" href="css/main.min.css?v=" + Date.now())
@@ -92,7 +92,8 @@ html(lang="ru-RU")
 			include ../modules/header
 
 			block content
-		include ../modules/modal
-		include ../modules/footer
 
+			include ../modules/footer
+		include ../modules/modal
+	
 		script(src="js/scripts.min.js")

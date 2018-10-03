@@ -1,8 +1,15 @@
 section.slider
     .container
-        .shal
+        .slider-overflow
+            .slider-composition
+                .slider-composition__info
+                    h1 Муниципальное бюджетное учреждение<br>
+                        span "Центральная районная больница"<br>
+                        | Волгодонского района Ростовской области
+            iframe(src="https://nok.rosminzdrav.ru/MO/GetBanner/6112/1" border="0" scrolling="no" allowtransparency="true" width="300" height="110" style="border: 0;")
+
         .js-glide
-            .glide
+            .main-slider.glide
                 .glide__track(data-glide-el="track")
                     ul.glide__slides
                         li.glide__slide
@@ -12,5 +19,7 @@ section.slider
                         li.glide__slide
                             img(src="https://picsum.photos/1920/710/?image=739", alt="h")
                 .glide__arrows(data-glide-el="controls")
-                    button.glide__arrow.glide__arrow--left(data-glide-dir="<") prev
-                    button.glide__arrow.glide__arrow--right(data-glide-dir=">") next
+                    a.glide__arrow.glide__arrow--left(data-glide-dir="<")
+                        +icon('arrow-left')
+                    a.glide__arrow.glide__arrow--right(data-glide-dir=">")
+                        +icon('arrow-right')

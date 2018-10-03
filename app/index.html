@@ -29,9 +29,8 @@
     <meta name="format-detection" content="telephone=no"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/css/glide.core.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/css/glide.theme.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/glide.min.js"></script>
-    <link rel="stylesheet" href="css/main.min.css?v=1538500712484"/>
+    <link rel="stylesheet" href="css/main.min.css?v=1538557182394"/>
     <meta name="description" property="og:description" content=" Сайт районной больницы в ст. Романовская"/>
     <meta property="og:site_name" content="больница Романовская"/>
     <meta property="og:title" content="Информация о больнице в ст.Романовская"/>
@@ -201,12 +200,12 @@
                 <svg class="icon icon-phone-book ">
                   <use xlink:href="img/sprite/sprite.svg#phone-book"></use>
                 </svg>
-              </div><a class="header-info__item-link" href="#" title="Контакты больницы">Контакты </a>
+              </div><a class="header-info__item-link" href="#" title="Контакты больницы">Контакты</a>
             </li>
           </ul>
           <div class="header-actions">
             <div class="header-actions__search">
-              <input class="header-actions__search-input" type="text" placeholder="Search"/>
+              <input class="header-actions__search-input" type="text" placeholder="Поиск"/>
               <svg class="icon icon-magnifier-tool ">
                 <use xlink:href="img/sprite/sprite.svg#magnifier-tool"></use>
               </svg>
@@ -223,9 +222,16 @@
       </header>
       <section class="slider">
         <div class="container">
-          <div class="shal"></div>
+          <div class="slider-overflow">
+            <div class="slider-composition">
+              <div class="slider-composition__info">
+                <h1>Муниципальное бюджетное учреждение<br><span>"Центральная районная больница"<br></span>Волгодонского района Ростовской области</h1>
+              </div>
+            </div>
+            <iframe src="https://nok.rosminzdrav.ru/MO/GetBanner/6112/1" border="0" scrolling="no" allowtransparency="true" width="300" height="110" style="border: 0;"></iframe>
+          </div>
           <div class="js-glide">
-            <div class="glide">
+            <div class="main-slider glide">
               <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
                   <li class="glide__slide"><img src="https://picsum.photos/1920/710/?image=946" alt="h"/></li>
@@ -233,10 +239,13 @@
                   <li class="glide__slide"><img src="https://picsum.photos/1920/710/?image=739" alt="h"/></li>
                 </ul>
               </div>
-              <div class="glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">prev</button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">next</button>
-              </div>
+              <div class="glide__arrows" data-glide-el="controls"><a class="glide__arrow glide__arrow--left" data-glide-dir="&lt;">
+                  <svg class="icon icon-arrow-left ">
+                    <use xlink:href="img/sprite/sprite.svg#arrow-left"></use>
+                  </svg></a><a class="glide__arrow glide__arrow--right" data-glide-dir="&gt;">
+                  <svg class="icon icon-arrow-right ">
+                    <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+                  </svg></a></div>
             </div>
           </div>
         </div>
@@ -246,7 +255,7 @@
           <div class="service-item"><a class="service-item__link" href="#">
               <svg class="icon icon-services--employee ">
                 <use xlink:href="img/sprite/sprite.svg#services--employee"></use>
-              </svg><span>Записаться на прием</span></a></div>
+              </svg><span>Запись на прием</span></a></div>
           <div class="service-item"><a class="service-item__link" href="#">
               <svg class="icon icon-services--employee ">
                 <use xlink:href="img/sprite/sprite.svg#services--employee"></use>
@@ -280,7 +289,7 @@
       <section class="news">
         <div class="container">
           <div class="news-info">
-            <h2 class="news-info__title">Новости</h2><a class="news-info__button btn" href="#">Все новости</a>
+            <h2 class="news-info__title">Новости</h2><a class="news-info__button btn btn--min" href="#">Все новости</a>
           </div>
           <div class="news-items">
             <article class="news-items__item"><a class="news-items__item-more" href="#">
@@ -304,6 +313,53 @@
           </div>
         </div>
       </section>
+      <section class="links">
+        <div class="container">
+          <div class="links-info">
+            <h1 class="links-info__title">Полезные ссылки</h1>
+          </div>
+          <ul class="links-list">
+            <li class="links-list__item"><a class="link-list__item-link" href="#">Страховые организации</a></li>
+            <li class="links-list__item"><a class="link-list__item-link" href="#">Памятка гражданам</a></li>
+            <li class="links-list__item"><a class="link-list__item-link" href="#">Памятка застрахованному</a></li>
+            <li class="links-list__item"><a class="link-list__item-link" href="#">Минздрав России</a></li>
+            <li class="links-list__item"><a class="link-list__item-link" href="#">ФОМС</a></li>
+            <li class="links-list__item"><a class="link-list__item-link" href="#">Минздрав области </a></li>
+            <li class="links-list__item"><a class="link-list__item-link" href="#"> Росздравнадзор</a></li>
+            <li class="links-list__item"><a class="link-list__item-link" href="#">Противодействие коррупции</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="organizations">
+        <div class="container">
+          <div class="organizations-info">
+            <h1 class="organizations-info__title">Вышестоящие организации</h1>
+          </div>
+          <div class="organizations-slider glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=46" alt="h"/></li>
+                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=162" alt="h"/></li>
+                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=339" alt="h"/></li>
+                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=46" alt="h"/></li>
+                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=162" alt="h"/></li>
+                <li class="glide__slide"><img src="https://picsum.photos/200/175/?image=339" alt="h"/></li>
+              </ul>
+            </div>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+              <button class="glide__bullet" data-glide-dir="=0"></button>
+              <button class="glide__bullet" data-glide-dir="=1"></button>
+              <button class="glide__bullet" data-glide-dir="=2"></button>
+              <button class="glide__bullet" data-glide-dir="=3"></button>
+              <button class="glide__bullet" data-glide-dir="=4"></button>
+              <button class="glide__bullet" data-glide-dir="=5"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita, incidunt ex voluptatibus veniam laudantium ullam aliquid? Nobis placeat, culpa sunt sapiente sit eaque dicta, dolorem alias natus repellendus, voluptatibus dignissimos voluptate illo expedita iusto tenetur omnis sint consequuntur architecto fugiat quam cumque quo possimus id? Minus asperiores quidem fuga rem illum obcaecati beatae veritatis voluptatum consequuntur impedit temporibus nesciunt laudantium alias nulla velit non earum saepe praesentium omnis magni, expedita itaque voluptate. Doloribus possimus expedita accusantium vero, tenetur numquam. Itaque, assumenda. Eligendi quidem rem soluta quos, facere reprehenderit error sed, excepturi repellat provident dolor adipisci voluptatem cum mollitia iusto rerum, beatae iste ex. Consectetur provident magni velit perferendis in numquam est tenetur corporis quibusdam sed porro explicabo impedit, distinctio consequatur, incidunt esse vel, eveniet quae quasi minima! Sint excepturi autem tempora nesciunt nihil placeat, recusandae sapiente cum aut ipsa cumque reprehenderit voluptas nobis aliquid quis veritatis quidem harum impedit adipisci fugiat dolor modi beatae inventore? Aliquam, maxime deserunt? Corrupti facilis quidem sed rem unde, doloribus eius consectetur assumenda maiores, similique suscipit sint saepe error in voluptates doloremque laborum molestias quae eveniet minima beatae. Atque odit incidunt fuga obcaecati, voluptatum, dolorem possimus doloribus fugiat exercitationem totam neque reprehenderit sed corrupti!</p>
+      </footer>
     </div>
     <div class="modal">
       <form class="modal-form" action="/" method="post">

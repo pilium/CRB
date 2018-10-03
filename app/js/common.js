@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     search_toggle();
     modal();
     
-    new Glide('.glide', {
+    new Glide('.main-slider', {
         type: 'slider',
         autoplay: 8000,
         keybord: true,
@@ -106,5 +106,9 @@ document.addEventListener("DOMContentLoaded", function () {
         rewindDuration: 1000,
         animationTimingFunc: 'cubic-bezier(0.665, 0.340, 0.740, 1.000)'
     }).mount();
-
+    new Glide('.organizations-slider', {
+        type: 'carousel',
+        startAt: 1,
+        perView: 6
+    }).mount();
 });
