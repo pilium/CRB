@@ -1,18 +1,6 @@
 nav
     ul.main-menu
-        li.main-menu__item
-            +icon('menu--hospital')
-            a.main-menu__item-link(href="#") О больнице
-            ul.sub-menu
-                +main-menu('sub', '#', 'История больницы')
-                +main-menu('sub', '#', 'Новости')
-                +main-menu('sub', '#', 'Дорожная карта')
-                +main-menu('sub', '#', 'Противодействие коррупции')
-                +main-menu('sub', '#', 'Вакансии')
-                +main-menu('sub', '#', 'Отзывы')
-                +main-menu('sub', '#', 'Галерея')
-
-        li.main-menu__item
+        li.main-menu__item.dropdown
             +icon('menu--patient')
             a.main-menu__item-link(href="#") Пациентам
             ul.sub-menu
@@ -21,18 +9,24 @@ nav
                 +main-menu('sub', '#', 'Условия оказания медицинской помощи')
                 +main-menu('sub', '#', 'Прием граждан по личным вопросам')
                 +main-menu('sub', '#', 'Защита прав граждан')
-                +main-menu('sub', '#', 'Правила записи на прием')
+                +main-menu('sub', '#', 'Общие правила')                        
                 +main-menu('sub', '#', 'Госпитализация в стационар')
-                +main-menu('sub', '#', 'Правила внутреннего распорядка')
-                +main-menu('sub', '#', 'Правила подготовки к исследованиям')
-                +main-menu('sub', '#', 'Нормативная база')
                 +main-menu('sub', '#', 'Перечень страховых компаний')
-                +main-menu('sub', '#', 'Часто задаваемые вопросы')
-                +main-menu('sub', '#', 'Диспансеризация')
-                +main-menu('sub', '#', 'Полезная информация')
-                +main-menu('sub', '#', 'Здоровый образ жизни')               
+                +main-menu('sub', '#', 'Диспансеризация')               
                 +main-menu('sub', '#', 'Перечень ЖНВЛС')
-        li.main-menu__item
+        li.main-menu__item.dropdown
+            +icon('menu--hospital')
+            a.main-menu__item-link(href="#") О больнице
+            ul.sub-menu
+                +main-menu('sub', '#', 'История больницы')
+                +main-menu('sub', '#', 'Новости')
+                +main-menu('sub', '#', 'Дорожная карта')
+                +main-menu('sub', '#', 'Нормативная база')
+                +main-menu('sub', '#', 'Противодействие коррупции')
+                +main-menu('sub', '#', 'Вакансии')
+                +main-menu('sub', '#', 'Отзывы')
+                +main-menu('sub', '#', 'Галерея')
+        li.main-menu__item.dropdown
             +icon('menu--survey')
             a.main-menu__item-link(href="#") Структура организации
             ul.sub-menu
@@ -44,7 +38,7 @@ nav
                 +main-menu('sub', '#', 'Поликлиника')
                 +main-menu('sub', '#', 'Вспомагательные лечебно-диагностические подразделения')
                 +main-menu('sub', '#', 'Фельдшерско-акушерские пункты')
-        li.main-menu__item
+        li.main-menu__item.dropdown
             +icon('menu--time')
             a.main-menu__item-link(href="#") Платные услуги
             ul.sub-menu
@@ -53,7 +47,16 @@ nav
                 +main-menu('sub', '#', 'Нормативные документы')
                 +main-menu('sub', '#', 'Приказы о платных услугах')
                 +main-menu('sub', '#', 'Профосмотры для организаций')
-        +main-menu('main', '#', 'Новости', 'exam')
+        li.main-menu__item.dropdown
+            +icon('menu--time')
+            a.main-menu__item-link(href="#") Общие правила
+            ul.sub-menu
+                +main-menu('sub', '#', 'Правила записи на прием')
+                +main-menu('sub', '#', 'Правила внутреннего распорядка')
+                +main-menu('sub', '#', 'Правила подготовки к исследованиям')
+        +main-menu('main', '#', 'Полезные статьи', 'exam')
+        +main-menu('main', '#', 'Часто задаваемые вопросы', 'survey')
+        +main-menu('main', '#', 'Здоровый образ жизни', 'geo')
         +main-menu('main', '#', 'Контакты', 'corruption')
         +main-menu('main', '#', 'Нормативные документы','geo')
         +main-menu('main', '#', 'Каталог файлов', 'survey')

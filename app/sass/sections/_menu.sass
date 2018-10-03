@@ -2,10 +2,15 @@
     background-color: rgba(#fff, 0.8)
     z-index: 3
     &__item
-        padding: 5px 25px
-        font-size: rem(16)
+        padding: 0 25px
+        font-size: rem(14)
         color: $main
         position: relative
+        &:last-child
+            padding: 0 25px
+        &.dropdown
+            background-color: $accent
+            color: #fff
         &-link
             display: block
             padding: 13px 0 13px 30px
@@ -32,19 +37,19 @@
         top: 300px
         opacity: 0
         left: 100%
-        background-color: rgba(2, 255, 255, 1)
+        background-color: rgba(255, 255, 255, 1)
         // box-shadow: 0 0 15.7px 2.3px rgba(74, 88, 94, 0.05)
         transition: top .5s ease
         z-index: -1
         pointer-events: none
         &__item
-            padding: 5px 25px
-            font-size: rem(16)
+            padding: 0 25px
+            font-size: rem(14)
             color: $main
             position: relative
             &-link
                 display: block
-                padding: 3px 0 3px 10px
+                padding: 13px 0 13px 10px
                 color: inherit
                 cursor: pointer
             
