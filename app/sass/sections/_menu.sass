@@ -1,19 +1,19 @@
 .main-menu
-    background-color: rgba(#fff, 0.8)
+    background-color: #fff
     z-index: 3
+    flex-grow: 1
     &__item
-        padding: 0 25px
-        font-size: rem(14)
+        padding: 0 15px
+        font-size: rem(13)
         color: $main
         position: relative
-        &:last-child
-            padding: 0 25px
+        
         &.dropdown
-            background-color: $accent
-            color: #fff
+            
+            color: $accent
         &-link
             display: block
-            padding: 1.5em 0 1.5em 30px
+            padding: .6em 0 .6em 10px
             color: inherit
             cursor: pointer
         svg
@@ -32,24 +32,24 @@
             > a
                 color: $accent
     .sub-menu
-        width: 100%
+        width: 130%
         position: absolute
         top: 300px
         opacity: 0
         left: 100%
         background-color: rgba(255, 255, 255, 1)
-        // box-shadow: 0 0 15.7px 2.3px rgba(74, 88, 94, 0.05)
+        box-shadow: 0 0 15.7px 2.3px rgba(74, 88, 94, 0.05)
         transition: top .5s ease
         z-index: -1
         pointer-events: none
         &__item
-            padding: 0 25px
-            font-size: rem(14)
+            padding: 0 15px
+            font-size: rem(13)
             color: $main
             position: relative
             &-link
                 display: block
-                padding: 13px 0 13px 10px
+                padding: .5em 0 .6em 10px
                 color: inherit
                 cursor: pointer
             

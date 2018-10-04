@@ -16,5 +16,4 @@ mixin icon(name,mod)
 mixin main-menu(type, link, text, icon)
 	li(class=`${type}-menu__item`)
 		a(class=`${type}-menu__item-link` href= link)=text
-		if(type == 'main')
-			+icon(`menu--${icon}`)
+		

@@ -106,13 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
         rewindDuration: 1000,
         animationTimingFunc: 'cubic-bezier(0.665, 0.340, 0.740, 1.000)'
     }).mount();
-    new Glide('.organizations-slider', {
-        type: 'carousel',
-        startAt: 1,
-        perView: 6
-    }).mount();
-
-
     
     function init(){
         var myMap = new ymaps.Map("map", {

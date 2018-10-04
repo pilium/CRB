@@ -1,7 +1,6 @@
 nav
     ul.main-menu
         li.main-menu__item.dropdown
-            +icon('menu--patient')
             a.main-menu__item-link(href="#") Пациентам
             ul.sub-menu
                 +main-menu('sub', '#', 'Права и обязанности пациента')
@@ -15,7 +14,6 @@ nav
                 +main-menu('sub', '#', 'Диспансеризация')               
                 +main-menu('sub', '#', 'Перечень ЖНВЛС')
         li.main-menu__item.dropdown
-            +icon('menu--hospital')
             a.main-menu__item-link(href="#") О больнице
             ul.sub-menu
                 +main-menu('sub', '#', 'История больницы')
@@ -27,7 +25,6 @@ nav
                 +main-menu('sub', '#', 'Отзывы')
                 +main-menu('sub', '#', 'Галерея')
         li.main-menu__item.dropdown
-            +icon('menu--survey')
             a.main-menu__item-link(href="#") Структура организации
             ul.sub-menu
                 +main-menu('sub', '#', 'Администрация')
@@ -39,7 +36,6 @@ nav
                 +main-menu('sub', '#', 'Вспомагательные лечебно-диагностические подразделения')
                 +main-menu('sub', '#', 'Фельдшерско-акушерские пункты')
         li.main-menu__item.dropdown
-            +icon('menu--time')
             a.main-menu__item-link(href="#") Платные услуги
             ul.sub-menu
                 +main-menu('sub', '#', 'Прейскурант цен')
@@ -48,16 +44,15 @@ nav
                 +main-menu('sub', '#', 'Приказы о платных услугах')
                 +main-menu('sub', '#', 'Профосмотры для организаций')
         li.main-menu__item.dropdown
-            +icon('menu--time')
             a.main-menu__item-link(href="#") Общие правила
             ul.sub-menu
                 +main-menu('sub', '#', 'Правила записи на прием')
                 +main-menu('sub', '#', 'Правила внутреннего распорядка')
                 +main-menu('sub', '#', 'Правила подготовки к исследованиям')
-        +main-menu('main', '#', 'Полезные статьи', 'exam')
-        +main-menu('main', '#', 'Часто задаваемые вопросы', 'survey')
-        +main-menu('main', '#', 'Здоровый образ жизни', 'geo')
-        +main-menu('main', '#', 'Контакты', 'corruption')
-        +main-menu('main', '#', 'Нормативные документы','geo')
-        +main-menu('main', '#', 'Каталог файлов', 'survey')
-        +main-menu('main', '#', 'online консультация', 'writing')
+        +main-menu('main', '#', 'Полезные статьи')
+        +main-menu('main', '#', 'Часто задаваемые вопросы')
+        +main-menu('main', '#', 'Здоровый образ жизни')
+        +main-menu('main', '#', 'Контакты')
+        +main-menu('main', '#', 'Нормативные документы')
+        +main-menu('main', '#', 'Каталог файлов')
+        +main-menu('main', '#', 'online консультация')
