@@ -2,20 +2,19 @@
     background-color: #fff
     z-index: 3
     flex-grow: 1
+    padding-bottom: 30px
     &__item
-        padding: 0 15px
-        font-size: rem(13)
+        padding: 0 25px
+        font-size: rem(14)
         color: $main
         position: relative
-        
-        &.dropdown
-            
-            color: $accent
         &-link
             display: block
-            padding: .6em 0 .6em 10px
+            padding: .6em 0 .6em 30px
             color: inherit
             cursor: pointer
+        &.dropdown 
+            color: $accent
         svg
             position: absolute
             display: block
@@ -43,13 +42,12 @@
         z-index: -1
         pointer-events: none
         &__item
-            padding: 0 15px
-            font-size: rem(13)
+            padding: 0 25px
+            font-size: rem(14)
             color: $main
             position: relative
             &-link
                 display: block
-                padding: .5em 0 .6em 10px
+                padding: .6em 0 .6em 10px
                 color: inherit
                 cursor: pointer
-            

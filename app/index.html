@@ -134,6 +134,12 @@
           </ul>
         </nav>
         <div class="aside-info"><a class="aside-info__mail aside-info__item" href="mailto:ardo0707@yandex.ru">ardo0707@yandex.ru</a><a class="aside-info__tel aside-info__item" href="tel:88639470722">8(86394) 7-07-22</a></div>
+        <div class="aside-search">
+          <div class="aside-search__wrap">
+            <input type="text" id="aside-search" name="aside-search"/>
+            <label for="aside-search">Поиск</label>
+          </div>
+        </div>
       </aside>
       <div class="right-side">
         <header class="header">
@@ -183,7 +189,7 @@
             <div class="slider-overflow">
               <div class="slider-composition">
                 <div class="slider-composition__info">
-                  <h1>Муниципальное бюджетное учреждение<br><span>"Центральная районная больница"<br></span>Волгодонского района Ростовской области</h1>
+                  <h1>Муниципальное бюджетное учреждение<br><span>Центральная районная больница<br></span>Волгодонского района Ростовской области</h1>
                 </div>
               </div>
               <iframe src="https://nok.rosminzdrav.ru/MO/GetBanner/6112/1" border="0" scrolling="no" allowtransparency="true" width="300" height="110" style="border: 0;"></iframe>
@@ -210,38 +216,40 @@
         </section>
         <section class="service">
           <div class="container">
-            <div class="service-item"><a class="service-item__link" href="#">
-                <svg class="icon icon-services--employee ">
-                  <use xlink:href="img/sprite/sprite.svg#services--employee"></use>
-                </svg><span>Запись на прием</span></a></div>
-            <div class="service-item"><a class="service-item__link" href="#">
-                <svg class="icon icon-services--employee ">
-                  <use xlink:href="img/sprite/sprite.svg#services--employee"></use>
-                </svg><span>Вопрос-ответ</span></a></div>
-            <div class="service-item"><a class="service-item__link" href="#">
-                <svg class="icon icon-services--employee ">
-                  <use xlink:href="img/sprite/sprite.svg#services--employee"></use>
-                </svg><span>Задать вопрос</span></a></div>
-            <div class="service-item"><a class="service-item__link" href="#">
-                <svg class="icon icon-services--employee ">
-                  <use xlink:href="img/sprite/sprite.svg#services--employee"></use>
-                </svg><span>оставить отзыв</span></a></div>
-            <div class="service-item"><a class="service-item__link" href="#" target="_blank">
-                <svg class="icon icon-services--employee ">
-                  <use xlink:href="img/sprite/sprite.svg#services--employee"></use>
-                </svg><span>Личный кабинет</span></a></div>
-            <div class="service-item"><a class="service-item__link" href="#">
-                <svg class="icon icon-services--employee ">
-                  <use xlink:href="img/sprite/sprite.svg#services--employee"></use>
-                </svg><span>Схема проезда</span></a></div>
-            <div class="service-item"><a class="service-item__link" href="#">
-                <svg class="icon icon-services--employee ">
-                  <use xlink:href="img/sprite/sprite.svg#services--employee"></use>
-                </svg><span>Сотрудники</span></a></div>
-            <div class="service-item"><a class="service-item__link" href="#">
-                <svg class="icon icon-services--employee ">
-                  <use xlink:href="img/sprite/sprite.svg#services--employee"></use>
-                </svg><span>Контакты</span></a></div>
+            <div class="service-item__wrapper">
+              <div class="service-item"><a class="service-item__link" href="#">
+                  <svg class="icon icon-quick--file ">
+                    <use xlink:href="img/sprite/sprite.svg#quick--file"></use>
+                  </svg><span>Лицензия и документы</span></a></div>
+              <div class="service-item"><a class="service-item__link" href="#">
+                  <svg class="icon icon-menu--time ">
+                    <use xlink:href="img/sprite/sprite.svg#menu--time"></use>
+                  </svg><span>График приема врачей</span></a></div>
+              <div class="service-item"><a class="service-item__link" href="#">
+                  <svg class="icon icon-quick--card ">
+                    <use xlink:href="img/sprite/sprite.svg#quick--card"></use>
+                  </svg><span>Платные услуги</span></a></div>
+              <div class="service-item"><a class="service-item__link" href="#">
+                  <svg class="icon icon-quick--structure ">
+                    <use xlink:href="img/sprite/sprite.svg#quick--structure"></use>
+                  </svg><span>Структура организации</span></a></div>
+              <div class="service-item"><a class="service-item__link" href="#" target="_blank">
+                  <svg class="icon icon-quick--questions ">
+                    <use xlink:href="img/sprite/sprite.svg#quick--questions"></use>
+                  </svg><span>Вопрос-ответ</span></a></div>
+              <div class="service-item"><a class="service-item__link" href="#">
+                  <svg class="icon icon-quick--catalog ">
+                    <use xlink:href="img/sprite/sprite.svg#quick--catalog"></use>
+                  </svg><span>Каталог файлов</span></a></div>
+              <div class="service-item"><a class="service-item__link" href="#">
+                  <svg class="icon icon-quick--feedback ">
+                    <use xlink:href="img/sprite/sprite.svg#quick--feedback"></use>
+                  </svg><span>Оставить отзыв</span></a></div>
+              <div class="service-item"><a class="service-item__link" href="#">
+                  <svg class="icon icon-quick--addres ">
+                    <use xlink:href="img/sprite/sprite.svg#quick--addres"></use>
+                  </svg><span>Контакты</span></a></div>
+            </div>
           </div>
         </section>
         <section class="news">
@@ -408,7 +416,33 @@
           </div>
         </section>
         <footer class="footer">
-          <div class="container"><span class="footer-date"></span></div>
+          <div class="container">
+            <div class="footer-wrap">
+              <div class="map-info">
+                <div class="map-info__title">
+                  <h2>Муниципальное бюджетное учреждение "ЦЕНТРАЛЬНАЯ РАЙОННАЯ БОЛЬНИЦА" Волгодонского района Ростовской области</h2>
+                </div>
+                <div class="map-info__contacts">
+                  <p>Российская Федерация, Ростовская обл, ст. Романовская, ул. Союзная 97а</p><a href="mailto:ardo0707@yandex.ru">ardo0707@yandex.ru</a><a href="tel:88639470722">8(86394) 7-07-22</a>
+                </div>
+              </div>
+              <div class="footer-info">
+                <div class="footer-date"><span></span></div>
+              </div>
+              <div class="footer-actions">
+                <div class="footer-actions__sitemap">
+                  <svg class="icon icon-sitemap ">
+                    <use xlink:href="img/sprite/sprite.svg#sitemap"></use>
+                  </svg>
+                </div>
+                <div class="footer-actions__top">
+                  <svg class="icon icon-arrow-up ">
+                    <use xlink:href="img/sprite/sprite.svg#arrow-up"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
         </footer>
       </div>
       <div class="modal">

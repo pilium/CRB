@@ -1,1 +1,32 @@
-// 
+@media only screen and (max-width : 1375px)
+    .aside
+        display: none
+    .right-side
+        margin-left: 0
+    .service-item
+        flex: 0 0 40%
+@media only screen and (max-width : 1030px)
+    .service-item
+        flex: 0 0 49%
+    .footer-title 
+        &__big
+            font-size: rem(16)
+@media only screen and (max-width : 940px)
+    .footer-title 
+        &__big
+            display: none
+        &__small
+            display: inline-block
+            font-size: rem(16)
+            font-weight: bold
+@media only screen and (max-width : 720px)
+    .service-item
+        flex: 0 0 80%
+        margin-left: auto
+        margin-right: auto
+@media only screen and (max-width : 560px)
+    .service-item
+        flex: 0 0 100%
+    .footer-wrap
+        display: block
+   

@@ -1,8 +1,18 @@
 .footer
     width: 100%
     padding: 20px
-    height: 70px
     background-color: $accent
+    &-wrap
+        display: flex
+        align-items: center
+        justify-content: space-around
     &-date
         color: #fff
-        font-size: rem(16)
+        font-size: rem(12)
+    &-title
+        &__small
+            display: none
+    &-actions > div
+        display: inline-block
+        margin-left: 10px
+        color: #fff
