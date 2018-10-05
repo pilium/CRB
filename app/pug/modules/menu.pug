@@ -1,7 +1,7 @@
 nav
     ul.main-menu
-        li.main-menu__item.dropdown
-            a.main-menu__item-link(href="#") Пациентам
+        li.main-menu__item.main-menu__item--dropdown
+            a.main-menu__link(href="#") Пациентам
             ul.sub-menu
                 +main-menu('sub', '#', 'Права и обязанности пациента')
                 +main-menu('sub', '#', 'График приема врачей')
@@ -13,8 +13,8 @@ nav
                 +main-menu('sub', '#', 'Перечень страховых компаний')
                 +main-menu('sub', '#', 'Диспансеризация')               
                 +main-menu('sub', '#', 'Перечень ЖНВЛС')
-        li.main-menu__item.dropdown
-            a.main-menu__item-link(href="#") О больнице
+        li.main-menu__item.main-menu__item--dropdown
+            a.main-menu__link(href="#") О больнице
             ul.sub-menu
                 +main-menu('sub', '#', 'История больницы')
                 +main-menu('sub', '#', 'Новости')
@@ -24,8 +24,8 @@ nav
                 +main-menu('sub', '#', 'Вакансии')
                 +main-menu('sub', '#', 'Отзывы')
                 +main-menu('sub', '#', 'Галерея')
-        li.main-menu__item.dropdown
-            a.main-menu__item-link(href="#") Структура организации
+        li.main-menu__item.main-menu__item--dropdown
+            a.main-menu__link(href="#") Структура организации
             ul.sub-menu
                 +main-menu('sub', '#', 'Администрация')
                 +main-menu('sub', '#', 'Хирургическое отделение')
@@ -35,16 +35,16 @@ nav
                 +main-menu('sub', '#', 'Поликлиника')
                 +main-menu('sub', '#', 'Вспомагательные лечебно-диагностические подразделения')
                 +main-menu('sub', '#', 'Фельдшерско-акушерские пункты')
-        li.main-menu__item.dropdown
-            a.main-menu__item-link(href="#") Платные услуги
+        li.main-menu__item.main-menu__item--dropdown
+            a.main-menu__link(href="#") Платные услуги
             ul.sub-menu
                 +main-menu('sub', '#', 'Прейскурант цен')
                 +main-menu('sub', '#', 'График работы медицинского персонала')
                 +main-menu('sub', '#', 'Нормативные документы')
                 +main-menu('sub', '#', 'Приказы о платных услугах')
                 +main-menu('sub', '#', 'Профосмотры для организаций')
-        li.main-menu__item.dropdown
-            a.main-menu__item-link(href="#") Общие правила
+        li.main-menu__item.main-menu__item--dropdown
+            a.main-menu__link(href="#") Общие правила
             ul.sub-menu
                 +main-menu('sub', '#', 'Правила записи на прием')
                 +main-menu('sub', '#', 'Правила внутреннего распорядка')

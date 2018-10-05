@@ -15,5 +15,39 @@ mixin icon(name,mod)
 
 mixin main-menu(type, link, text, icon)
 	li(class=`${type}-menu__item`)
-		a(class=`${type}-menu__item-link` href= link)=text
-		
+		a(class=`${type}-menu__link` href= link)=text
+
+//- sections items
+
+mixin organizationsItem(href, src, alt, text)
+	.organizations-item
+		a.organizations-item__link(href= href target="_blank")
+			.organizations-item__icon-box
+				img(src=`../img/organizations/${src}.jpg`, alt= alt)
+			p.organizations-item__content= text
+
+mixin servicesItem(href, icon, title, text)
+	.services-item
+		a.services-item__link(href= href)
+			.services-item__icon-box
+				+icon(icon)
+			p.services-item__title= title
+			p.services-item__content= text
+
+mixin newsItem(href, date, title, text)
+	article.news__item.item-news
+		a.item-news__link(href= href)
+			+icon('right-arrow')
+		span.item-news__date= date
+		span.item-news__title= title
+		p.item-news__text= text
+
+mixin linksItem(href, text)
+	li.links-item
+		a.links-item__link(href= href)= text
+
+mixin serviceItem(href, icon , text)
+	.service-item
+		a.service-item__link(href= href)
+			+icon(`quick--${icon}`)
+			span= text

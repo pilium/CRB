@@ -34,6 +34,7 @@ html(lang="ru-RU")
 		meta(name="apple-mobile-web-app-status-bar-style" content="black")
 		meta(name="format-detection" content="telephone=no")
 
+		meta(http-equiv="cleartype" content="on")
 		//- fonts
 		link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet")
 		
@@ -42,7 +43,7 @@ html(lang="ru-RU")
 		//- Slider Glide
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/css/glide.core.min.css")
 		//- link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/css/glide.theme.min.css")
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/glide.min.js")
+		
 		//- Style
 		link(rel="stylesheet" href="css/main.min.css")
 
@@ -91,7 +92,7 @@ html(lang="ru-RU")
 	body.home
 		.main-wrapper
 			include ../modules/aside
-			.right-side
+			main.right-side
 				include ../modules/header
 
 				block content
@@ -99,4 +100,5 @@ html(lang="ru-RU")
 				include ../modules/footer
 			include ../modules/modal
 	block scripts
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/glide.min.js")
 		script(src="js/scripts.min.js")

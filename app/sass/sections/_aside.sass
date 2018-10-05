@@ -1,5 +1,5 @@
 .aside
-    width: 230px
+    width: 250px
     top: 0px
     bottom: 0
     position: fixed
@@ -24,58 +24,58 @@
             position: relative
             margin-right: 10px
             margin-left: 35px
-            input
-                display: inline-block
-                width: 100%
-                padding: 10px 0 10px 15px
-                font-weight: 400
+        &__input
+            display: inline-block
+            width: 100%
+            padding: 10px 0 10px 15px
+            font-weight: 400
+            color: $accent
+            background: #efefef
+            border: 0
+            border-radius: 3px
+            outline: 0
+            text-indent: 65px
+            transition: all .3s ease-in-out
+            &:focus, &:active
                 color: $accent
-                background: #efefef
-                border: 0
-                border-radius: 3px
-                outline: 0
-                text-indent: 65px
-                transition: all .3s ease-in-out
-                &:focus, &:active
-                    color: $accent
-                    text-indent: 0
-                    background: #fff
-                    box-shadow: 0 0 10px 0 rgba($accent, 0.8)
-                    border-top-right-radius: 3px
-                    border-bottom-right-radius: 3px
-                    + label
-                        transform: rotate(-66deg)
-                        border-radius: 3px
-                        &:before
-                            transform: rotate(10deg)
-            label
-                display: inline-block
+                text-indent: 0
+                background: #fff
+                box-shadow: 0 0 10px 0 rgba($accent, 0.8)
+                border-top-right-radius: 3px
+                border-bottom-right-radius: 3px
+                + label
+                    transform: rotate(-66deg)
+                    border-radius: 3px
+                    &:before
+                        transform: rotate(10deg)
+        &__label
+            display: inline-block
+            position: absolute
+            top: 0
+            left: 0
+            padding: 10px 5px
+            text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4)
+            background: $accent
+            transition: all .4s ease-in-out
+            border-top-left-radius: 3px
+            border-bottom-left-radius: 3px
+            transform-origin: left bottom
+            line-height: 1.18
+            z-index: 99
+            &::before, &::after
+                content: ""
                 position: absolute
                 top: 0
+                right: 0
+                bottom: 0
                 left: 0
-                padding: 10px 5px
-                text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4)
+                border-radius: 3px
                 background: $accent
-                transition: all .4s ease-in-out
-                border-top-left-radius: 3px
-                border-bottom-left-radius: 3px
                 transform-origin: left bottom
-                line-height: 1.18
-                z-index: 99
-                &::before, &::after
-                    content: ""
-                    position: absolute
-                    top: 0
-                    right: 0
-                    bottom: 0
-                    left: 0
-                    border-radius: 3px
-                    background: $accent
-                    transform-origin: left bottom
-                    transition: all .4s ease-in-out
-                    pointer-events: none
-                    z-index: -1
-                &::before
-                    background: rgba(3, 36, 41, 0.2)
-                    z-index: -2
-                    right: 20%
+                transition: all .4s ease-in-out
+                pointer-events: none
+                z-index: -1
+            &::before
+                background: rgba(3, 36, 41, 0.2)
+                z-index: -2
+                right: 20%

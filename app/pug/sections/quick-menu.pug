@@ -2,36 +2,12 @@
 section.service
 	.container
 		.service-item__wrapper
-			.service-item
-				a.service-item__link(href="#")
-					+icon('quick--file')
-					span Лицензия и документы
-			.service-item
-				a.service-item__link(href="#")
-					+icon('menu--time')
-					span График приема врачей
-			.service-item
-				a.service-item__link(href="#")
-					+icon('quick--card')
-					span Платные услуги
-			.service-item
-				a.service-item__link(href="#")
-					+icon('quick--structure')
-					span Структура организации
-			.service-item
-				a.service-item__link(href="#" target="_blank")
-					+icon('quick--questions')
-					span Вопрос-ответ
-			.service-item
-				a.service-item__link(href="#")
-					+icon('quick--catalog')
-					span Каталог файлов
-			.service-item
-				a.service-item__link(href="#")
-					+icon('quick--feedback')
-					span Оставить отзыв
-			.service-item
-				a.service-item__link(href="#")
-					+icon('quick--addres')
-					span Контакты
+			+serviceItem('#', 'file', 'Лицензия и документы')
+			+serviceItem('#', 'time', 'График приема врачей')
+			+serviceItem('#', 'card', 'Платные услуги')
+			+serviceItem('#', 'structure', 'Структура организации')
+			+serviceItem('#', 'questions', 'Вопрос-ответ')
+			+serviceItem('#', 'catalog', 'Каталог файлов')
+			+serviceItem('#', 'feedback', 'Оставить отзыв')
+			+serviceItem('#', 'adress', 'Контакты')
 //- END quick-menu

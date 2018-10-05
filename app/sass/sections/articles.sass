@@ -1,4 +1,4 @@
-.news
+.articles
     padding: 60px
     &-info
         margin-bottom: 20px
@@ -10,62 +10,60 @@
             line-height: 24px
             color: $accent
             text-transform: uppercase
-    &-items
+    &__list
         display: flex
         align-items: center
         justify-content: space-between
-        &__item
-            padding: 28px 33px
-            border-top: 2px solid $accent
+    .item-news
+        padding: 28px 33px
+        border-top: 2px solid $accent
+        box-shadow: -2.5px 3.2px 23px 1px rgba(88, 99, 104, 0.11)
+        background: #fff
+        position: relative
+        text-overflow: ellipsis
+        height: 280px
+        overflow: hidden
+        margin-right: 30px
+        &:last-child
+            margin-right: 0
+        &__link
+            width: 50px
+            height: 50px
+            background-color: #fff
             box-shadow: -2.5px 3.2px 23px 1px rgba(88, 99, 104, 0.11)
-            background: #fff
-            position: relative
-            text-overflow: ellipsis
-            height: 280px
-            overflow: hidden
-            margin-right: 30px
-            &:last-child
-                margin-right: 0
-            &-more
-                width: 50px
-                height: 50px
-                background-color: #fff
-                box-shadow: -2.5px 3.2px 23px 1px rgba(88, 99, 104, 0.11)
-                border-radius: 50%
+            border-radius: 50%
+            position: absolute
+            top: 15px
+            right: 15px
+            color: $accent
+            &:hover
+                background-color: transparent
+                box-shadow: none
+                transform: scale(1.2)
+                transition: transform .1s ease-in
+                transition: box-shadow .1s ease-in
+                transition: background-color .1s ease-in
+            svg
                 position: absolute
-                top: 15px
-                right: 15px
-                color: $accent
-                &:hover
-                    background-color: transparent
-                    box-shadow: none
-                    transform: scale(1.2)
-                    transition: transform .1s ease-in
-                    transition: box-shadow .1s ease-in
-                    transition: background-color .1s ease-in
-
-
-                svg
-                    position: absolute
-                    display: block
-                    top: 11.5px
-                    left: 11.5px
-                    
-            &-date
                 display: block
-                margin-bottom: 25px
-                color: #c6c6c6
-                font-size: rem(16)
-            &-title
-                min-height: 60px
-                display: block
-                padding-bottom: 15px
-                margin-bottom: 20px
-                color: $main
-                font-size: rem(16)
-                line-height: 24px
-                border-bottom: 1px solid #eaebec
-            &-text
-                color: $main
-                font-size: rem(16)
-                line-height: 24px
+                top: 11.5px
+                left: 11.5px
+                
+        &__date
+            display: block
+            margin-bottom: 25px
+            color: #c6c6c6
+            font-size: rem(16)
+        &__title
+            min-height: 60px
+            display: block
+            padding-bottom: 15px
+            margin-bottom: 20px
+            color: $main
+            font-size: rem(16)
+            line-height: 24px
+            border-bottom: 1px solid #eaebec
+        &__text
+            color: $main
+            font-size: rem(16)
+            line-height: 24px

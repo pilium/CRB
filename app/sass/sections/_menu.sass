@@ -4,25 +4,24 @@
     flex-grow: 1
     padding-bottom: 30px
     &__item
-        padding: 0 25px
-        font-size: rem(14)
-        color: $main
+        padding-left: 25px
+        padding-right: 25px
         position: relative
-        &-link
-            display: block
-            padding: .6em 0 .6em 30px
-            color: inherit
-            cursor: pointer
-        &.dropdown 
-            color: $accent
+        font-size: rem(14)
+        color: #fff
+        background-color: $accent
+        &.main-menu__item--dropdown 
+            color: #fff
         svg
             position: absolute
             display: block
             top: 10px
             left: 10px
         &:hover
+            color: $accent
+            background-color: #fff
             .sub-menu
-                top: 0
+                left: 100%
                 opacity: 1
                 pointer-events: auto
             svg
@@ -30,24 +29,35 @@
                 transition: fill .4s ease
             > a
                 color: $accent
+    &__link
+            display: block
+            padding: .65em 0 .65em
+            color: inherit
+            position: relative
+            font-weight: 500
+            
+            cursor: pointer
     .sub-menu
         width: 130%
         position: absolute
-        top: 300px
+        top: 0
         opacity: 0
         left: 100%
         background-color: rgba(255, 255, 255, 1)
         box-shadow: 0 0 15.7px 2.3px rgba(74, 88, 94, 0.05)
-        transition: top .5s ease
+        transition: left .3s linear, opacity .5s linear 
         z-index: -1
         pointer-events: none
         &__item
-            padding: 0 25px
+            padding-left: 25px
+            padding-right: 25px
+            position: relative
             font-size: rem(14)
             color: $main
+        &__link
+            display: block
+            padding: .65em 0 .65em
+            color: $accent
+            font-weight: bold
             position: relative
-            &-link
-                display: block
-                padding: .6em 0 .6em 10px
-                color: inherit
-                cursor: pointer
+            cursor: pointer     

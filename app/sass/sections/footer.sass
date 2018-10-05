@@ -6,13 +6,29 @@
         display: flex
         align-items: center
         justify-content: space-around
-    &-date
+    &-info
+        color: $main
+        font-size: rem(14)
+        &__adress,
+        &__mail,
+        &__tel
+            font-weight: 300
+        &__title
+            font-weight: bold
+    &-actions
+        display: flex
+        align-items: center
+        justify-content: space-around
+        flex-direction: column
+        flex-wrap: wrap
+        width: 105px
         color: #fff
-        font-size: rem(12)
-    &-title
-        &__small
-            display: none
-    &-actions > div
-        display: inline-block
-        margin-left: 10px
-        color: #fff
+        &__date
+            display: block
+            font-size: rem(12)
+    &-icons
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-around
+          
