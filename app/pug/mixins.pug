@@ -46,8 +46,8 @@ mixin linksItem(href, text)
 	li.links-item
 		a.links-item__link(href= href)= text
 
-mixin serviceItem(href, icon , text)
-	.service-item
-		a.service-item__link(href= href)
+mixin quickItem(href, icon , text)
+	.quick-item
+		a.quick-item__link(href= href)
 			+icon(`quick--${icon}`)
 			span= text

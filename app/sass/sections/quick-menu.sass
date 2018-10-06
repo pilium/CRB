@@ -1,4 +1,4 @@
-.service
+.quick
     background-color: #eee
     padding-top: 20px
     &-item__wrapper
@@ -14,6 +14,11 @@
         &__link
             position: relative
             display: block
+            transition: background-color .3s linear, color .3s ease-in-out
+            &:hover
+                background-color: $accent
+                span
+                    color: #fff
             &::before
                 content: ''
                 position: absolute

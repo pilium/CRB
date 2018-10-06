@@ -47,9 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    search_toggle();
-    modal();
-    
     new Glide('.main-slider', {
         type: 'slider',
         autoplay: 8000,
@@ -76,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         myMap.geoObjects.add(myPlacemark);
     }
-    ymaps.ready(init);
+    
 
     function addTimeFooter() {
         const date = new Date();
@@ -89,4 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         container.innerHTML= date.toLocaleString("ru", options);
     }
     setTimeout(addTimeFooter, 100);
+    search_toggle();
+    modal();
+    ymaps.ready(init);
 });
