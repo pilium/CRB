@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const search = container.querySelector('.icon-magnifier-tool');
     const input = container.querySelector("[type=text]");
 
+    const sliderContainer = document.querySelector('.main-slider');
+
     const link = document.querySelector(".js-header-info__writeToUs-link");
     const popup = document.querySelector(".modal");
     const close = popup.querySelector(".modal-close__btn");
@@ -46,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     }
-
-    new Glide('.main-slider', {
+    if (sliderContainer) {
+        new Glide(sliderContainer, {
         type: 'slider',
         autoplay: 8000,
         keybord: true,
@@ -56,6 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
         rewindDuration: 1000,
         animationTimingFunc: 'cubic-bezier(0.665, 0.340, 0.740, 1.000)'
     }).mount();
+    }
+    
     
     function init(){
         var myMap = new ymaps.Map("map", {
@@ -89,4 +93,5 @@ document.addEventListener("DOMContentLoaded", function () {
     search_toggle();
     modal();
     ymaps.ready(init);
+    
 });

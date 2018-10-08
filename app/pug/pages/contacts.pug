@@ -1,0 +1,11 @@
+extends ../layout/inner
+
+block title
+	| Контакты
+
+block content
+	include ../sections/contacts/contact
+	include ../sections/map
+
+append scripts
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
