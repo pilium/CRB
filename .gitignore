@@ -6,4 +6,4 @@
 /**/Thumbs.db
 /**/*.DS_Store
 /app/css/**
-/app/**/*.html
+/app/*.html

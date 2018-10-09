@@ -88,8 +88,8 @@ gulp.task('watch', ['pug', 'sass', 'js', 'browser-sync'], function() {
 
 gulp.task('imagemin', function() {
   return gulp.src([
-    'app/img/**/*',
-    '!app/img/icons'
+    'app/img/**/*.jpg',
+    'app/img/**/*.png'
     ])
 		.pipe(cache(imagemin()))
 		.pipe(gulp.dest('dist/img'));
