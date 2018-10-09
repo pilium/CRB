@@ -1,16 +1,14 @@
 nav
     ul.main-menu
         li.main-menu__item.main-menu__item--dropdown
-            a.main-menu__link(href="#") Пациентам
+            a.main-menu__link(href="patient.html") Пациентам
             ul.sub-menu
-                +main-menu('sub', '#', 'Права и обязанности пациента')
-                +main-menu('sub', '#', 'График приема врачей')
-                +main-menu('sub', '#', 'Условия оказания медицинской помощи')
-                +main-menu('sub', '#', 'Прием граждан по личным вопросам')
-                +main-menu('sub', '#', 'Защита прав граждан')
-                +main-menu('sub', '#', 'Общие правила')                        
-                +main-menu('sub', '#', 'Госпитализация в стационар')
-                +main-menu('sub', '#', 'Перечень страховых компаний')
+                +main-menu('sub', 'patientDuties.html', 'Права и обязанности пациента')
+                +main-menu('sub', 'doctorsShedule.html', 'График приема врачей')
+                +main-menu('sub', 'helpIf.html', 'Условия оказания медицинской помощи')
+                +main-menu('sub', 'privateQuestions.html', 'Прием граждан по личным вопросам')
+                +main-menu('sub', 'settlerProtect.html', 'Защита прав граждан')                  
+                +main-menu('sub', 'smo.html', 'Перечень страховых компаний')
                 +main-menu('sub', '#', 'Диспансеризация')               
                 +main-menu('sub', '#', 'Перечень ЖНВЛС')
         li.main-menu__item.main-menu__item--dropdown
@@ -36,23 +34,20 @@ nav
                 +main-menu('sub', '#', 'Вспомагательные лечебно-диагностические подразделения')
                 +main-menu('sub', '#', 'Фельдшерско-акушерские пункты')
         li.main-menu__item.main-menu__item--dropdown
-            a.main-menu__link(href="#") Платные услуги
+            a.main-menu__link(href="pay.html") Платные услуги
             ul.sub-menu
-                +main-menu('sub', '#', 'Прейскурант цен')
-                +main-menu('sub', '#', 'График работы медицинского персонала')
-                +main-menu('sub', '#', 'Нормативные документы')
-                +main-menu('sub', '#', 'Приказы о платных услугах')
-                +main-menu('sub', '#', 'Профосмотры для организаций')
+                +main-menu('sub', 'payShedule.html', 'График работы медицинского персонала')
+                +main-menu('sub', 'payOrders.html', 'Приказы о платных услугах')
+                +main-menu('sub', 'payOrganizations.html', 'Профосмотры для организаций')
         li.main-menu__item.main-menu__item--dropdown
-            a.main-menu__link(href="#") Общие правила
+            a.main-menu__link(href="rules.html") Общие правила
             ul.sub-menu
-                +main-menu('sub', '#', 'Правила записи на прием')
-                +main-menu('sub', '#', 'Правила внутреннего распорядка')
-                +main-menu('sub', '#', 'Правила подготовки к исследованиям')
-        +main-menu('main', '#', 'Полезные статьи')
-        +main-menu('main', '#', 'Часто задаваемые вопросы')
-        +main-menu('main', '#', 'Здоровый образ жизни')
+                +main-menu('sub', 'writeRules.html', 'Правила записи на прием')
+                //- +main-menu('sub', 'innerRules.html', 'Правила внутреннего распорядка')
+                +main-menu('sub', 'prepareRules.html', 'Правила подготовки к исследованиям')
+        +main-menu('main', 'articles.html', 'Полезные статьи')
+        +main-menu('main', 'zoj.html', 'Здоровый образ жизни')
         +main-menu('main', 'contacts.html', 'Контакты')
-        +main-menu('main', '#', 'Нормативные документы')
-        +main-menu('main', '#', 'Каталог файлов')
-        +main-menu('main', '#', 'online консультация')
+        +main-menu('main', 'docs.html', 'Нормативные документы')
+        +main-menu('main', 'files.html', 'Каталог файлов')
+        +main-menu('main', 'online.html', 'online консультация')

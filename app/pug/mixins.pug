@@ -17,6 +17,14 @@ mixin main-menu(type, link, text, icon)
 	li(class=`${type}-menu__item`)
 		a(class=`${type}-menu__link` href= link)=text
 
+mixin downloadBadge(href, title, icon, size)
+	.download
+		p.download-title= title
+		a(href= href, title="Скачать" target="_blank", rel="noopener noreferrer").download-actions
+			+icon(icon)
+			span= size
+			
+
 //- sections items
 
 mixin organizationsItem(href, src, alt, text)

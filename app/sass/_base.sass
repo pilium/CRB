@@ -31,6 +31,9 @@ img
 a
     color: inherit
     font-size: inherit
+section
+    p
+        margin: 0 0 1.5em
 
 // Кнопка
 .btn 
@@ -46,6 +49,7 @@ a
     border: none
     &.btn--min
         width: 200px
+
 // Table
 .tftable
     font-size: rem(12)
@@ -54,15 +58,37 @@ a
     margin: 0 auto
     border: 1px solid $accent
     border-collapse: collapse
-    td
+    td, th
         font-size: rem(16)
         border: 1px solid $accent
         padding: 8px
-        width: 50%
+        width: 33%
         a
             color: $accent
             font-style: italic
         &:first-child
             font-weight: bold
+    th
+        text-align: left
+        background-color: $accent
     tr
         background-color: #ffffff
+// download
+.download
+    display: flex
+    justify-content: space-around
+    align-items: center
+    border: 1px solid #000
+    background-color: #eee
+    &-title
+        font-size: rem(14)
+        color: $accent
+        width: 90%
+        line-height: 1
+        margin: 0
+    &-actions
+        background-color: $accent
+
+        svg
+            width: 20px
+            height: 20px
