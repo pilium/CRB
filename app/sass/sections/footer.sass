@@ -8,8 +8,10 @@
         align-items: center
         justify-content: space-around
     &-info
+        width: 80%
         color: $main
         font-size: rem(14)
+        text-align: center
         &__adress,
         &__mail,
         &__tel
@@ -19,14 +21,17 @@
     &-actions
         display: flex
         align-items: center
-        justify-content: space-around
+        justify-content: space-between
         flex-direction: column
         flex-wrap: wrap
-        width: 105px
+        width: 125px
         color: #fff
+        svg
+            width: rem(35)
+            height: rem(35)
         &__date
             display: block
-            font-size: rem(12)
+            font-size: rem(14)
     &-icons
         width: 100%
         display: flex
