@@ -58,6 +58,7 @@ section
     margin: 0 auto
     border: 1px solid $accent
     border-collapse: collapse
+    margin-bottom: 30px
     td, th
         font-size: rem(16)
         border: 1px solid $accent
@@ -73,6 +74,10 @@ section
         background-color: $accent
     tr
         background-color: #ffffff
+    &--dispans 
+        td, th
+            &:first-child
+                width: 50%
 // download
 .download
     display: flex
