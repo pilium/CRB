@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const input = container.querySelector("[type=text]");
 
     const sliderContainer = document.querySelector('.main-slider');
+    const mapContainer = document.getElementById('map');
 
     const link = document.querySelector(".js-header-info__writeToUs-link");
     const popup = document.querySelector(".modal");
@@ -60,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }).mount();
     }
     
-    
-    function init(){
+    if(mapContainer) {
+        function init(){
         var myMap = new ymaps.Map("map", {
             center: [47.5396,42.0151],
             controls: ['typeSelector','fullscreenControl','geolocationControl','rulerControl','routeButtonControl'],
@@ -76,7 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
             preset: 'islands#blueMedicalIcon',
         });
         myMap.geoObjects.add(myPlacemark);
+        }
+        ymaps.ready(init);
     }
+    
     
 
     function addTimeFooter() {
@@ -92,6 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(addTimeFooter, 100);
     search_toggle();
     modal();
-    ymaps.ready(init);
+    
     
 });
