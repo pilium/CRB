@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         hoverpause: true,
         rewind: true,
         rewindDuration: 1000,
-        animationTimingFunc: 'cubic-bezier(0.665, 0.340, 0.740, 1.000)'
+        animationTimingFunc: 'bounce'
     }).mount();
     }
     

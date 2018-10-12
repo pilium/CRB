@@ -42,7 +42,7 @@ mixin servicesItem(href, icon, title, text)
 			p.services-item__title= title
 			p.services-item__content= text
 
-mixin newsItem(href, date, title, text)
+mixin newsItem(href, day, year, title, text)
 	//- article.news__item.item-news
 	//- 	a.item-news__link(href= href)
 	//- 		+icon('right-arrow')
@@ -53,8 +53,8 @@ mixin newsItem(href, date, title, text)
 	.post-module
 		.thumbnail
 			.date
-				.day= href
-				.month= date
+				.day= day
+				.month= year
 			img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
 		.post-content
 			.category Photos
@@ -64,7 +64,7 @@ mixin newsItem(href, date, title, text)
 			.post-meta
 				span.timestamp
 					i.fa.fa-clock- o
-					|  6 mins ago
+					|  6мин назад
 				span.comments
 					i.fa.fa-comments
 					a(href='#')  39 comments
