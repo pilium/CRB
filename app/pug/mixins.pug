@@ -23,7 +23,18 @@ mixin downloadBadge(href, title, icon, size)
 		a(href= href, title="Скачать" target="_blank", rel="noopener noreferrer").download-actions
 			+icon(icon)
 			span= size
-			
+
+mixin breadcrumbs()
+	.section.section-breadcrumbs
+		ul.breadcrumbs
+			li.breadcrumbs-item.breadcrumbs-item--first
+				a.breadcrumbs-item__link(href="") Главная
+			li.breadcrumbs-item
+				a.breadcrumbs-item__link(href="") Пациентам
+			li.breadcrumbs-item
+				a.breadcrumbs-item__link(href="") Расписание приёма врачей
+			li.breadcrumbs-item.breadcrumbs-item--last
+				span.breadcrumbs-item__link Детская поликлиника
 
 //- sections items
 
