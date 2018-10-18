@@ -125,6 +125,10 @@
     width: 100%
     padding: 30px
     transition: all .3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s
+    &__bottom
+      display: flex
+      justify-content: space-between
+      align-items: center
     .category
       position: absolute
       top: -34px
@@ -156,7 +160,6 @@
       transition: display 1s linear
       will-change: visibility, position
     .post-meta
-      margin: 30px 0 0
       color: #999999
       .timestamp
         margin: 0 16px 0 0

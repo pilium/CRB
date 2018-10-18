@@ -96,13 +96,6 @@ mixin servicesItem(href, icon, title, text)
 			p.services-item__content= text
 
 mixin newsItem(href, day, year, title, text)
-	//- article.news__item.item-news
-	//- 	a.item-news__link(href= href)
-	//- 		+icon('right-arrow')
-	//- 	span.item-news__date= date
-	//- 	span.item-news__title= title
-	//- 	p.item-news__text= text
-	
 	.post-module
 		.thumbnail
 			.date
@@ -114,13 +107,16 @@ mixin newsItem(href, day, year, title, text)
 			h1.title= title
 			h2.sub_title The city that never sleeps.
 			p.description= text
-			.post-meta
-				span.timestamp
-					i.fa.fa-clock- o
-					|  6мин назад
-				span.comments
-					i.fa.fa-comments
-					a(href='#')  39 comments
+			.post-content__bottom
+				.post-meta
+					span.timestamp
+						|  6мин назад
+				button.btn.btn--card
+					.circle
+						span.icon.arrow
+					p.button-text Перейти
+
+
 
 mixin linksItem(href, text)
 	li.links-item
