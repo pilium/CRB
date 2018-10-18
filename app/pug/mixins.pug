@@ -108,13 +108,15 @@ mixin newsItem(href, day, year, title, text)
 			h2.sub_title The city that never sleeps.
 			p.description= text
 			.post-content__bottom
-				.post-meta
-					span.timestamp
-						|  6мин назад
 				button.btn.btn--card
 					.circle
 						span.icon.arrow
 					p.button-text Перейти
+				.post-meta
+					svg.icon.icon-clock
+						use(xlink:href="img/sprite/sprite.svg#clock")
+					span.timestamp
+						|  6мин назад
 
 
 
