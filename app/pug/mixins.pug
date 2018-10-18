@@ -35,6 +35,48 @@ mixin breadcrumbs()
 				a.breadcrumbs-item__link(href="") Расписание приёма врачей
 			li.breadcrumbs-item.breadcrumbs-item--last
 				span.breadcrumbs-item__link Детская поликлиника
+mixin dayShedule()
+	table.tftable(border="1px solid #000")
+		caption распорядок дня в отделениях
+		tr
+			td 06.00-6.30
+			td Подъем, измерение температуры
+		tr
+			td 06.30-8.00
+			td Инъекции, процедуры
+		tr
+			td 08.30-09.30
+			td Завтрак
+		tr
+			td 09.30-10.00
+			td Обход
+		tr
+			td 10.00-13.00
+			td Выписка пациентов
+		tr
+			td 13.00-14.00
+			td Обед
+		tr
+			td 14.00-16.00
+			td Тихий час
+		tr
+			td 16.00-19.00
+			td Посещения больных
+		tr
+			td 17.00-18.00
+			td Ужин
+		tr
+			td 18.00-20.00
+			td Инъекции, процедуры
+		tr
+			td 20.00-21.00
+			td Вечерний туалет
+		tr
+			td 21.00-22.00
+			td Подготовка ко сну
+		tr
+			td 22.00
+			td Отбой
 
 //- sections items
 
