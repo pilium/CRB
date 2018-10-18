@@ -103,3 +103,36 @@ a
         svg
             width: 20px
             height: 20px
+.history-wrap
+    position: relative
+    background-color: #fff
+    padding: 1.5rem
+    text-align: center
+    color: #9fa4af
+    width: 95%
+    margin: 10px auto 0
+    box-shadow: 0 0 7px 0 rgba($accent, 0.6)
+    h1
+        position: absolute
+        top: 0
+        padding: 10px 16px 10px 90px
+        left: -30px
+        width: calc(100% + 30px)
+        color: #fff
+        font-size: 1.4em
+        line-height: 1.6em
+        margin: 0
+        background-color: $accent
+        z-index: 10
+        &::after
+            content: ' '
+            position: absolute
+            left: 0
+            top: 100%
+            width: 0
+            bottom: 0
+            border: 15px solid
+            border-top-color: $accent
+            border-right-color: $accent
+            border-bottom-color: transparent
+            border-left-color: transparent
