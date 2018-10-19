@@ -36,19 +36,34 @@ mixin breadcrumbs()
 			li.breadcrumbs-item.breadcrumbs-item--last
 				span.breadcrumbs-item__link Детская поликлиника
 
-mixin filesLink(href, icon, title, size, bigText)
-	.file-link__wrap
-		a.file(href= href target="_blank" rel="noopener noreferrer")
-			span.file-icon
-				+icon(icon)
-			if(bigText)
-				span.file-title.big-title= title
-			else
-				span.file-title= title
-			if(size)
-				span.file-size= size
-			else
-				span.file-size.link переход на другой сайт
+mixin filesLink(href, icon, title, size, bigText, addons, addonsHref)
+	if(addons)
+		.file-link__wrap.addon
+			a.file(href= href target="_blank" rel="noopener noreferrer")
+				span.file-icon
+					+icon(icon)
+				if(bigText)
+					span.file-title.big-title= title
+				else
+					span.file-title= title
+				if(size)
+					span.file-size= size
+				else
+					span.file-size.link переход на другой сайт
+				a(href= addonsHref title="Скачать приложения к данному файлу").addon-link Приложения
+	else
+		.file-link__wrap
+			a.file(href= href target="_blank" rel="noopener noreferrer")
+				span.file-icon
+					+icon(icon)
+				if(bigText)
+					span.file-title.big-title= title
+				else
+					span.file-title= title
+				if(size)
+					span.file-size= size
+				else
+					span.file-size.link переход на другой сайт
 
 
 mixin dayShedule()

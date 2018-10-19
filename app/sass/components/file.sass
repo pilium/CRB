@@ -6,6 +6,12 @@
     display: flex
     align-items: center
     justify-content: center
+    &.addon
+        &:hover
+            .addon-link
+                right: 2.5%
+                opacity: 1
+                transition: right .3s linear, opacity .3s linear
 .file
     position: relative
     display: flex
@@ -57,3 +63,16 @@
         &.link
             width: 200px
             font-size: rem(11)
+.addon-link
+    position: absolute
+    top: 0
+    right: -300px
+    opacity: 0
+    display: block
+    width: auto
+    padding: 20px
+    background-color: $accent
+    border-radius: 10px
+    font-size: rem(12)
+    font-style: italic
+    transition: right .3s linear, opacity .3s linear
