@@ -37,7 +37,8 @@
             font-weight: 500
             
             cursor: pointer
-    .sub-menu
+    .sub-menu,
+    .sub-sub-menu
         width: 130%
         position: absolute
         top: 0
@@ -54,6 +55,10 @@
             position: relative
             font-size: rem(14)
             color: $main
+            &:hover
+                .sub-sub-menu
+                    opacity: 1
+                    pointer-events: auto
         &__link
             display: block
             padding: .6em .6em

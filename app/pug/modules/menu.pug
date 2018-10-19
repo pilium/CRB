@@ -29,9 +29,23 @@ nav
                 +main-menu('sub', 'neurologist.html', 'Неврологическое отделение')
                 +main-menu('sub', 'terapevt1.html', 'Терапевтическое отделение №1')
                 +main-menu('sub', 'terapevt2.html', 'Терапевтическое отделение №2(х.Рябичев)')
+                li.sub-menu__item
+                    a.sub-menu__link(href="kdl.html") Вспомагательные лечебно-диагностические подразделения
+                    ul.sub-sub-menu
+                        li.sub-sub-menu__item
+                            a.sub-sub-menu__link(href="kdl.html") Клинико-диагностическая лаборатория
+                        li.sub-sub-menu__item
+                            a.sub-sub-menu__link(href="#") Рентгеновский кабинет
+                        li.sub-sub-menu__item
+                            a.sub-sub-menu__link(href="#") Кабинеты функциональной диагностики
+                        li.sub-sub-menu__item
+                            a.sub-sub-menu__link(href="#") Кабинет ультразвуковой диагностики
+                        li.sub-sub-menu__item
+                            a.sub-sub-menu__link(href="#") Эндоскопический кабинет
+                        li.sub-sub-menu__item
+                            a.sub-sub-menu__link(href="#") Физиотерапевтические кабинеты
                 +main-menu('sub', 'clinic.html', 'Поликлиника')
                 +main-menu('sub', 'ambulance.html', 'Отделение скорой помощи')
-                +main-menu('sub', '#', 'Вспомагательные лечебно-диагностические подразделения')
                 +main-menu('sub', 'FAP.html', 'Фельдшерско-акушерские пункты')
         li.main-menu__item.main-menu__item--dropdown
             a.main-menu__link(href="pay.html") Платные услуги
