@@ -36,13 +36,17 @@ mixin breadcrumbs()
 			li.breadcrumbs-item.breadcrumbs-item--last
 				span.breadcrumbs-item__link Детская поликлиника
 
-mixin filesLink(href, icon, title, size)
+mixin filesLink(href, icon, title, size, bigText)
 	.file-link__wrap
-		a.file(href= href target="_blank")
+		a.file(href= href target="_blank" rel="noopener noreferrer")
 			span.file-icon
 				+icon(icon)
-			span.file-title= title
+			if(bigText)
+				span.file-title.big-title= title
+			else
+				span.file-title= title
 			span.file-size= size
+
 
 mixin dayShedule()
 	table.tftable(border="1px solid #000")

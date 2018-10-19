@@ -21,6 +21,7 @@
         width: 60px
         padding: 10px
         margin: 1px 10px 1px 1px
+        height: calc(100% - 2px)
         background-color: #fff
         svg
             width: 2rem
@@ -33,14 +34,20 @@
         .icon-file--doc
             fill: blue
         .icon-file--docx
-            fill: #1fb1e8        
+            fill: #1fb1e8
+        .icon-file--rar
+            fill: brown 
+        .icon-file--rtf
+            fill: #1103ec                     
     &-title
         color: $accent
         font-size: rem(13)
         font-weight: bold
         width: 100%
         line-height: 13px
-        padding: 10px 0
+        padding: 10px 5px
+        &.big-title
+            font-size: rem(11)
     &-size
         width: 100px
         font-style: italic
