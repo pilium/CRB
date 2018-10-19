@@ -45,7 +45,10 @@ mixin filesLink(href, icon, title, size, bigText)
 				span.file-title.big-title= title
 			else
 				span.file-title= title
-			span.file-size= size
+			if(size)
+				span.file-size= size
+			else
+				span.file-size.link переход на другой сайт
 
 
 mixin dayShedule()
