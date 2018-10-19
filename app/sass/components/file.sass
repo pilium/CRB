@@ -1,0 +1,39 @@
+.file-wrap
+    padding: 20px
+.file
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: #eee
+    transition: all .3s ease
+    border-radius: 6px
+    text-decoration: none
+    margin-bottom: 10px
+    &-icon
+        width: 60px
+        padding: 10px
+        margin: 5px 15px 5px  5px
+        background-color: #fff
+        svg
+            width: 2rem
+            height: 2rem
+            fill: $accent
+        .icon-file--pdf
+            fill: red
+        .icon-file--jpg
+            fill: darkgreen
+        .icon-file--doc
+            fill: blue
+    &-title
+        color: $accent
+        font-size: rem(13)
+        font-weight: bold
+        width: 100%
+        line-height: 13px
+        padding: 10px 0
+    &-size
+        width: 100px
+        font-style: italic
+        color: #999
+        font-size: rem(12)
+        padding: 10px 20px 10px 10px

@@ -156,9 +156,13 @@ gulp.task('svg-sprite', ['Scleansprite', 'svg-spritemade']);
 
 gulp.task('build', ['removedist', 'svg-sprite', 'imagemin', 'sass', 'js'], function() {
 
-  var buildFiles = gulp.src([
+  var buildHtml = gulp.src([
     'app/*.html',
   ]).pipe(gulp.dest('dist'));
+
+  var buildFiles = gulp.src([
+    'app/files/**/*.*',
+  ]).pipe(gulp.dest('dist/files'));
 
   var buildAccess = gulp.src([
     '.htaccess',

@@ -35,6 +35,14 @@ mixin breadcrumbs()
 				a.breadcrumbs-item__link(href="") Расписание приёма врачей
 			li.breadcrumbs-item.breadcrumbs-item--last
 				span.breadcrumbs-item__link Детская поликлиника
+
+mixin filesLink(href, icon, title, size)
+	a.file(href= href target="_blank")
+		span.file-icon
+			+icon(icon)
+		span.file-title= title
+		span.file-size= size
+
 mixin dayShedule()
 	table.tftable(border="1px solid #000")
 		caption распорядок дня в отделениях
