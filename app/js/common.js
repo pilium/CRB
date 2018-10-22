@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const preloader = document.getElementById('preloader');
     setTimeout(() => {
         preloader.classList.add('loaded');
-    }, 1000);
+        document.body.style.overflow = 'visible';
+    }, 3000);
+    
     // END Preloader
 
     const container = document.querySelector('.header-actions__search');
