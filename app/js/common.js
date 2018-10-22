@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
+    // preloader
+    const preloader = document.getElementById('preloader');
+    setTimeout(() => {
+        preloader.classList.add('loaded');
+    }, 1000);
+    // END Preloader
+
     const container = document.querySelector('.header-actions__search');
     const search = container.querySelector('.icon-magnifier-tool');
     const input = container.querySelector("[type=text]");
