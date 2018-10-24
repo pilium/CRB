@@ -1,69 +1,35 @@
 .slider
-    .container
-        position: relative
-        padding: 0
-    &-overflow
+  &-slide
+    width: 50%
+    margin-left: 50%
+    height: 100%
+    background-color: rgba(255, 255, 255, 0.7)
+    &__info
+      width: 100%
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      text-align: center
+      padding: 0 5px
+  .slider-info
+    font-family: 'Josefin Sans'
+    color: $main
+    &__title
+      text-transform: uppercase
+      font-weight: bold
+      letter-spacing: .3em
+      font-size: rem(34)
+      position: relative
+      margin-bottom: 30px
+      &:after
+        content: ''
         position: absolute
-        top: 0
-        left: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 40%
+        height: 1px
+        background-color: $accent
+        bottom: -15px
         display: block
-        bottom: 0
-        width: 50%
-        background-color: rgba(#fff, .8)
-        z-index: 2
-        box-shadow: inset 20px 0px 53px 0px rgba(216, 230, 226, 0.58)
-        iframe
-            position: absolute
-            display: block
-            bottom: 2%
-            right: 3%
-    &-composition
-        position: absolute
-        display: block
-        left: 20px
-        top: 10%
-        padding: 0 10px
-        &__info
-            h1
-                font-size: rem(24)
-                color: $main
-                span
-                    font-size: rem(40)
-                    color: $accent
-                    text-transform: uppercase
-                
-    .glide__arrow
-        position: absolute
-        display: block
-        top: 80%
-        z-index: 2
-        cursor: pointer
-        svg
-            width: 50px
-            height: 50px
-            position: absolute
-            display: block
-            top: 0
-            left: 0
-            fill: darken($accent, 30%)
-    .glide__arrow:hover
-        svg
-            fill: $main
-
-    .glide__arrow--left
-        left: 2.2em
-
-    .glide__arrow--right
-        left: 6.2em
-
-    .glide__arrow--disabled
-        opacity: 0.33
-
-    .glide--swipeable
-        cursor: grab
-        cursor: -moz-grab
-        cursor: -webkit-grab
-    .glide--dragging 
-        cursor: grabbing
-        cursor: -moz-grabbing
-        cursor: -webkit-grabbing
+    &__text
+      font-size: rem(18)

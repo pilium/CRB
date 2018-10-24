@@ -57,17 +57,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     }
-    if (sliderContainer) {
-        new Glide(sliderContainer, {
-        type: 'slider',
-        autoplay: 8000,
-        keybord: true,
-        hoverpause: true,
-        rewind: true,
-        rewindDuration: 1000,
-        animationTimingFunc: 'bounce'
-    }).mount();
-    }
+    // if (sliderContainer) {
+    //     new Glide(sliderContainer, {
+    //     type: 'slider',
+    //     autoplay: 8000,
+    //     keybord: true,
+    //     hoverpause: true,
+    //     rewind: true,
+    //     rewindDuration: 1000,
+    //     animationTimingFunc: 'bounce'
+    // }).mount();
+    // }
+    var mySwiper = new Swiper ('.swiper-container', {
+        loop: true,
+        parallax: true,
+        speed: 1000,
+        mousewheelControl: true
+      })
     
     if(mapContainer) {
         function init(){
