@@ -1,7 +1,47 @@
-section.map
+.map
     margin-bottom: 10px
-    #map
-        width: 100%
-        height: 400px
-    .map-info
-        background-color: $accent
+    &-wrapper
+        display: flex
+        align-items: center
+        justify-content: center
+    &-container
+        width: 50%
+        #map
+            width: 100%
+            height: 400px
+    &-info
+        width: 50%
+        height: 100%
+        padding: 10px
+        background-color: #fff
+        &__title
+            display: block
+            color: $accent
+            font-size: 30px
+            line-height: 40px
+            text-transform: uppercase
+            padding-bottom: 25px
+            margin-bottom: 24px
+            text-align: center
+            border-bottom: 1px solid $accent
+        &__adress
+            display: block
+            margin-bottom: 10px
+            padding-left: 29px
+            position: relative
+            color: $accent
+            font-size: 16px
+            line-height: 34px
+        &__tel
+            display: block
+            padding-left: 29px
+            position: relative
+            color: $accent
+            font-size: 16px
+            margin-bottom: 14px
+        &__mail
+            display: block
+            padding-left: 29px
+            position: relative
+            color: $accent
+            font-size: 16px

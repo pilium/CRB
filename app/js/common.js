@@ -70,6 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var mySwiper = new Swiper ('.swiper-container', {
         loop: true,
         parallax: true,
+        autoplay: {
+            delay: 5000,
+          },
         speed: 1000,
         mousewheelControl: true
       })
@@ -78,9 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 30,
         effect: 'fade',
         loop: true,
-        mousewheel: {
-          invert: false,
-        },
+        grabCursor: true,
+        autoplay: {
+            delay: 2000,
+          },
         // autoHeight: true,
         pagination: {
           el: '.blog-slider__pagination',
