@@ -1,17 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     // preloader
     const preloader = document.getElementById('preloader');
-    setTimeout(() => {
-        preloader.classList.add('active');
-    }, 3000);
-    
+    if(preloader) {
+        setTimeout(() => {
+            preloader.classList.add('active');
+            document.body.style.overflow = 'visible';
+        }, 3000);  
+    }
     // END Preloader
 
     const container = document.querySelector('.header-actions__search');
     const search = container.querySelector('.icon-magnifier-tool');
     const input = container.querySelector("[type=text]");
 
-    const sliderContainer = document.querySelector('.main-slider');
+    const sliderContainer = document.querySelector('.swiper-container');
     const mapContainer = document.getElementById('map');
 
     const link = document.querySelector(".js-header-info__writeToUs-link");
@@ -67,30 +69,32 @@ document.addEventListener("DOMContentLoaded", function () {
     //     animationTimingFunc: 'bounce'
     // }).mount();
     // }
-    var mySwiper = new Swiper ('.swiper-container', {
-        loop: true,
-        parallax: true,
-        autoplay: {
-            delay: 5000,
-          },
-        speed: 1000,
-        mousewheelControl: true
-      })
-      
-    var swiper = new Swiper('.blog-slider', {
-        spaceBetween: 30,
-        effect: 'fade',
-        loop: true,
-        grabCursor: true,
-        autoplay: {
-            delay: 2000,
-          },
-        // autoHeight: true,
-        pagination: {
-          el: '.blog-slider__pagination',
-          clickable: true,
-        }
-      });    
+    if(sliderContainer) {
+        var mySwiper = new Swiper ('.swiper-container', {
+            loop: true,
+            parallax: true,
+            autoplay: {
+                delay: 5000,
+            },
+            speed: 1000,
+            mousewheelControl: true
+        })
+        
+        var swiper = new Swiper('.blog-slider', {
+            spaceBetween: 30,
+            effect: 'fade',
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 2000,
+            },
+            // autoHeight: true,
+            pagination: {
+            el: '.blog-slider__pagination',
+            clickable: true,
+            }
+        });  
+    }
     if(mapContainer) {
         function init(){
         var myMap = new ymaps.Map("map", {
@@ -123,6 +127,27 @@ document.addEventListener("DOMContentLoaded", function () {
         const container = document.querySelector('.js-footer-info__date');
         container.innerHTML= date.toLocaleString("ru", options);
     }
+
+    // Hamburger
+    var wrapperMenu = document.querySelector('.wrapper-menu');
+    var sidenav = document.querySelector('.sidenav');
+    var overlay = document.querySelector('.sidenav-overlay');
+
+    wrapperMenu.addEventListener('click', function(){
+        wrapperMenu.classList.toggle('open');
+        sidenav.classList.toggle('show');
+        overlay.classList.toggle('show');
+    })
+    document.addEventListener('click', function(e) {
+        console.log(e);
+        
+        if(e.target.classList.contains('sidenav-overlay')) {
+            wrapperMenu.classList.toggle('open');
+            sidenav.classList.toggle('show');
+            overlay.classList.toggle('show');
+        }
+    })
+
     setTimeout(addTimeFooter, 100);
     search_toggle();
     modal();

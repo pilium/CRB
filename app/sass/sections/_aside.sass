@@ -1,12 +1,27 @@
 .aside
-    width: 250px
-    top: 0px
-    bottom: 0
     position: fixed
-    z-index: 3
-    display: flex
-    flex-direction: column
+    width: 300px
+    left: 0
+    top: 0
+    margin: 0
+    transform: translateX(-100%)
+    height: 100%
+    height: calc(100% + 60px)
+    height: -moz-calc(100%)
+    padding-bottom: 60px
     background-color: #fff
+    z-index: 999
+    overflow-y: auto
+    will-change: transform
+    backface-visibility: hidden
+    transform: translateX(-105%)
+    transition: transform 1s ease
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+    &.show
+        transform: translateX(0)
+        transition: transform 1s ease
+    li
+        line-height: 48px
     &-logo
         padding: 5px
         text-align: center
@@ -79,3 +94,18 @@
                 background: rgba(3, 36, 41, 0.2)
                 z-index: -2
                 right: 20%
+.sidenav-overlay
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    opacity: 0
+    height: 120vh
+    background-color: rgba(0,0,0,0.7)
+    z-index: 997
+    display: none
+    transition: opacity 1s ease
+    &.show
+        display: block
+        opacity: 1
+        transition: opacity 1s ease

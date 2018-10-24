@@ -62,11 +62,16 @@
     </style><![endif]-->
     <style body{opacity:="body{opacity:" 0="0" overflow-x:="overflow-x:" hidden}="hidden}" html{background-color:="html{background-color:" #1a1a1a}="#1a1a1a}"></style>
   </head>
-  <body class="home">
+  <body class="inner">
     <div class="main-wrapper">
       <main class="right-side">
         <header class="header">
           <div class="container">
+            <div class="wrapper-menu">
+              <div class="line-menu half start"></div>
+              <div class="line-menu"></div>
+              <div class="line-menu half end"></div>
+            </div>
             <ul class="header-info">
               <li class="header-info__item header-info__tel">
                 <div class="header-info__item-icon">
@@ -106,6 +111,7 @@
               </div>
             </div>
           </div>
+          <div class="sidenav-overlay"></div>
         </header><a href="writeRules.html">Правила записи на прием </a><a href="prepareRules.html">Правила подготовки к исследованиям</a>
         <footer class="footer">
           <div class="container">
@@ -153,6 +159,78 @@
           <button class="btn modal-user__btn" type="submit">Отправить</button>
           <button class="modal-close__btn" type="button"></button>
         </form>
+      </div>
+      <div class="sidenav aside" id="slide-out">
+        <div class="aside-logo"><a href="index.html" title="На главную"> <img src="img/logo-green.png" alt="Логотип"/></a></div>
+        <nav>
+          <ul class="main-menu">
+            <li class="main-menu__item main-menu__item--dropdown"><a class="main-menu__link" href="patient.html">Пациентам</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item"><a class="sub-menu__link" href="patientDuties.html">Права и обязанности пациента</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="doctorsShedule.html">График приема врачей</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="helpIf.html">Условия оказания медицинской помощи</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="privateQuestions.html">Прием граждан по личным вопросам</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="settlerProtect.html">Защита прав граждан</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="smo.html">Перечень страховых компаний</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="dispans.html">Диспансеризация</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="jnvls.html">Перечень ЖНВЛС</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item main-menu__item--dropdown"><a class="main-menu__link" href="#">О больнице</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item"><a class="sub-menu__link" href="history.html">История больницы</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="#">Новости</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="roadmap.html">Дорожная карта</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="corruption.html">Противодействие коррупции</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="licence.html">Лицензии</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="vacancy.html">Вакансии</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="#">Отзывы</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="#">Галерея</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item main-menu__item--dropdown"><a class="main-menu__link" href="#">Структура организации</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item"><a class="sub-menu__link" href="administration.html">Администрация</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="surgeon.html">Хирургическое отделение</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="neurologist.html">Неврологическое отделение</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="terapevt1.html">Терапевтическое отделение №1</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="terapevt2.html">Терапевтическое отделение №2(х.Рябичев)</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="kdl.html">Вспомагательные лечебно-диагностические подразделения</a>
+                  <ul class="sub-sub-menu">
+                    <li class="sub-sub-menu__item"><a class="sub-sub-menu__link" href="kdl.html">Клинико-диагностическая лаборатория</a></li>
+                    <li class="sub-sub-menu__item"><a class="sub-sub-menu__link" href="rentgen.html">Рентгеновский кабинет</a></li>
+                    <li class="sub-sub-menu__item"><a class="sub-sub-menu__link" href="kfd.html">Кабинеты функциональной диагностики</a></li>
+                    <li class="sub-sub-menu__item"><a class="sub-sub-menu__link" href="kud.html">Кабинет ультразвуковой диагностики</a></li>
+                    <li class="sub-sub-menu__item"><a class="sub-sub-menu__link" href="endoscop.html">Эндоскопический кабинет</a></li>
+                    <li class="sub-sub-menu__item"><a class="sub-sub-menu__link" href="fizio.html">Физиотерапевтические кабинеты</a></li>
+                  </ul>
+                </li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="clinic.html">Поликлиника</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="ambulance.html">Отделение скорой помощи</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="FAP.html">Фельдшерско-акушерские пункты</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item main-menu__item--dropdown"><a class="main-menu__link" href="pay.html">Платные услуги</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item"><a class="sub-menu__link" href="payShedule.html">График работы медицинского персонала</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="payOrders.html">Приказы о платных услугах</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="payOrganizations.html">Профосмотры для организаций</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item main-menu__item--dropdown"><a class="main-menu__link" href="rules.html">Общие правила</a>
+              <ul class="sub-menu">
+                <li class="sub-menu__item"><a class="sub-menu__link" href="writeRules.html">Правила записи на прием</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="prepareRules.html">Правила подготовки к исследованиям</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item"><a class="main-menu__link" href="articles.html">Полезные статьи</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="zoj.html">Здоровый образ жизни</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="contacts.html">Контакты</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="docs.html">Нормативные документы</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="files.html">Каталог файлов</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="online.html">online консультация</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </body>
