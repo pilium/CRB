@@ -43,9 +43,8 @@ html(lang="ru-RU")
 		//- bettertext
 		//- link(rel="stylesheet", href="https://unpkg.com/bettertext.css@2.0.x/bettertext.css")
 		
-		//- Slider Glide
-		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/css/glide.core.min.css")
-		//- link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/css/glide.theme.min.css")
+		//- animate
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css")
 
 		//- Swiper
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css")
@@ -197,7 +196,7 @@ html(lang="ru-RU")
 		//- 		span
 		//- 		span
 		.main-wrapper
-			include ../modules/aside
+			//- include ../modules/aside
 			main.right-side
 				include ../modules/header
 
@@ -206,6 +205,5 @@ html(lang="ru-RU")
 				include ../modules/footer
 			include ../modules/modal
 	block scripts
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.3/glide.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js")
 		script(src="js/scripts.min.js")
