@@ -31,7 +31,7 @@ gulp.task('pug', function() {
     .pipe(plumber())
     .pipe(sourcemaps.init())
       .pipe(pug({
-    pretty: true //минификация: False
+    pretty: false //минификация: False
   }))
       .on('error', notify.onError(function(error) {
     return 'Message to the notifier: ' + error.message;
@@ -50,7 +50,7 @@ gulp.task('js', function() {
     }))
     .pipe(sourcemaps.init())
       .pipe(concat('scripts.min.js'))
-      // .pipe(uglify()) // Минимизировать весь js (на выбор)
+      .pipe(uglify()) // Минимизировать весь js (на выбор)
     .pipe(sourcemaps.write())
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.reload({stream: true}));
@@ -73,7 +73,7 @@ gulp.task('sass', function() {
       .pipe(sass({outputStyle: 'expand'}).on('error', notify.onError()))
       .pipe(rename({suffix: '.min', prefix: ''}))
       .pipe(autoprefixer(['last 15 versions']))
-      // .pipe(cleanCSS()) // Опционально, закомментировать при отладке
+      .pipe(cleanCSS()) // Опционально, закомментировать при отладке
     .pipe(sourcemaps.write())
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({stream: true}));
