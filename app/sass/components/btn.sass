@@ -1,0 +1,100 @@
+// Кнопка
+.btn
+    display: inline-block
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
+    padding: .5rem 1.6rem
+    font-weight: 400
+    text-align: center
+    font-size: .64rem
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    margin: .375rem
+    border: 0
+    border-radius: .125rem;
+    cursor: pointer
+    text-transform: uppercase
+    white-space: normal
+    word-wrap: break-word
+    color: #fff
+    background-color: $accent
+    &:hover
+        border-color: darken($accent, 10%)
+    &.btn--min
+        width: 200px
+    &.btn--card
+        position: relative
+        display: inline-block
+        cursor: pointer
+        outline: none
+        border: 0
+        vertical-align: middle
+        text-decoration: none
+        background: transparent
+        padding: 0
+        font-size: inherit
+        font-family: inherit
+        width: 12rem
+        height: auto
+        .circle 
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1)
+            position: relative
+            margin: 0
+            width: 3rem
+            height: 3rem
+            background: $accent
+            border-radius: 1.625rem
+            .icon 
+                transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1)
+                position: absolute
+                top: 0
+                bottom: 0
+                margin: auto
+                background: #fff
+                left: 0.625rem
+                width: 1.125rem
+                height: 0.125rem
+                background: none
+                &::before 
+                    position: absolute
+                    content: ''
+                    top: -0.25rem
+                    right: 0.0625rem
+                    width: 0.625rem
+                    height: 0.625rem
+                    border-top: 0.125rem solid #fff
+                    border-right: 0.125rem solid #fff
+                    transform: rotate(45deg)
+        .button-text 
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1)
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            padding: 0.75rem 0
+            margin: 0 0 0 0.85rem
+            color: #282936
+            display: none
+            font-weight: 700
+            line-height: 1.6
+            text-align: center
+            text-transform: uppercase
+
+        &:hover
+            .circle 
+                width: 95%
+                .icon
+                    background: #fff
+                    transform: translate(1rem, 0)
+            .button-text
+                display: block
+                color: #fff
+    &.btn--slider-btn
+      width: auto
+      background: none
+      text-transform: uppercase
+      font-size: 16px
+      padding: 6px 20px
+      transition: all .3s ease
+      background-color: $accent
+      color: #fff
+      text-decoration: none

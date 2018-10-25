@@ -67,8 +67,12 @@ mixin filesLink(href, icon, title, size, bigText, addons, addonsHref)
 
 
 mixin dayShedule()
-	table.tftable(border="1px solid #000")
+	table.table.table-mc-green.table-bordered.table-striped
 		caption распорядок дня в отделениях
+		thead
+			tr
+				th Часы
+				th Действие
 		tr
 			td 06.00-6.30
 			td Подъем, измерение температуры
