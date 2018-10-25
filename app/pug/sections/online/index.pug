@@ -5,18 +5,18 @@ section.online
         p Прежде чем задать вопрос, ознакомьтесь, пожалуйста, с 
             a(href="onlineRules.html", target="_blank", rel="noopener noreferrer") "Правилами on-line консультирования".
         form(action="#", method="get")
-            p
-                label(for="online-name") Имя отправителя
+            p.input-field
                 input(type="text", name="online[name]", id="online-name")
-            p
-                label(for="online-mail") E-mail отправителя 
+                label(for="online-name") Имя отправителя
+            p.input-field 
                 input(type="mail", name="online[mail]", id="online-mail")
-            p
-                label(for="online-theme") Тема письма
+                label(for="online-mail") E-mail отправителя
+            p.input-field
                 input(type="mail", name="online[theme]", id="online-theme")
-            p
-                label(for="online-text") Тема письма
+                label(for="online-theme") Тема письма
+            p.input-field
                 textarea(name="online[text]", cols="30", rows="5" id="online-text")
-            p
+                label(for="online-text") Тема письма
+            p.input-field
                 input.btn(type="submit", value="Отправить")
                 

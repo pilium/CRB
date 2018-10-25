@@ -139,14 +139,29 @@ document.addEventListener("DOMContentLoaded", function () {
         overlay.classList.toggle('show');
     })
     document.addEventListener('click', function(e) {
-        console.log(e);
-        
         if(e.target.classList.contains('sidenav-overlay')) {
             wrapperMenu.classList.toggle('open');
             sidenav.classList.toggle('show');
             overlay.classList.toggle('show');
         }
     })
+
+    // accordion
+    var acc = document.getElementsByClassName("collapsible-header");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function(e) {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            e.preventDefault();
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            panel.classList.toggle('active')
+        });
+    }
 
     setTimeout(addTimeFooter, 100);
     search_toggle();
