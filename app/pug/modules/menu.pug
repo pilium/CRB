@@ -4,7 +4,6 @@ nav
             ul.collasible
                 .collapsible-header
                     span Пациентам
-                    
                 .collapsible-body
                     ul.sub-menu
                         +main-menu('sub', 'patientDuties.html', 'Права и обязанности пациента')
@@ -19,7 +18,6 @@ nav
             ul.collasible
                 .collapsible-header
                     span О больнице
-                   
                 .collapsible-body
                     ul.sub-menu
                         +main-menu('sub', 'history.html', 'История больницы')
@@ -41,26 +39,21 @@ nav
                         +main-menu('sub', 'neurologist.html', 'Неврологическое отделение')
                         +main-menu('sub', 'terapevt1.html', 'Терапевтическое отделение №1')
                         +main-menu('sub', 'terapevt2.html', 'Терапевтическое отделение №2(х.Рябичев)')
-                        li.sub-menu__item
-                            .collapsible-header
-                                span Вспомагательные лечебно-диагностические подразделения 
-                            .collapsible-body
-                                ul.sub-sub-menu
-                                    li.sub-sub-menu__item
-                                        a.sub-sub-menu__link(href="kdl.html") Клинико-диагностическая лаборатория
-                                    li.sub-sub-menu__item
-                                        a.sub-sub-menu__link(href="rentgen.html") Рентгеновский кабинет
-                                    li.sub-sub-menu__item
-                                        a.sub-sub-menu__link(href="kfd.html") Кабинеты функциональной диагностики
-                                    li.sub-sub-menu__item
-                                        a.sub-sub-menu__link(href="kud.html") Кабинет ультразвуковой диагностики
-                                    li.sub-sub-menu__item
-                                        a.sub-sub-menu__link(href="endoscop.html") Эндоскопический кабинет
-                                    li.sub-sub-menu__item
-                                        a.sub-sub-menu__link(href="fizio.html") Физиотерапевтические кабинеты
                         +main-menu('sub', 'clinic.html', 'Поликлиника')
                         +main-menu('sub', 'ambulance.html', 'Отделение скорой помощи')
                         +main-menu('sub', 'FAP.html', 'Фельдшерско-акушерские пункты')
+        li.main-menu__item.dropdown
+            ul.collapsible
+                .collapsible-header
+                    span.small-text Лечебно-диагностические подразделения 
+                .collapsible-body
+                    ul.sub-sub-menu
+                        +main-menu('sub', 'kdl.html', 'Клинико-диагностическая лаборатория')
+                        +main-menu('sub', 'rentgen.html', 'Рентгеновский кабинет')
+                        +main-menu('sub', 'kfd.html', 'Кабинеты функциональной диагностики')
+                        +main-menu('sub', 'kud.html', 'Кабинет ультразвуковой диагностики')
+                        +main-menu('sub', 'endoscop.html', 'Эндоскопический кабинет')
+                        +main-menu('sub', 'fizio.html', 'Физиотерапевтические кабинеты')
         li.main-menu__item.dropdown
             ul.collasible
                 .collapsible-header
