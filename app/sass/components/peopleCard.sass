@@ -1,12 +1,13 @@
 .article-card__wrapper
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-content: space-around
     flex-wrap: wrap
 .card-wrapper
-    width: 45%
+    width: 32%
     position: relative
     min-height: 1px
+
 .material-card
   position: relative
   height: 0
@@ -35,6 +36,8 @@
       font-weight: 400
       display: block
       font-size: 0.8em
+      &.small-text
+        font-size: 11px
     &:before
       content: ' '
       position: absolute
@@ -74,10 +77,6 @@
     top: 0
     bottom: 16px
     left: 16px
-    -webkit-transition: all 0.3s
-    -moz-transition: all 0.3s
-    -ms-transition: all 0.3s
-    -o-transition: all 0.3s
     transition: all 0.3s
   .mc-btn-action
     position: absolute
