@@ -47,15 +47,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let modal = () => {
+        const overlay = document.querySelector('.modal-overlay');
         link.addEventListener("click", function (event) {
             event.preventDefault();
             popup.classList.toggle("modal-show");
+            overlay.classList.toggle('show');
             login.focus();
         });
         close.addEventListener("click", function (event) {
             event.preventDefault();
             popup.classList.remove("modal-show");
+            overlay.classList.toggle('show');
         });
+        document.addEventListener('click', function(e) {
+            if(e.target.classList.contains('modal-overlay')) {
+                popup.classList.remove("modal-show");
+                overlay.classList.toggle('show');
+            }
+        })
 
     }
     // if (sliderContainer) {
