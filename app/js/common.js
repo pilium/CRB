@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
             loop: true,
             grabCursor: true,
             autoplay: {
-                delay: 2000,
+                delay: 7000,
             },
             // autoHeight: true,
             pagination: {
@@ -186,11 +186,11 @@ document.addEventListener("DOMContentLoaded", function () {
         var swiper = new Swiper('.news-slider', {
             effect: 'coverflow',
             grabCursor: true,
-            loop: true,
+            loop: false,
             centeredSlides: true,
             keyboard: true,
             spaceBetween: 0,
-            slidesPerView: 'auto',
+            slidesPerView: '3',
             speed: 300,
             coverflowEffect: {
                 rotate: 0,
