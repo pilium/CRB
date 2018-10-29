@@ -1,8 +1,9 @@
 section.duties
-    .container
+    .panel.panel-breadcrumbs
         +breadcrumbs()
+    .container
         h1.section-title Права и обязанности пациента
-        .flow-text
+        .panel
             ul
                 | При обращении за медицинской помощью и ее получении пациент имеет право на:
                 li
@@ -153,5 +154,5 @@ section.duties
                             | одновременное лечение в другом учреждении без ведома и разрешения лечащего врача;
                         li отказ от направления или несвоевременная явка на ВК.
             p
-                | Просим Вас ознакомиться с 
-                a(href="rulestoPrepare.html") Правилами для пациентов по подготовке к диагностическим процедурам
+                | Просим Вас ознакомиться
+            +filesLink('files/catalog/pravila_dlja_pacientov_po_podgotovke_k_diagnostich.doc', 'file--doc', 'Правила для пациентов по подготовке к диагностическим процедурам', '( 0.2мб )')

@@ -37,7 +37,6 @@ html(lang="ru-RU")
 		meta(http-equiv="cleartype" content="on")
 
 		//- fonts
-		link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,400italic,600italic" rel="stylesheet")
 		
 		//- bettertext
@@ -183,15 +182,13 @@ html(lang="ru-RU")
 					c2.701-2.71,2.701-0.518,5.402-2.195c2.701-1.678,5.402,0,6.559-1.678c1.158-1.678,1.288-1.419,4.888,0s2.314-1.031,2.188-5.937\
 					c-0.129-4.904,2.058-2.709,2.058-4.516s-1.672-0.515-2.057-2.708C236.896,70.784,234.58,69.108,232.009,72.205z")
 		.main-wrapper
-			//- include ../modules/aside
-			main.right-side
-				include ../modules/header
+			include ../modules/header
 
-				block content
+			block content
 
-				include ../modules/footer
-			include ../modules/modal
-			include ../modules/aside
+			include ../modules/footer
+		include ../modules/modal
+		include ../modules/aside
 	block scripts
 		//- Swiper
 		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css")

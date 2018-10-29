@@ -12,11 +12,6 @@ body
     width: 100%
     max-width: 1600px
 
-main.right-side
-    position: relative
-    background-color: #fff
-    overflow: hidden
-
 .container
     width: 100%
     margin: 0 auto
@@ -27,16 +22,55 @@ ul
     margin: 0
     list-style: none
 
+article
+    ul
+        padding: 10px
+        margin: 10px
+        list-style-type: square
+
 img
     max-width: 100%
     height: auto
+
+.inner
+    section:not(.map)
+        background-color: #ededed
+        .section-title
+            font-size: rem(30)
+            font-weight: bold
+            text-align: center
 
 a
     color: inherit
     font-size: inherit
     &:hover
         text-decoration: none
-
+article
+    a
+        text-decoration: underline
+        color: $accent
+        font-style: italic
+        font-weight: bold
+        &:hover
+            color: lighten($accent, 10%)
+            text-decoration: underline
+.panel
+    width: 100%
+    margin: 20px auto
+    text-align: left
+    padding: 1%
+    box-shadow: 0 .005em .01em 0 rgba(0,0,0,.15),0 2px 10px 0 rgba(0,0,0,.15)
+    background-color: #fff
+    &.panel-form
+        width: 50%
+    &.panel-nopd
+        padding: 0
+    &.panel-breadcrumbs
+        padding: 0
+        margin-top: 1px
+    &.panel-list:not(:first-child)
+        margin-bottom: 1px
+        margin-top: 0
 
 // download
 .download
