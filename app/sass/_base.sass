@@ -24,9 +24,14 @@ ul
 
 article
     ul
-        padding: 10px
-        margin: 10px
         list-style-type: square
+    a
+        text-decoration: underline
+        color: $accent
+        font-weight: bold
+        &:hover
+            color: lighten($accent, 10%)
+            text-decoration: underline
 
 img
     max-width: 100%
@@ -37,21 +42,11 @@ img
         font-size: rem(30)
         font-weight: bold
         text-align: center
-
 a
     color: inherit
     font-size: inherit
     &:hover
         text-decoration: none
-article
-    a
-        text-decoration: underline
-        color: $accent
-        font-style: italic
-        font-weight: bold
-        &:hover
-            color: lighten($accent, 10%)
-            text-decoration: underline
 .panel
     width: 100%
     margin: 20px auto
