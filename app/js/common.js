@@ -200,6 +200,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 slideShadows: false
             },
             breakpoints: {
+                1024: {
+                    slidesPerView: 2
+                },
+                800: {
+                    slidesPerView: 1
+                },
                 480: {
                     spaceBetween: 0,
                     centeredSlides: true

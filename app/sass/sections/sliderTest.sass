@@ -3,7 +3,8 @@
     width: 100%
     height: 800px
     padding-top: 20px
-    margin-bottom: 20px
+    margin-bottom: 30px
+    margin-top: 60px
 .icon-slider
   display: inline-block
   width: 1em
@@ -75,10 +76,10 @@
 
 .news-slider__ctr
   position: relative
-  z-index: 12
+  z-index: 9
 
 .news-slider__arrow
-  background: #fff
+  background: $accent
   border: none
   display: inline-flex
   width: 50px
@@ -96,6 +97,8 @@
     outline: none !important
   .icon-font
     display: inline-flex
+    svg
+      fill: #fff
   &.news-slider-prev
     left: 15px
     transform: translateY(-50%)
@@ -118,7 +121,7 @@
     transition-delay: .5s, .5s, 0s
   .swiper-pagination-bullet-active
     opacity: 1
-    background: #ffffff
+    background: $accent
     width: 100px
     transition-delay: 0s
 
