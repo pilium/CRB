@@ -1,10 +1,12 @@
 section.online
     .container
-        h2 Уважаемые посетители!
+        h1.section-title Online-консультация
+        p Уважаемые посетители!
         p Вы можете задать вопрос специалистам нашей больницы, однако просим Вас четко осознавать, что в большинстве случаев мы можем только сориентировать Вас в том, к какому специалисту необходимо обратиться в первую очередь и какие анализы и обследования Вам нужно пройти для постановки правильного диагноза и назначения эффективного лечения.
         p Прежде чем задать вопрос, ознакомьтесь, пожалуйста, с 
             a(href="onlineRules.html", target="_blank", rel="noopener noreferrer") "Правилами on-line консультирования".
-        form(action="#", method="get")
+        p.form-caption Оставьте свой вопрос
+        form.small(action="#", method="get")
             p.input-field
                 input(type="text", name="online[name]", id="online-name")
                 label(for="online-name") Имя отправителя
@@ -17,6 +19,6 @@ section.online
             p.input-field
                 textarea(name="online[text]", cols="30", rows="5" id="online-text")
                 label(for="online-text") Тема письма
-            p.input-field
-                input.btn(type="submit", value="Отправить")
+            p.input-field.input-field--btn
+                input.btn.btn--form(type="submit", value="Отправить")
                 
