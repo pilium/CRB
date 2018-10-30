@@ -7,9 +7,12 @@ nav
                 .collapsible-body
                     ul.sub-menu
                         +main-menu('sub', 'patientDuties.html', 'Права и обязанности пациента')
+                        +main-menu('sub', 'writeRules.html', 'Правила записи на прием')
+                        +main-menu('sub', 'prepareRules.html', 'Правила подготовки к исследованиям')
                         +main-menu('sub', 'doctorsShedule.html', 'График приема врачей')
                         +main-menu('sub', 'helpIf.html', 'Условия оказания медицинской помощи')
                         +main-menu('sub', 'services.html', 'Оказываемые услуги')
+                        +main-menu('sub', 'demografic.html', 'Демографические показатели')
                         +main-menu('sub', 'privateQuestions.html', 'Прием граждан по личным вопросам')
                         +main-menu('sub', 'settlerProtect.html', 'Защита прав граждан')                  
                         +main-menu('sub', 'smo.html', 'Перечень страховых компаний')
@@ -24,6 +27,7 @@ nav
                         +main-menu('sub', 'history.html', 'История больницы')
                         +main-menu('sub', '#', 'Новости')
                         +main-menu('sub', 'roadmap.html', 'Дорожная карта')
+                        +main-menu('sub', 'modernize.html', 'Модернизация здравоохранения')
                         +main-menu('sub', 'corruption.html', 'Противодействие коррупции')
                         +main-menu('sub', 'licence.html', 'Лицензии')
                         +main-menu('sub', 'vacancy.html', 'Вакансии')
@@ -64,15 +68,6 @@ nav
                         +main-menu('sub', 'payShedule.html', 'График работы медицинского персонала')
                         +main-menu('sub', 'payOrders.html', 'Приказы о платных услугах')
                         +main-menu('sub', 'payOrganizations.html', 'Профосмотры для организаций')
-        li.main-menu__item.dropdown
-            ul.collasible
-                .collapsible-header
-                    span Общие правила 
-                .collapsible-body
-                    ul.sub-menu
-                        +main-menu('sub', 'writeRules.html', 'Правила записи на прием')
-                        //- +main-menu('sub', 'innerRules.html', 'Правила внутреннего распорядка')
-                        +main-menu('sub', 'prepareRules.html', 'Правила подготовки к исследованиям')
         +main-menu('main', 'articles.html', 'Полезные статьи')
         +main-menu('main', 'zoj.html', 'Здоровый образ жизни')
         +main-menu('main', 'contacts.html', 'Контакты')

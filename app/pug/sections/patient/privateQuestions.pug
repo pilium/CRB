@@ -1,47 +1,53 @@
 section.privateQuestions
-    .container
+    .panel.panel-breadcrumbs
         +breadcrumbs()
-        h1.section-title Прием по личным вопросам
-        p Уважаемые пациенты!
-        p
-            | С целью реализации прав граждан на оказание доступной и качественной медицинской помощи и своевременного решения
-            | вопросов, возникающих при ее оказании,
-            | в МБУЗ "ЦРБ" Волгодонского района
-            | по адресу: 
-            i  Волгодонской район, ст.Романовская пер.Союзный 97а
-            |         в кабинете Главного врача
-            |         осуществляется прием граждан по личным вопросам.
-        ul
-            | Прием ведут:
-            li
-                b
-                    | Главный врач
-                    | Найденов Сергей Юрьевич
-                |  каждую среду
-                |             с 1500 до 1700
-                |             тел.: 8(86394) 70614 e-mail: crbvr@yandex.ru
-            li
-                b
-                    | Заместитель Главы Администрации Волгодонского района
-                    | по социальным вопросам и информационной политике
-                    | Леонова Светлана Владимировна
-                |  каждую третью среду месяца с
-                |             1500 до 1700
-                |             тел.: 8(86394) 70130 e-mail: radm@vttc.donpac.ru
-        p
-            | Так же здесь Вы можете pадать свой вопрос главному врачу и получить ответ на указанный Вами e-mail.
-        form(action="#" method="post")
+    .container
+        article.panel
+            h1.section-title Прием граждан по личным вопросам
+            p Уважаемые пациенты!
             p
-                label(for="topic") Тема вопроса
-                input#topic(type="text" name="topic")
-            p
-                label(for="description") Описание вопроса
-                textarea#description(name="text" cols="100" rows="20")
-            p
-                label(for="name") Ваше имя
-                input#name(type="text" name="name")
-            p
-                label(for="email") Ваш e-mail
-                input#email(type="email" name="email")
-            p тут капча
-            input(type="button" value="submit")
+                | С целью реализации прав граждан на оказание доступной и качественной медицинской помощи и своевременного решения
+                | вопросов, возникающих при ее оказании,
+                | в МБУЗ "ЦРБ" Волгодонского района
+                | по адресу: 
+                i  Волгодонской район, ст.Романовская пер.Союзный 97а
+                |         в кабинете Главного врача
+                |         осуществляется прием граждан по личным вопросам.
+            p Прием ведут:
+            ul
+                li
+                    p
+                        b
+                            | Главный врач
+                            | Найденов Сергей Юрьевич
+                        |  каждую среду
+                        |             с 1500 до 1700
+                        |             тел.: 8(86394) 70614 e-mail: crbvr@yandex.ru
+                li
+                    p
+                        b
+                            | Заместитель Главы Администрации Волгодонского района
+                            | по социальным вопросам и информационной политике
+                            | Леонова Светлана Владимировна
+                        |  каждую третью среду месяца с
+                        |             1500 до 1700
+                        |             тел.: 8(86394) 70130 e-mail: radm@vttc.donpac.ru
+            p Так же здесь Вы можете pадать свой вопрос главному врачу и получить ответ на указанный Вами e-mail.
+            .form-wrap
+                #form-container.expand
+                    #form-content.expand
+                        #form-head
+                            h3.pre Оставьте свой вопрос
+                            p.pre Ответ будет отправлен на вашу почту
+                        form(action="#" method="POST" name="online")
+                            p
+                                label(for="ask-name") Ваше имя
+                                input.input.name(name='ask_name', placeholder='Ваше имя', type='text', id="ask-name" )
+                            p
+                                label(for="ask-email") Ваш e-mail
+                                input.input.email(name='ask_email', placeholder='Ваш e-mail', type='mail', id="ask-email")
+                            p
+                                label(for="ask-subject") Тема вопроса
+                                input.input.subject(name='ask_subject', placeholder='Тема сообщения', type='text', id='ask-subject')
+                            textarea.input.message(placeholder='Ваше сообщение')
+                            input.input.submit(type='submit', value='Отправить сообщение')
