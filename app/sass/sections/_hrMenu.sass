@@ -1,0 +1,128 @@
+/*---------Задаём параметры блока, содержащего основное меню------------
+
+.site-navigation
+  width: 100%
+  height: 100%
+  text-align: center
+  margin-left: auto
+  margin-right: auto
+  z-index: 200
+  .main-menu__item
+    padding: 0
+/*---------------Задаём стили для разделов нашего меню--------------
+
+.actives
+  background-color: $accent !important
+  text-decoration: none !important
+  border-left: 5px solid #1F8046 !important
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+
+.site-navigation
+  display: flex
+  justify-content: space-between
+  align-items: center
+  > li
+    height: 36px
+    position: relative
+    width: 200px
+    text-align: center
+    width: calc( 100% / 7 )
+    display: table
+    background-color: $accent
+    z-index: 200
+    > a, span
+      width: 100%
+      display: table-cell
+      vertical-align: middle
+      text-decoration: none
+      font-size: 8pt !important
+      font-weight: bold
+      text-transform: uppercase
+      color: #fff
+      -webkit-transition: all 0.3s ease-in-out
+      -o-transition: all 0.3s ease-in-out
+      transition: all 0.3s ease-in-out
+      border-left: 5px solid $accent
+      &:hover
+        background-color: #fff
+        color: #1F8046
+        text-decoration: none
+        border-left: 5px solid #1F8046
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+  li
+    &.active 
+        a, span
+            background-color: #fff
+            color: #3f9979
+            border-left: 5px solid #3f9979
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+    position: relative
+    cursor: pointer
+  strong
+    color: #333
+    font-weight: 700
+    font-size: 10pt
+    padding: 0 0 0 3px
+  > li
+    > ul
+      a, span
+        background-color: #fff
+        text-decoration: none
+        font-size: 8pt !important
+        font-weight: bold
+        display: block
+        padding: 12px 5px
+        text-transform: uppercase
+        color: #1F8046
+        -webkit-transition: all 0.3s ease-in-out
+        -o-transition: all 0.3s ease-in-out
+        transition: all 0.3s ease-in-out
+        border-left: 5px solid #1F8046
+        border-top: 1px solid #1F8046
+      li:hover >
+        a, span
+          color: #47B308
+          text-decoration: underline !important
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+          border-radius: 0px
+          border-left: 5px solid #47B308
+    ul
+      position: absolute
+      display: none
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+      width: 100%
+      border-right: 1px solid #1F8046
+      border-bottom: 1px solid #1F8046
+    > ul
+      > li > ul li > ul
+        width: 220px
+      left: 0
+      top: 36px
+      li
+        > ul
+          left: 100%
+          top: 0
+          opacity: 0
+          transition: 0.5s
+          -webkit-transition: 0.5s
+          -moz-transition: 0.5s
+          -o-transition: 0.5s
+        &:hover > ul
+          display: block
+          opacity: 1
+          transition: 0.5s
+          -webkit-transition: 0.5s
+          -moz-transition: 0.5s
+          -o-transition: 0.5s
+
+ 
+/*---------- Делаем скрытую часть видимой ---------------
+
+.site-navigation > li:hover >
+  ul
+    display: block
+  a
+    background-color: $accent !important
+    color: #fff !important
+    text-decoration: none !important
+    border-left: 5px solid #1F8046 !important

@@ -145,18 +145,19 @@ document.addEventListener("DOMContentLoaded", function () {
     var sidenav = document.querySelector('.sidenav');
     var overlay = document.querySelector('.sidenav-overlay');
 
-    wrapperMenu.addEventListener('click', function () {
-        wrapperMenu.classList.toggle('open');
-        sidenav.classList.toggle('show');
-        overlay.classList.toggle('show');
-    })
-    document.addEventListener('click', function (e) {
-        if (e.target.classList.contains('sidenav-overlay')) {
+    if(wrapperMenu)
+        wrapperMenu.addEventListener('click', function () {
             wrapperMenu.classList.toggle('open');
             sidenav.classList.toggle('show');
             overlay.classList.toggle('show');
-        }
-    })
+        })
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('sidenav-overlay')) {
+                wrapperMenu.classList.toggle('open');
+                sidenav.classList.toggle('show');
+                overlay.classList.toggle('show');
+            }
+        })
 
     // accordion
     var acc = document.getElementsByClassName("collapsible-header");
