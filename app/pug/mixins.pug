@@ -113,6 +113,22 @@ mixin dayShedule()
 			td 22.00
 			td Отбой
 
+//- main section title
+mixin mainSectionTitle(first, last)
+	.rhombus-title
+		.double-line.is--left
+		.rhombus.is--left
+			span
+			span
+			span
+		h5= first
+			span= last
+		.rhombus.is--right
+			span
+			span
+			span
+		.double-line.is--right
+
 //- sections items
 
 mixin organizationsItem(href, src, alt, text)

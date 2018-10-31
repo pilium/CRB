@@ -1,0 +1,66 @@
+.rhombus-title
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: 
+  margin: 40px auto
+  .double-line
+    flex: 1 1
+    height: 10px
+    position: relative
+    transform-origin: center center
+    &.is--right
+      transform: scale(-1, 1)
+    &:before
+      content: ""
+      width: 100%
+      height: 1px
+      position: absolute
+      top: -5px
+      left: 0
+      background: linear-gradient(to left, rgba($accent, .5), rgba($accent, .1))
+    &:after
+      content: ""
+      width: 100%
+      height: 1px
+      position: absolute
+      top: 0
+      left: 0
+      background: linear-gradient(to left, rgba($accent, .5), rgba($accent, .1))
+      top: unset
+      bottom: 4px
+      left: 0
+  .rhombus
+    margin: 0 5px
+    width: 35px
+    flex: 0 0 35px
+    height: 25px
+    position: relative
+    span
+      background: $accent
+      transform: rotate(45deg)
+      transform-origin: center center
+      display: block
+      position: absolute
+      width: 15px
+      height: 15px
+      &:nth-child(1)
+        top: 0
+      &:nth-child(2)
+        opacity: .8
+        transform: rotate(45deg) scale(0.8)
+      &:nth-child(3)
+        opacity: .6
+        transform: rotate(45deg) scale(0.6)
+    &.is--left span:nth-child(1), &.is--right span:nth-child(3)
+      right: 0
+    &.is--left span:nth-child(2)
+      right: 10px
+    &.is--right span:nth-child(2)
+      left: 10px
+  h5
+    margin: 0 10px
+    font-size: rem(36)
+    text-transform: uppercase
+    span
+      color: $accent
