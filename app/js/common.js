@@ -187,16 +187,16 @@ document.addEventListener("DOMContentLoaded", function () {
             effect: 'coverflow',
             grabCursor: true,
             loop: false,
-            centeredSlides: true,
+            centeredSlides: false,
             keyboard: true,
-            spaceBetween: 0,
+            spaceBetween: 10,
             slidesPerView: '3',
             speed: 300,
             coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
                 depth: 0,
-                modifier: 3,
+                modifier: 1,
                 slideShadows: false
             },
             breakpoints: {

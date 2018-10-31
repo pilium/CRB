@@ -2,9 +2,7 @@
     position: relative
     width: 100%
     height: 800px
-    padding-top: 20px
     margin-bottom: 30px
-    margin-top: 60px
     overflow: hidden
 .icon-slider
   display: inline-block
@@ -27,15 +25,7 @@
     left: 0
     width: 100%
     height: 100%
-    background-image: linear-gradient(45deg, #fff 0%, #0E5DC4 100%)
-    opacity: 0.9
-  img
-    width: 100%
-    height: 100%
-    object-fit: cover
-    pointer-events: none
-    user-select: none
-
+  
 .news-slider
   z-index: 2
   max-width: 1300px
@@ -58,18 +48,12 @@
   z-index: 2
 
 .news-slider__item
-  width: 400px
+  width: 500px
   flex-shrink: 0
   &.swiper-slide
     opacity: 1
     pointer-events: auto
     transition: all .3s
-  &.swiper-slide-active
-    opacity: 1
-    pointer-events: auto
-    background-color: #fff
-    * 
-        color: #000
 
 @media screen and (max-width: 992px)
   .news-slider__item
@@ -114,8 +98,8 @@
     width: 13px
     height: 10px
     display: inline-block
-    background: #fff
-    opacity: .2
+    background: $accent
+    opacity: .4
     margin: 0 5px
     border-radius: 20px
     transition: opacity .5s, background-color .5s, width .5s
@@ -131,21 +115,25 @@
     width: 70px
 
 .news__item
-  padding: 40px
-  color: $main
+  padding: 30px
+  color: #222
   border-radius: 10px
   display: block
   transition: all .3s
-  &.active
-    color: #222222
-    .news-date, .news__title, .news__txt
-      opacity: 1
-    .news__img
-      box-shadow: none
+  background-color: #fff
+  color: $accent
+  transition: all .3s linear
+  &:hover
+    background-color: $accent
+    color: #fff
+    transition: all .3s linear
+    .news__title
+      color: #fff
+      transition: all .3s linear
+  
 
 @media screen and (min-width: 800px)
   .news__item:hover
-    color: #222222
     transition-delay: .1s
     .news-date, .news__title, .news__txt
       opacity: 1
@@ -155,18 +143,18 @@
 
 @media screen and (max-width: 992px)
   .news__item
-    padding: 30px
+    padding: 20px
 
 @media screen and (max-width: 576px)
   .news__item
-    padding: 20px
+    padding: 10px
 
 .news-date
   padding-bottom: 20px
   margin-bottom: 20px
   border-bottom: 2px solid
   display: inline-block
-  opacity: .7
+  opacity: 1
   transition: opacity .3s
 
 @media screen and (max-width: 576px)
@@ -190,12 +178,15 @@
   font-size: 16px
 
 .news__title
+  display: block
   font-size: 25px
   font-weight: 500
-  opacity: .7
+  opacity: 1
   margin-top: 10px
   margin-bottom: 15px
   transition: opacity .3s
+  cursor: pointer
+  color: $accent
 
 @media screen and (max-width: 576px)
   .news__title
@@ -206,7 +197,7 @@
   margin: 10px 0
   line-height: 1.6em
   font-size: 15px
-  opacity: .7
+  opacity: 1
   transition: opacity .3s
 
 .news__img

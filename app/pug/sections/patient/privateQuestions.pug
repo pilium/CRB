@@ -49,5 +49,7 @@ section.privateQuestions
                             p
                                 label(for="ask-subject") Тема вопроса
                                 input.input.subject(name='ask_subject', placeholder='Тема сообщения', type='text', id='ask-subject')
-                            textarea.input.message(placeholder='Ваше сообщение')
-                            input.input.submit(type='submit', value='Отправить сообщение')
+                            p 
+                                label(for="ask-text") Ваш вопрос
+                                textarea.input.message(placeholder='Ваше сообщение' id='ask-text' name="ask_text")
+                            input.btn(type='submit', value='Отправить сообщение')

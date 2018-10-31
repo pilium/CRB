@@ -1,26 +1,74 @@
-.breadcrumbs
-    margin-bottom: 25px
-    padding: 20px 15px 50px 30px
-    &-item
-        display: inline
-        &__link
-            color: $main
-            display: block
-            float: left
-            font-size: 12px
-            padding: 7px 16px 7px 19px
-            position: relative
-            text-decoration: none
-            border: 1px solid #817d7d
-            border-right-width: 0
-            background-color: #fff
-    &-item--first a
-        border-top-left-radius: 5px
-    &-item--last span
-        border-bottom-right-radius: 5px
-        background: $accent
-        cursor: default
-        color: #fff
-        padding: 8px 16px 8px 19px
-        border: none
-        
+.breadcrumb
+  text-align: center
+  display: inline-block
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25)
+  overflow: hidden
+  border-radius: 5px
+  counter-reset: flag
+
+.breadcrumb__step
+  text-decoration: none
+  outline: none
+  display: block
+  float: left
+  font-size: rem(14)
+  line-height: 45px
+  padding: 0 25px 0 60px
+  position: relative
+  background: #fff
+  color: $accent
+  transition: background 0.5s
+  &:first-child
+    padding-left: 46px
+    border-radius: 5px 0 0 5px
+    &::before
+      left: 14px
+  &:last-child
+    border-radius: 0 5px 5px 0
+    padding-right: 20px
+    &::after
+      content: none
+  &::before
+    content: counter(flag)
+    counter-increment: flag
+    border-radius: 100%
+    width: 20px
+    height: 20px
+    line-height: 20px
+    margin: 10px 0
+    position: absolute
+    top: 0
+    left: 30px
+    font-weight: bold
+    background: #fff
+    box-shadow: 0 0 0 1px $accent
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: -18px
+    width: 45px
+    height: 45px
+    transform: scale(0.707) rotate(45deg)
+    z-index: 1
+    border-radius: 0 5px 0 50px
+    background: #fff
+    transition: background 0.5s
+    box-shadow: 2px -2px 0 2px darken($accent, 10%)
+
+.breadcrumb__step--active
+  color: #fff
+  background: $accent
+  &::before
+    color: $accent
+  &::after
+    background: $accent
+
+.breadcrumb__step:hover
+  color: #fff
+  background: lighten($accent, 10%)
+  &::before
+    color: $accent
+  &::after
+    color: $accent
+    background: lighten($accent, 10%)

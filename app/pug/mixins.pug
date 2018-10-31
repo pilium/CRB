@@ -25,16 +25,10 @@ mixin downloadBadge(href, title, icon, size)
 			span= size
 
 mixin breadcrumbs()
-	.section.section-breadcrumbs
-		ul.breadcrumbs
-			li.breadcrumbs-item.breadcrumbs-item--first
-				a.breadcrumbs-item__link(href="") Главная
-			li.breadcrumbs-item
-				a.breadcrumbs-item__link(href="") Пациентам
-			li.breadcrumbs-item
-				a.breadcrumbs-item__link(href="") Расписание приёма врачей
-			li.breadcrumbs-item.breadcrumbs-item--last
-				span.breadcrumbs-item__link Детская поликлиника
+	.breadcrumb
+		a.breadcrumb__step(href='#') Главная
+		a.breadcrumb__step(href='#') Контакты
+		a.breadcrumb__step.breadcrumb__step--active(href='#') Права и обязанности пациента
 
 mixin filesLink(href, icon, title, size, bigText, addons, addonsHref)
 	if(addons)
