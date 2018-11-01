@@ -2,9 +2,12 @@
     position: relative
     width: 100%
     background-color: #fff
+    color: #fff
+    padding-top: 10px
     .container
         display: flex
         justify-content: space-between
+        padding-bottom: 10px
     &-info
         display: flex
         align-items: center
@@ -24,24 +27,25 @@
                 margin-left: 10px
                 color: $accent
                 font-size: rem(18)
+                border-bottom: 2px dotted $accent
                 &:visited
-                    color: darken($accent, 20%)
-                    border-bottom-color: darken($accent, 20%)
+                    // color: darken($accent, 20%)
+                    // border-bottom-color: darken($accent, 20%)
                 &:hover
-                    border-bottom: 2px dotted $accent
+                    border-bottom: 2px dotted #fff
                 &:active
-                    color: darken($accent, 80%)
-                    border-bottom-color: darken($accent, 40%)
+                    // color: darken($accent, 80%)
+                    // border-bottom-color: darken($accent, 40%)
         &__tel
             .header-info__item-link
-                color: $main
+                color: $accent
                 font-size: rem(18)
                 text-transform: uppercase
                 line-height: 1
                 font-weight: bold
                 border-bottom: none
-                &:visited
-                    color: darken($accent, 20%)
+                // &:visited
+                //     color: darken($accent, 20%)
                 &:hover
                     color: $accent
                 &:active
@@ -52,32 +56,32 @@
         justify-content: space-between
         &__search
             width: 0px
-            height: 48px
+            height: 30px
             background: #fff
             text-align: center
-            line-height: 45px
-            padding-right: 50px
+            line-height: 30px
+            padding-right: 35px
             transition: all 0.5s ease
             border-radius: 5px
             position: relative
-            color: $accent
+            color: $main
             box-shadow: 0 0 10px rgba($accent, 0.3)
             cursor: pointer
             svg
                 position: absolute
                 display: block
-                width: 27px
-                height: 27px
-                top: 10.5px
-                right: 11.5px
-                fill: currentColor
+                width: 20px
+                height: 20px
+                top: 6.5px
+                right: 6.5px
+                fill: $accent
             input
                 border: 0px
-                border-bottom: 2px solid $accent
+                border-bottom: 1px solid $accent
                 background: transparent
                 width: 0%
                 line-height: 1
-                height: 2rem
+                height: 1.5rem
                 padding: 5px 0
                 outline: none
                 color: $accent
@@ -85,23 +89,25 @@
                 transition: all 0.3s ease
             &.active
                 width: 350px
-                padding-left: 25px
+                padding-left: 15px
                 box-shadow: 0 0 10px rgba($accent, 0.8)
                 transition: all 0.5s ease
                 input
-                    width: 98%
+                    width: 100%
                     padding-left: 5px
                     transition: all 0.5s 0.8s ease
                     +placeholder
-                        color: $accent
+                        color: #fff
         &__starblind
             button
-                width: 48px
-                height: 48px
+                width: 30px
+                height: 30px
                 border: none
                 margin-left: 8px
                 box-shadow: 0.2px 2px 27.6px 1.5px rgba(138, 137, 137, 0.16)
                 background-color: #ffffff
                 box-shadow: 0 0 10px rgba($accent, 0.3)
                 svg
-                    color: $accent
+                    width: 20px
+                    height: 20px
+                    fill: $accent

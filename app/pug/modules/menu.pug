@@ -1,76 +1,94 @@
-nav
-    ul.main-menu
-        li.main-menu__item.dropdown
-            ul.collasible
-                .collapsible-header
-                    span Пациентам
-                .collapsible-body
-                    ul.sub-menu
-                        +main-menu('sub', 'patientDuties.html', 'Права и обязанности пациента')
-                        +main-menu('sub', 'writeRules.html', 'Правила записи на прием')
-                        +main-menu('sub', 'prepareRules.html', 'Правила подготовки к исследованиям')
-                        +main-menu('sub', 'doctorsShedule.html', 'График приема врачей')
-                        +main-menu('sub', 'helpIf.html', 'Условия оказания медицинской помощи')
-                        +main-menu('sub', 'services.html', 'Оказываемые услуги')
-                        +main-menu('sub', 'demografic.html', 'Демографические показатели')
-                        +main-menu('sub', 'privateQuestions.html', 'Прием граждан по личным вопросам')
-                        +main-menu('sub', 'settlerProtect.html', 'Защита прав граждан')                  
-                        +main-menu('sub', 'smo.html', 'Перечень страховых компаний')
-                        +main-menu('sub', 'dispans.html', 'Диспансеризация')               
-                        +main-menu('sub', 'jnvls.html', 'Перечень ЖНВЛС')
-        li.main-menu__item.dropdown
-            ul.collasible
-                .collapsible-header
-                    span О больнице
-                .collapsible-body
-                    ul.sub-menu
-                        +main-menu('sub', 'history.html', 'История больницы')
-                        +main-menu('sub', '#', 'Новости')
-                        +main-menu('sub', 'roadmap.html', 'Дорожная карта')
-                        +main-menu('sub', 'modernize.html', 'Модернизация здравоохранения')
-                        +main-menu('sub', 'corruption.html', 'Противодействие коррупции')
-                        +main-menu('sub', 'licence.html', 'Лицензии')
-                        +main-menu('sub', 'vacancy.html', 'Вакансии')
-                        +main-menu('sub', '#', 'Отзывы')
-                        +main-menu('sub', '#', 'Галерея')
-        li.main-menu__item.dropdown
-            ul.collasible
-                .collapsible-header
-                    span Структура организации
-                .collapsible-body
-                    ul.sub-menu
-                        +main-menu('sub', 'administration.html', 'Администрация')
-                        +main-menu('sub', 'surgeon.html', 'Хирургическое отделение')
-                        +main-menu('sub', 'neurologist.html', 'Неврологическое отделение')
-                        +main-menu('sub', 'terapevt1.html', 'Терапевтическое отделение №1')
-                        +main-menu('sub', 'terapevt2.html', 'Терапевтическое отделение №2(х.Рябичев)')
-                        +main-menu('sub', 'clinic.html', 'Поликлиника')
-                        +main-menu('sub', 'ambulance.html', 'Отделение скорой помощи')
-                        +main-menu('sub', 'FAP.html', 'Фельдшерско-акушерские пункты')
-        li.main-menu__item.dropdown
-            ul.collapsible
-                .collapsible-header
-                    span Диагностические подразделения 
-                .collapsible-body
-                    ul.sub-sub-menu
-                        +main-menu('sub', 'kdl.html', 'Клинико-диагностическая лаборатория')
-                        +main-menu('sub', 'rentgen.html', 'Рентгеновский кабинет')
-                        +main-menu('sub', 'kfd.html', 'Кабинеты функциональной диагностики')
-                        +main-menu('sub', 'kud.html', 'Кабинет ультразвуковой диагностики')
-                        +main-menu('sub', 'endoscop.html', 'Эндоскопический кабинет')
-                        +main-menu('sub', 'fizio.html', 'Физиотерапевтические кабинеты')
-        li.main-menu__item.dropdown
-            ul.collasible
-                .collapsible-header
-                    span Платные услуги
-                .collapsible-body
-                    ul.sub-menu
-                        +main-menu('sub', 'payShedule.html', 'График работы медицинского персонала')
-                        +main-menu('sub', 'payOrders.html', 'Приказы о платных услугах')
-                        +main-menu('sub', 'payOrganizations.html', 'Профосмотры для организаций')
-        +main-menu('main', 'articles.html', 'Полезные статьи')
-        +main-menu('main', 'zoj.html', 'Здоровый образ жизни')
-        +main-menu('main', 'contacts.html', 'Контакты')
-        +main-menu('main', 'docs.html', 'Нормативные документы')
-        +main-menu('main', 'files.html', 'Каталог файлов')
-        +main-menu('main', 'online.html', 'online консультация')
+nav.side-menu
+    ul.nano-content
+        li.sub-menu
+            a.acc-header(href='javascript:void(0);')
+                +icon('menu--patient')
+                span Пациентам
+                +icon('menu--right-chevron')
+            ul.sub-list
+                +main-menu('sub', 'patientDuties.html', 'Права и обязанности пациента')
+                +main-menu('sub', 'writeRules.html', 'Правила записи на прием')
+                +main-menu('sub', 'prepareRules.html', 'Правила подготовки к исследованиям')
+                +main-menu('sub', 'doctorsShedule.html', 'График приема врачей')
+                +main-menu('sub', 'helpIf.html', 'Условия оказания медицинской помощи')
+                +main-menu('sub', 'services.html', 'Оказываемые услуги')
+                +main-menu('sub', 'demografic.html', 'Демографические показатели')
+                +main-menu('sub', 'privateQuestions.html', 'Прием граждан по личным вопросам')
+                +main-menu('sub', 'settlerProtect.html', 'Защита прав граждан')                  
+                +main-menu('sub', 'smo.html', 'Перечень страховых компаний')
+                +main-menu('sub', 'dispans.html', 'Диспансеризация')               
+                +main-menu('sub', 'jnvls.html', 'Перечень ЖНВЛС')
+        li.sub-menu
+            a.acc-header(href='javascript:void(0);')
+                +icon('menu--hospital')
+                span О больнице
+                +icon('menu--right-chevron')
+            ul.sub-list
+                +main-menu('sub', 'history.html', 'История больницы')
+                +main-menu('sub', '#', 'Новости')
+                +main-menu('sub', 'roadmap.html', 'Дорожная карта')
+                +main-menu('sub', 'modernize.html', 'Модернизация здравоохранения')
+                +main-menu('sub', 'corruption.html', 'Противодействие коррупции')
+                +main-menu('sub', 'licence.html', 'Лицензии')
+                +main-menu('sub', 'vacancy.html', 'Вакансии')
+                +main-menu('sub', '#', 'Отзывы')
+                +main-menu('sub', '#', 'Галерея')
+        li.sub-menu
+            a.acc-header(href='javascript:void(0);')
+                +icon('menu--structure')
+                span Структура организации
+                +icon('menu--right-chevron')
+            ul.sub-list
+                +main-menu('sub', 'administration.html', 'Администрация')
+                +main-menu('sub', 'surgeon.html', 'Хирургическое отделение')
+                +main-menu('sub', 'neurologist.html', 'Неврологическое отделение')
+                +main-menu('sub', 'terapevt1.html', 'Терапевтическое отделение №1')
+                +main-menu('sub', 'terapevt2.html', 'Терапевтическое отделение №2(х.Рябичев)')
+                +main-menu('sub', 'clinic.html', 'Поликлиника')
+                +main-menu('sub', 'ambulance.html', 'Отделение скорой помощи')
+                +main-menu('sub', 'FAP.html', 'Фельдшерско-акушерские пункты')
+        li.sub-menu
+            a.acc-header(href='javascript:void(0);')
+                +icon('menu--stethoscope')
+                span Диагностические подразделения 
+                +icon('menu--right-chevron')
+            ul.sub-list
+                +main-menu('sub', 'kdl.html', 'Клинико-диагностическая лаборатория')
+                +main-menu('sub', 'rentgen.html', 'Рентгеновский кабинет')
+                +main-menu('sub', 'kfd.html', 'Кабинеты функциональной диагностики')
+                +main-menu('sub', 'kud.html', 'Кабинет ультразвуковой диагностики')
+                +main-menu('sub', 'endoscop.html', 'Эндоскопический кабинет')
+                +main-menu('sub', 'fizio.html', 'Физиотерапевтические кабинеты')
+        li.sub-menu
+            a.acc-header(href='javascript:void(0);')
+                +icon('menu--credit-card')
+                span Платные услуги
+                +icon('menu--right-chevron')
+            ul.sub-list
+                +main-menu('sub', 'payShedule.html', 'График работы медицинского персонала')
+                +main-menu('sub', 'payOrders.html', 'Приказы о платных услугах')
+                +main-menu('sub', 'payOrganizations.html', 'Профосмотры для организаций')
+        li.sub-menu
+            a.acc-header(href='articles.html')
+                +icon('menu--article')
+                span Полезные статьи
+        li.sub-menu
+            a.acc-header(href='zoj.html')
+                +icon('menu--fruit')
+                span Здоровый образ жизни
+        li.sub-menu
+            a.acc-header(href='docs.html')
+                +icon('menu--script')
+                span Нормативные документы
+        li.sub-menu
+            a.acc-header(href='files.html')
+                +icon('menu--catalog')
+                span Каталог файлов
+        li.sub-menu
+            a.acc-header(href='online.html')
+                +icon('menu--consultant')
+                span online консультация
+        li.sub-menu
+            a.acc-header(href='contacts.html')
+                +icon('menu--book')
+                span Контакты

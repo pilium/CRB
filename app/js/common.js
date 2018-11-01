@@ -159,8 +159,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
 
+    
     // accordion
-    var acc = document.getElementsByClassName("collapsible-header");
+    var acc = document.getElementsByClassName("acc-header");
     var i;
 
     for (i = 0; i < acc.length; i++) {

@@ -1,128 +1,257 @@
-/*---------Задаём параметры блока, содержащего основное меню------------
+// /*---------Задаём параметры блока, содержащего основное меню------------
 
-.site-navigation
-  width: 100%
-  height: 100%
-  text-align: center
-  margin-left: auto
-  margin-right: auto
-  z-index: 200
-  .main-menu__item
-    padding: 0
-/*---------------Задаём стили для разделов нашего меню--------------
+// .site-navigation
+//   width: 100%
+//   height: 100%
+//   text-align: center
+//   margin-left: auto
+//   margin-right: auto
+//   z-index: 7
+//   background-color: #fff
+//   .main-menu__item
+//     padding: 0
+// /*---------------Задаём стили для разделов нашего меню--------------
 
-.actives
-  background-color: $accent !important
-  text-decoration: none !important
-  border-left: 5px solid #1F8046 !important
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+// .actives
+//   background-color: $accent !important
+//   text-decoration: none !important
+//   border-left: 5px solid #1F8046 !important
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
 
-.site-navigation
-  display: flex
-  justify-content: space-between
-  align-items: center
-  > li
-    height: 36px
-    position: relative
-    width: 200px
-    text-align: center
-    width: calc( 100% / 7 )
-    display: table
-    background-color: $accent
-    z-index: 200
-    > a, span
-      width: 100%
-      display: table-cell
-      vertical-align: middle
-      text-decoration: none
-      font-size: 8pt !important
-      font-weight: bold
-      text-transform: uppercase
-      color: #fff
-      -webkit-transition: all 0.3s ease-in-out
-      -o-transition: all 0.3s ease-in-out
-      transition: all 0.3s ease-in-out
-      border-left: 5px solid $accent
-      &:hover
-        background-color: #fff
-        color: #1F8046
-        text-decoration: none
-        border-left: 5px solid #1F8046
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
-  li
-    &.active 
-        a, span
-            background-color: #fff
-            color: #3f9979
-            border-left: 5px solid #3f9979
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
-    position: relative
-    cursor: pointer
-  strong
-    color: #333
-    font-weight: 700
-    font-size: 10pt
-    padding: 0 0 0 3px
-  > li
-    > ul
-      a, span
-        background-color: #fff
-        text-decoration: none
-        font-size: 8pt !important
-        font-weight: bold
-        display: block
-        padding: 12px 5px
-        text-transform: uppercase
-        color: #1F8046
-        -webkit-transition: all 0.3s ease-in-out
-        -o-transition: all 0.3s ease-in-out
-        transition: all 0.3s ease-in-out
-        border-left: 5px solid #1F8046
-        border-top: 1px solid #1F8046
-      li:hover >
-        a, span
-          color: #47B308
-          text-decoration: underline !important
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
-          border-radius: 0px
-          border-left: 5px solid #47B308
-    ul
-      position: absolute
-      display: none
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
-      width: 100%
-      border-right: 1px solid #1F8046
-      border-bottom: 1px solid #1F8046
-    > ul
-      > li > ul li > ul
-        width: 220px
-      left: 0
-      top: 36px
-      li
-        > ul
-          left: 100%
-          top: 0
-          opacity: 0
-          transition: 0.5s
-          -webkit-transition: 0.5s
-          -moz-transition: 0.5s
-          -o-transition: 0.5s
-        &:hover > ul
-          display: block
-          opacity: 1
-          transition: 0.5s
-          -webkit-transition: 0.5s
-          -moz-transition: 0.5s
-          -o-transition: 0.5s
+// .site-navigation
+//   display: flex
+//   justify-content: space-between
+//   align-items: center
+//   > li
+//     height: 36px
+//     position: relative
+//     width: 200px
+//     text-align: center
+//     width: calc( 100% / 7 )
+//     display: table
+//     background-color: $accent
+//     z-index: 7
+//     > a, span
+//       width: 100%
+//       display: table-cell
+//       vertical-align: middle
+//       text-decoration: none
+//       font-size: 8pt !important
+//       font-weight: bold
+//       text-transform: uppercase
+//       color: #fff
+//       -webkit-transition: all 0.3s ease-in-out
+//       -o-transition: all 0.3s ease-in-out
+//       transition: all 0.3s ease-in-out
+//       border-left: 5px solid $accent
+//       &:hover
+//         background-color: #fff
+//         color: #1F8046
+//         text-decoration: none
+//         border-left: 5px solid #1F8046
+//         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+//   li
+//     &.active 
+//         a, span
+//             background-color: #fff
+//             color: #3f9979
+//             border-left: 5px solid #3f9979
+//             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+//     position: relative
+//     cursor: pointer
+//   strong
+//     color: #333
+//     font-weight: 700
+//     font-size: 10pt
+//     padding: 0 0 0 3px
+//   > li
+//     > ul
+//       a, span
+//         background-color: #fff
+//         text-decoration: none
+//         font-size: 8pt !important
+//         font-weight: bold
+//         display: block
+//         padding: 12px 5px
+//         text-transform: uppercase
+//         color: #1F8046
+//         -webkit-transition: all 0.3s ease-in-out
+//         -o-transition: all 0.3s ease-in-out
+//         transition: all 0.3s ease-in-out
+//         border-left: 5px solid #1F8046
+//         border-top: 1px solid #1F8046
+//       li:hover >
+//         a, span
+//           color: #47B308
+//           text-decoration: underline !important
+//           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+//           border-radius: 0px
+//           border-left: 5px solid #47B308
+//     ul
+//       position: absolute
+//       display: none
+//       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+//       width: 100%
+//       border-right: 1px solid #1F8046
+//       border-bottom: 1px solid #1F8046
+//     > ul
+//       > li > ul li > ul
+//         width: 220px
+//       left: 0
+//       top: 36px
+//       li
+//         > ul
+//           left: 100%
+//           top: 0
+//           opacity: 0
+//           transition: 0.5s
+//           -webkit-transition: 0.5s
+//           -moz-transition: 0.5s
+//           -o-transition: 0.5s
+//         &:hover > ul
+//           display: block
+//           opacity: 1
+//           transition: 0.5s
+//           -webkit-transition: 0.5s
+//           -moz-transition: 0.5s
+//           -o-transition: 0.5s
 
  
-/*---------- Делаем скрытую часть видимой ---------------
+// /*---------- Делаем скрытую часть видимой ---------------
 
-.site-navigation > li:hover >
+// .site-navigation > li:hover >
+//   ul
+//     display: block
+//   a
+//     background-color: $accent !important
+//     color: #fff !important
+//     text-decoration: none !important
+//     border-left: 5px solid #1F8046 !important
+
+.nav
+  display: block
+  background: #FFFFFF
+  border-radius: 3px
   ul
-    display: block
-  a
-    background-color: $accent !important
-    color: #fff !important
-    text-decoration: none !important
-    border-left: 5px solid #1F8046 !important
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 10px
+    .hrMenu-list
+      position: relative
+      border-top: 2px solid $accent
+      display: block
+      &.fixed-width
+        width: 13%
+        &:nth-child(4)
+          width: 20%
+        &:nth-child(5)
+          width: 25%
+      &:hover
+        .menu
+          display: block
+        .icon-menu--right-chevron
+          transform: rotateZ(90deg)
+          transition: transform .3s ease
+      &:nth-child(2) > a:before
+        z-index: 1
+        position: absolute
+        top: 0
+        left: -15px
+        content: ''
+        width: 0
+        height: 0
+        display: block
+        border-right: 15px solid #FFFFFF
+        border-top: 60px solid transparent
+      &:nth-last-child(2) a:after
+        position: absolute
+        z-index: 1
+        top: 0
+        right: -15px
+        content: ''
+        width: 0
+        height: 0
+        display: block
+        border-left: 15px solid #FFFFFF
+        border-top: 60px solid transparent
+      &:last-child a,
+      &:first-child a
+        background: $accent
+        padding: 0 25px 0 30px
+        color: #FFFFFF
+        &:hover
+          background: darken($accent, 10%)
+      a
+        position: relative
+        display: block
+        padding: 0 25px
+        color: $accent
+        font-size: 14px
+        line-height: 60px
+        text-decoration: none
+        transition: all 0.3s linear
+        svg
+          transition: transform .3s ease
+        &:hover
+          background: #f2f2f2
+          &:before
+            border-right: 15px solid #f2f2f2
+          &:after
+            border-left: 15px solid #f2f2f2
+        &.logo
+          // background: $accent
+          // width: 61px
+          // height: 61px
+          // padding: 15px 30px 15px 15px
+          // line-height: 1
+          // vertical-align: middle
+          .icon-menu--homepage
+            width: 14px
+            height: 14px
+            fill: #fff
+            transform: translateX(-5px)
+          &:hover
+            background: darken($accent, 5%)
+          img
+            width: 100px
+            position: absolute
+            display: block
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 50px
+            height: auto
+        i
+          margin: 0 0 0 6px
+        .icon-menu--right-chevron
+          position: absolute
+          top: 50%
+          margin-top: -6px
+          right: 5px
+          display: block
+          width: 12px
+          height: 12px
+      .menu
+        display: none
+        position: absolute
+        background: #FFFFFF
+        top: 96%
+        width: 100%
+        border-radius: 0 0 3px 3px
+        z-index: 10
+        li
+          display: block
+          width: 320px
+          margin: 0
+          a
+            background: #FFFFFF
+            padding: 0 15px
+            color: #666666
+            text-align: left
+            line-height: 40px
+            &::before
+              display: none
+            &:hover
+              background: #f2f2f2
+              color: $accent

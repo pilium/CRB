@@ -1,76 +1,136 @@
-.main-menu
-    background-color: #fff
-    z-index: 3
-    flex-grow: 1
-    padding-bottom: 40px
-    &__item
-        position: relative
-        font-size: rem(16)
-        line-height: 1.5
-        color: $accent
-        padding: .2rem 0 .2rem 0.6rem
-        font-weight: bold
-        &.dropdown
-            padding: 0
-            ul
-                width: 100%
-        &:hover
-            background-color: $accent
-            transition: color .4s ease
-            svg
-                fill: $accent
-                transition: fill .4s ease
-            > a
-                color: #fff
-            .collapsible-header
-                background-color: $accent
-                color: #fff
-                svg
-                    fill: #fff
-    &__link
-        display: block
-        padding: .8em .5em
-        color: inherit
-        position: relative
-        font-weight: bold
+// .main-menu
+//     background-color: #fff
+//     z-index: 3
+//     flex-grow: 1
+//     padding-bottom: 40px
+//     &__item
+//         position: relative
+//         font-size: rem(16)
+//         line-height: 1.5
+//         color: $accent
+//         padding: .2rem 0 .2rem 0.6rem
+//         font-weight: bold
+//         &.dropdown
+//             padding: 0
+//             ul
+//                 width: 100%
+//         &:hover
+//             background-color: $accent
+//             transition: color .4s ease
+//             svg
+//                 fill: $accent
+//                 transition: fill .4s ease
+//             > a
+//                 color: #fff
+//             .collapsible-header
+//                 background-color: $accent
+//                 color: #fff
+//                 svg
+//                     fill: #fff
+//     &__link
+//         display: block
+//         padding: .8em .5em
+//         color: inherit
+//         position: relative
+//         font-weight: bold
         
-        cursor: pointer
-    .sub-menu,
-        width: 100%
-        display: block
-        background-color: rgba(255, 255, 255, 1)
-        box-shadow: 0 0 15.7px 2.3px rgba(74, 88, 94, 0.05)
-        transition: left .3s linear, opacity .5s linear 
-        &__item
-            padding-left: 5px
-            position: relative
-            font-size: rem(16)
-            color: $main
-            &:hover
-                color: $accent
-        &__link
+//         cursor: pointer
+//     .sub-menu,
+//         width: 100%
+//         display: block
+//         background-color: rgba(255, 255, 255, 1)
+//         box-shadow: 0 0 15.7px 2.3px rgba(74, 88, 94, 0.05)
+//         transition: left .3s linear, opacity .5s linear 
+//         &__item
+//             padding-left: 5px
+//             position: relative
+//             font-size: rem(16)
+//             color: $main
+//             &:hover
+//                 color: $accent
+//         &__link
+//             display: block
+//             padding: .1em .5em
+//             color: inherit
+//             font-weight: normal
+//             position: relative
+//             cursor: pointer
+//     .collapsible
+//         font-weight: bold
+//         &-header
+//             cursor: pointer
+//             -webkit-tap-highlight-color: transparent
+//             font-size: rem(16)
+//             line-height: 1.5
+//             padding: 1rem 
+//             font-weight: bold
+//             span.small-text
+//                 font-size: 12px
+//         &-body
+//             display: none
+//             transition: display 2s ease
+//             ul
+//                 padding-left: 1rem
+//             &.active
+//                 display: block
+//                 transition: display 2s ease
+.side-menu
+    .sub-list
+        display: none
+        transition: height .5s
+        &.active
             display: block
-            padding: .1em .5em
-            color: inherit
-            font-weight: normal
-            position: relative
-            cursor: pointer
-    .collapsible
-        font-weight: bold
-        &-header
-            cursor: pointer
-            -webkit-tap-highlight-color: transparent
-            font-size: rem(16)
-            line-height: 1.5
-            padding: 1rem 
-            font-weight: bold
-            span.small-text
-                font-size: 12px
-        &-body
-            display: none
-            transition: display 2s ease
-            ul
-                padding-left: 1rem
-            &.active
+        li 
+            margin-bottom: 0
+            margin-right: 0
+            border-bottom: none
+            margin-left: 10px
+            a 
+                font-size: 14px
+                padding-top: 13px
+                padding-bottom: 13px
+                color: #484b4f
+                letter-spacing: -1px
+    ul
+        padding-right: 10px
+        li 
+            list-style-type: none
+            border-bottom: 1px solid rgba(255,255,255,.05)
+            a 
+                position: relative
+                color: #222
+                text-decoration: none
                 display: block
-                transition: display 2s ease
+                padding: 13px 0 13px 25px
+                font-size: 14px
+                outline: 0
+                transition: all 200ms ease-in
+                svg
+                    position: absolute
+                    top: 45%
+                    left: 10px
+                    transform: translateY(-50%)
+                    width: 16px
+                    height: 16px
+                    transition: transform .3s ease
+                    &.icon-menu--right-chevron
+                        left: auto
+                        right: 10px
+                &.active 
+                    color: #1abc9c
+                
+                    ul.sub-list
+                        display: block
+                    .icon-menu--right-chevron
+                        display: none
+                &:hover 
+                    color: #1abc9c
+                
+                span 
+                    display: inline-block
+                    padding-left: 10px
+                
+                i
+                    width: 20px
+                    .fa-angle-left, .fa-angle-right 
+                        padding-top: 3px
