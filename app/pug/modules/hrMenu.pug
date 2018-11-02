@@ -92,7 +92,7 @@
         +icon('menu--right-chevron')
       ul.menu
         +main-menu('sub', 'history.html', 'История больницы')
-        +main-menu('sub', '#', 'Новости')
+        +main-menu('sub', 'news.html', 'Новости')
         +main-menu('sub', 'roadmap.html', 'Дорожная карта')
         +main-menu('sub', 'modernize.html', 'Модернизация здравоохранения')
         +main-menu('sub', 'corruption.html', 'Противодействие коррупции')
@@ -105,7 +105,7 @@
         +main-menu('main', 'files.html', 'Каталог файлов')
     li.hrMenu-list.fixed-width
       a(href='#calendar')
-        | Структура организации
+        | Структура 
         +icon('menu--right-chevron')
       ul.menu
         +main-menu('sub', 'administration.html', 'Администрация')
@@ -118,7 +118,7 @@
         +main-menu('sub', 'FAP.html', 'Фельдшерско-акушерские пункты')
     li.hrMenu-list.fixed-width
       a(href='#calendar')
-        | Диагностические подразделения
+        | Диагностика
         +icon('menu--right-chevron')
       ul.menu
         +main-menu('sub', 'kdl.html', 'Клинико-диагностическая лаборатория')
@@ -143,4 +143,4 @@
         | Лицензии
     li.hrMenu-list
       a(href='#contact')
-        .fa.fa-envelope
+        +icon('magnifier-tool')

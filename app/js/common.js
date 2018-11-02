@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const close = popup.querySelector(".modal-close__btn");
     const login = popup.querySelector("[name=login]");
 
+    const testimonialsSlider = document.querySelector('.testimonials-slider');
+
     let search_toggle = () => {
         search.addEventListener('click', function () {
             toggle_search_class();
@@ -224,6 +226,17 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+    if(testimonialsSlider) {
+        var swiper = new Swiper(testimonialsSlider, {
+        autoHeight: true,
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+    });
+    }
+    
 
     // peopleCard
     function peopleCard() {

@@ -1,73 +1,78 @@
+.news-item__wrap
+  display: flex
+  align-items: center
+  justify-content: space-around
+  flex-wrap: wrap
 .news
-    padding: 20px
+  .section-title
+    margin-bottom: 20px
     &-info
         margin-bottom: 20px
         display: flex
         align-items: center
         justify-content: space-between
         &__title
-            font-size: rem(30)
-            line-height: 24px
+            font-size: rem(20)
             color: $accent
             text-transform: uppercase
     &__list
         display: flex
         align-items: center
         justify-content: space-between
-    // .item-news
-    //     padding: 28px 33px
-    //     border-top: 2px solid $accent
-    //     box-shadow: -2.5px 3.2px 23px 1px rgba(88, 99, 104, 0.11)
-    //     background: #fff
-    //     position: relative
-    //     text-overflow: ellipsis
-    //     height: 280px
-    //     overflow: hidden
-    //     margin-right: 30px
-    //     cursor: pointer
-    //     &:last-child
-    //         margin-right: 0
-    //     &__link
-    //         width: 50px
-    //         height: 50px
-    //         background-color: #fff
-    //         box-shadow: -2.5px 3.2px 23px 1px rgba(88, 99, 104, 0.11)
-    //         border-radius: 50%
-    //         position: absolute
-    //         top: 15px
-    //         right: 15px
-    //         color: $accent
-    //         &:hover
-    //             background-color: transparent
-    //             box-shadow: none
-    //             transform: scale(1.2)
-    //             transition: transform .1s ease-in
-    //             transition: box-shadow .1s ease-in
-    //             transition: background-color .1s ease-in
-    //         svg
-    //             position: absolute
-    //             display: block
-    //             top: 11.5px
-    //             left: 11.5px
+    .item-news
+        padding: 28px 33px
+        border-top: 2px solid $accent
+        box-shadow: -2.5px 3.2px 23px 1px rgba(88, 99, 104, 0.11)
+        background: #fff
+        position: relative
+        text-overflow: ellipsis
+        height: 280px
+        overflow: hidden
+        margin-right: 30px
+        cursor: pointer
+        &:last-child
+            margin-right: 0
+        &__link
+            width: 50px
+            height: 50px
+            background-color: #fff
+            box-shadow: -2.5px 3.2px 23px 1px rgba(88, 99, 104, 0.11)
+            border-radius: 50%
+            position: absolute
+            top: 15px
+            right: 15px
+            color: $accent
+            &:hover
+                background-color: transparent
+                box-shadow: none
+                transform: scale(1.2)
+                transition: transform .1s ease-in
+                transition: box-shadow .1s ease-in
+                transition: background-color .1s ease-in
+            svg
+                position: absolute
+                display: block
+                top: 11.5px
+                left: 11.5px
                 
-    //     &__date
-    //         display: block
-    //         margin-bottom: 25px
-    //         color: #c6c6c6
-    //         font-size: rem(16)
-    //     &__title
-    //         min-height: 60px
-    //         display: block
-    //         padding-bottom: 15px
-    //         margin-bottom: 20px
-    //         color: $main
-    //         font-size: rem(16)
-    //         line-height: 24px
-    //         border-bottom: 1px solid #eaebec
-    //     &__text
-    //         color: $main
-    //         font-size: rem(16)
-    //         line-height: 24px
+        &__date
+            display: block
+            margin-bottom: 25px
+            color: #c6c6c6
+            font-size: rem(16)
+        &__title
+            min-height: 60px
+            display: block
+            padding-bottom: 15px
+            margin-bottom: 20px
+            color: $main
+            font-size: rem(14)
+            line-height: 24px
+            border-bottom: 1px solid #eaebec
+        &__text
+            color: $main
+            font-size: rem(12)
+            line-height: 24px
     
 .post-module
   position: relative
@@ -75,16 +80,13 @@
   display: block
   background: #FFFFFF
   min-width: 270px
-  width: 32%
+  width: 31%
   height: 470px
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15)
   
   transition: all 3.3s linear 0s
   &:hover
     box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3)
-    p.description
-      visibility: visible
-      position: static     
 
 .post-module:hover .thumbnail img, .hover .thumbnail img
   transform: scale(1.1)
@@ -143,22 +145,19 @@
       margin: 0
       padding: 0 0 10px
       color: #333333
-      font-size: 26px
+      font-size: rem(20)
       font-weight: 700
     .sub_title
       margin: 0
       padding: 0 0 20px
       color: $accent
-      font-size: 20px
+      font-size: 16px
       font-weight: 400
     .description
-      visibility: hidden
       color: #666666
-      position: absolute
       font-size: 14px
       line-height: 1.8em
       transition: display 1s linear
-      will-change: visibility, position
     .post-meta
       color: #999999
       display: flex
@@ -169,7 +168,8 @@
         height: 1rem
       .timestamp
         margin: 0 0 0 6px
-        font-size: rem(14)
+        font-size: rem(10)
+        font-style: italic
       a
         color: #999999
         text-decoration: none

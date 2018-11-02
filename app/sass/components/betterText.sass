@@ -1,9 +1,7 @@
 article
-
-    font-size: 1.3em
+    font-family: Merriweather, Arial,sans-serif
+    font-size: 1.2em
     line-height: 1.5
-
-
     ol:not([class]):before, ul:not([class]):before
         content: ''
         display: block
@@ -18,6 +16,9 @@ article
         max-width: calc(100% - 2.5em)
         padding-left: 0
         padding-right: 2.5em
+    ol:not([class])
+        ul:not([class])
+            padding-left: 2rem
 
     ul:not([class]) ul, ol:not([class]) ul, ul:not([class]) ol, ol:not([class]) ol
         margin-bottom: 0

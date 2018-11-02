@@ -13,15 +13,24 @@
 	//- 	button.btn.modal-user__btn(type="submit") Отправить
 	button.modal-close__btn(type="button")
 	.form-wrap
-		#form-container.expand.modal-form
+		#form-container.expand
 			#form-content.expand
 				#form-head
 					h3.pre Оставьте свой вопрос
 					p.pre Ответ будет отправлен на вашу почту
-				form(action="#" method="POST" name="online")
-					input.input.name(name='modal_name', placeholder='Ваше имя', type='text')
-					input.input.email(name='modal_email', placeholder='Ваш e-mail', type='mail')
-					input.input.subject(name='modal_subject', placeholder='Тема сообщения', type='text')
-					textarea.input.message(placeholder='Ваше сообщение')
-					input.input.submit(type='submit', value='Отправить сообщение')
+				form.modal-form(action="#" method="POST" name="modal")
+					p
+						label(for="madal-name") Ваше имя
+						input.input.name(name='modal_name', placeholder='Ваше имя', type='text', id="modal-name")
+					p
+						label(for="modal-email") Ваш e-mail
+						input.input.email(name='modal_email', placeholder='Ваш e-mail', type='mail', id="modal-email")
+					p
+						label(for="modal-subject") Тема сообщения
+						input.input.subject(name='modal_subject', placeholder='Тема сообщения', type='text', id="modal-subject")
+					p
+						label(for="modal-text") Ваше сообщение
+						textarea.input.message(placeholder='Ваше сообщение', name="modal_text", id="modal-text")
+					p
+						input.input.submit(type='submit', value='Отправить сообщение')
 .modal-overlay

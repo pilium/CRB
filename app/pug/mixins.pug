@@ -61,8 +61,8 @@ mixin filesLink(href, icon, title, size, bigText, addons, addonsHref)
 
 
 mixin dayShedule()
-	table.table.table-mc-green.table-bordered.table-striped
-		caption распорядок дня в отделениях
+	table.table.table-mc-green.table-bordered.table-striped.table-col-2
+		caption Распорядок дня в отделениях
 		thead
 			tr
 				th Часы
@@ -149,14 +149,14 @@ mixin newsItem(href, day, year, title, text)
 			img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg')
 		.post-content
 			.category Photos
-			h1.title= title
-			h2.sub_title The city that never sleeps.
+			p.title= title
+			p.sub_title The city that never sleeps.
 			p.description= text
 			.post-content__bottom
-				button.btn.btn--card
+				a(href= href).btn.btn--card
 					.circle
 						span.icon.arrow
-					p.button-text Перейти
+					span.button-text Перейти
 				.post-meta
 					svg.icon.icon-clock
 						use(xlink:href="img/sprite/sprite.svg#clock")
