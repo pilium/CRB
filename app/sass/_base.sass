@@ -55,6 +55,21 @@ img
         text-transform: uppercase
         color: $accent
         margin-bottom: 20px
+    .team-title
+        font-size: rem(25)
+        text-transform: uppercase
+        color: $accent
+        position: relative
+        text-align: left
+        &::after
+            content: ''
+            position: absolute
+            top: 100%
+            left: 0
+            right: 0
+            width: 100%
+            height: 2px
+            background-color: $accent
     h1,h2,h3,h4
         text-align: center
 a
