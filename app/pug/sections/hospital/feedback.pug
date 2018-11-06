@@ -1,0 +1,41 @@
+section.feedback
+	.panel.panel-breadcrumbs
+		+breadcrumbs()
+	article.panel
+		h1.section-title Отзывы пациентов
+		.form-wrap
+			#form-container.expand
+				#form-content.expand
+					#form-head
+						h3.pre Написать отзыв
+					form(action="#" method="POST" name="online")
+						p
+							label(for="online-name") Ваше имя 
+							input.input.name(name='online_name', placeholder='Ваше имя', type='text', id='online-name')
+						p
+							label(for="online-subject") Тема отзыва
+							input.input.subject(name='online_subject', placeholder='Тема сообщения', type='text'. id='online-subject')
+						p
+							label(for="online-text") Текст отзыва
+							textarea.input.message(placeholder='Ваше сообщение', name="online_text",  id="online-text")
+						p
+							input.input.submit(type='submit', value='Отправить сообщение')
+		.feedback
+			blockquote.block
+				p
+					| "В предверии праздника - Дня медработника, хотим выразить благодарность и признательность фельдшеру Сухобалковского ФАПа КАЗАНИНОЙ ИРИНЕ ВАСИЛЬЕВНЕ за её профессионализм, добросовестность и внимательность, отзывчивость и терпение, ответственность за своё дело, доброжелательность и любовь к людям! 
+					| БОЛЬШОЕ СПАСИБО ей за золотые руки и доброе сердце, за её нелёгкий труд! 
+					| Мы хотим, чтобы администрация больницы зачитала благодарность и поощрила КАЗАНИНУ ИРИНУ ВАСИЛЬЕВНУ за каждодневный кропотливый труд. 
+					| А весь коллектив ЦРБ поздравляем с профессиональным праздником и желаем творческих успехов, личного счастья, здоровья , удачи и материального благополучия! 
+					| С уважением, жители хутора Сухая Балка."
+				footer
+				cite
+					span Галина
+					span.date 14.06.2018
+			blockquote.block
+				p
+					| &quot;Totam at eius excepturi deleniti sed, error repellat itaque omnis maiores tempora ratione dolor velit minus porro aspernatur repudiandae labore quas adipisci esse, nulla tempore voluptatibus cupiditate.&quot;
+				footer
+					cite
+						span Melissa Washington
+

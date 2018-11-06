@@ -30,10 +30,19 @@ section.online
                         h3.pre Оставьте свой вопрос
                         p.pre Ответ будет отправлен на вашу почту
                     form(action="#" method="POST" name="online")
-                        input.input.name(name='user_name', placeholder='Ваше имя', type='text')
-                        input.input.email(name='user_email', placeholder='Ваш e-mail', type='mail')
-                        input.input.subject(name='user_subject', placeholder='Тема сообщения', type='text')
-                        textarea.input.message(placeholder='Ваше сообщение')
-                        input.input.submit(type='submit', value='Отправить сообщение')
+                        p
+                          label(for="online-name") Ваше имя 
+                          input.input.name(name='online_name', placeholder='Ваше имя', type='text', id='online-name')
+                        p
+                          label(for="online-email")
+                          input.input.email(name='online_email', placeholder='Ваш e-mail', type='mail', id='online-email')
+                        p
+                          label(for="online-subject")
+                          input.input.subject(name='online_subject', placeholder='Тема сообщения', type='text'. id='online-subject')
+                        p
+                          label(for="online-text")
+                          textarea.input.message(placeholder='Ваше сообщение', name="online_text",  id="online-text")
+                        p
+                          input.input.submit(type='submit', value='Отправить сообщение')
 
                     
