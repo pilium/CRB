@@ -8,16 +8,16 @@ section.feedback
 				#form-content.expand
 					#form-head
 						h3.pre Написать отзыв
-					form(action="#" method="POST" name="online")
+					form(action="#" method="POST" name="feedback")
 						p
-							label(for="online-name") Ваше имя 
-							input.input.name(name='online_name', placeholder='Ваше имя', type='text', id='online-name')
+							label(for="feedback-name") Ваше имя 
+							input.input.name(name='feedback_name', placeholder='Ваше имя', type='text', id='feedback-name')
 						p
-							label(for="online-subject") Тема отзыва
-							input.input.subject(name='online_subject', placeholder='Тема сообщения', type='text'. id='online-subject')
+							label(for="feedback-subject") Тема отзыва
+							input.input.subject(name='feedback_subject', placeholder='Тема сообщения', type='text'. id='feedback-subject')
 						p
-							label(for="online-text") Текст отзыва
-							textarea.input.message(placeholder='Ваше сообщение', name="online_text",  id="online-text")
+							label(for="feedback-text") Текст отзыва
+							textarea.input.message(placeholder='Ваше сообщение', name="feedback_text",  id="feedback-text")
 						p
 							input.input.submit(type='submit', value='Отправить сообщение')
 		.feedback

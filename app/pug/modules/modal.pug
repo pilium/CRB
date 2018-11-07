@@ -1,36 +1,23 @@
 .modal
-	//- form.modal-form(action="/" method="post")
-	//- 	.modal-user
-	//- 		.modal-user__login.input-field
-	//- 			input(type="text" name="login" required)
-	//- 			label(for="modal-login") Ваше имя
-	//- 		.modal-user__mail.input-field
-	//- 			input(type="email" name="email"  required)
-	//- 			label(for="modal-email") Ваш e-mail
-	//- 		.modal-user__text.input-field
-	//- 			textarea(name="text" required rows="5")
-	//- 			label(for="modal-textarea") Текст письма
-	//- 	button.btn.modal-user__btn(type="submit") Отправить
 	button.modal-close__btn(type="button")
-	.form-wrap
-		#form-container.expand
-			#form-content.expand
-				#form-head
-					h3.pre Оставьте свой вопрос
-					p.pre Ответ будет отправлен на вашу почту
-				form.modal-form(action="#" method="POST" name="modal")
-					p
-						label(for="madal-name") Ваше имя
-						input.input.name(name='modal_name', placeholder='Ваше имя', type='text', id="modal-name")
-					p
-						label(for="modal-email") Ваш e-mail
-						input.input.email(name='modal_email', placeholder='Ваш e-mail', type='mail', id="modal-email")
-					p
-						label(for="modal-subject") Тема сообщения
-						input.input.subject(name='modal_subject', placeholder='Тема сообщения', type='text', id="modal-subject")
-					p
-						label(for="modal-text") Ваше сообщение
-						textarea.input.message(placeholder='Ваше сообщение', name="modal_text", id="modal-text")
-					p
-						input.input.submit(type='submit', value='Отправить сообщение')
+	form.registration.registration-modal(method="post" action="#")
+		h3 Ваш вопрос
+		label.pure-material-textfield-outlined
+			input(placeholder="Ваше имя" type="text" required)
+			span Ваше имя
+		label.pure-material-textfield-outlined
+			input(placeholder="Ваша электронная почта" type="email" required)
+			span Ваш Email
+		label.pure-material-textfield-outlined
+			input(placeholder="Тема вопроса" type="text" required)
+			span Тема вопроса
+		label.pure-material-textfield-outlined
+			textarea(placeholder="Ваш вопрос" required rows='10')
+			span Текст вопроса
+		button.pure-material-button-contained(type="submit") Отправить
+		.done
+			h1 👌 Ответ будет выслан Вам на электронную почту в ближайшее время
+			a.pure-material-button-text(href="javascript:window.location.reload(true)") назад
+		.progress
+			progress.pure-material-progress-circular
 .modal-overlay
