@@ -3,23 +3,26 @@ section.feedback
 		+breadcrumbs()
 	article.panel
 		h1.section-title Отзывы пациентов
-		.form-wrap
-			#form-container.expand
-				#form-content.expand
-					#form-head
-						h3.pre Написать отзыв
-					form(action="#" method="POST" name="feedback")
-						p
-							label(for="feedback-name") Ваше имя 
-							input.input.name(name='feedback_name', placeholder='Ваше имя', type='text', id='feedback-name')
-						p
-							label(for="feedback-subject") Тема отзыва
-							input.input.subject(name='feedback_subject', placeholder='Тема сообщения', type='text'. id='feedback-subject')
-						p
-							label(for="feedback-text") Текст отзыва
-							textarea.input.message(placeholder='Ваше сообщение', name="feedback_text",  id="feedback-text")
-						p
-							input.input.submit(type='submit', value='Отправить сообщение')
+		form.registration.registration-modal(method="post" action="#")
+			h3 Ваш отзыв
+			label.pure-material-textfield-outlined
+				input(placeholder="Ваше имя" type="text" required)
+				span Ваше имя 
+			label.pure-material-textfield-outlined
+				input(placeholder="Ваша электронная почта" type="email" required)
+				span Ваш Email
+			label.pure-material-textfield-outlined
+				input(placeholder="Тема отзыва" type="text" required)
+				span Тема отзыва
+			label.pure-material-textfield-outlined
+				textarea(placeholder="Текст отзыва" required rows='10')
+				span Текст отзыва
+			button.pure-material-button-contained(type="submit") Отправить
+			.done
+				h1 👌 Спасибо за ваш отзыв
+				a.pure-material-button-text(href="javascript:window.location.reload(true)") назад
+			.progress
+				progress.pure-material-progress-circular
 		.feedback
 			blockquote.block
 				p
