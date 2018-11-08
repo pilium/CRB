@@ -1,8 +1,9 @@
+.slidertest
+  background-color: #fff
 .wrapper
     position: relative
     width: 100%
-    height: 800px
-    margin-bottom: 30px
+    height: 700px
     overflow: hidden
 .icon-slider
   display: inline-block
@@ -60,6 +61,7 @@
 
 .news-slider__ctr
   position: relative
+  top: 10px
   z-index: 9
 
 .news-slider__arrow
@@ -90,28 +92,15 @@
     right: 15px
     transform: translateY(-50%)
 
-.news-slider__pagination
-  text-align: center
-  margin-top: 50px
-  .swiper-pagination-bullet
-    width: 13px
-    height: 10px
-    display: inline-block
-    background: $accent
-    opacity: .4
-    margin: 0 5px
-    border-radius: 20px
-    transition: opacity .5s, background-color .5s, width .5s
-    transition-delay: .5s, .5s, 0s
-  .swiper-pagination-bullet-active
-    opacity: 1
-    background: $accent
-    width: 100px
-    transition-delay: 0s
-
-@media screen and (max-width: 576px)
-  .news-slider__pagination .swiper-pagination-bullet-active
-    width: 70px
+.news-slider__show-all
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  text-transform: uppercase
+  font-size: rem(20)
+  color: $accent
+  cursor: pointer
 
 .news__item
   padding: 30px
