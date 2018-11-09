@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 	// preloader
 	const preloader = document.getElementById('preloader');
 	if (preloader) {
@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	const testimonialsSlider = document.querySelector('.testimonials-slider');
 
 	let search_toggle = () => {
-		search.addEventListener('click', function () {
+		search.addEventListener('click', () => {
 			toggle_search_class();
 			input.focus();
 		});
-		document.addEventListener("keydown", function (event) {
+		document.addEventListener("keydown", event => {
 			if (event.keyCode == 27) {
 				if (container.classList.contains("active")) {
 					container.classList.remove("active");
@@ -52,18 +52,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	let modal = () => {
 		const overlay = document.querySelector('.modal-overlay');
-		link.addEventListener("click", function (event) {
+		link.addEventListener("click", event => {
 			event.preventDefault();
 			popup.classList.toggle("modal-show");
 			overlay.classList.toggle('show');
 			login.focus();
 		});
-		close.addEventListener("click", function (event) {
+		close.addEventListener("click", event => {
 			event.preventDefault();
 			popup.classList.remove("modal-show");
 			overlay.classList.toggle('show');
 		});
-		document.addEventListener('click', function (e) {
+		document.addEventListener('click', e => {
 			if (e.target.classList.contains('modal-overlay')) {
 				popup.classList.remove("modal-show");
 				overlay.classList.toggle('show');
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// }).mount();
 	// }
 	if (sliderContainer) {
-		var mySwiper = new Swiper('.swiper-container', {
+		const mySwiper = new Swiper('.swiper-container', {
 			loop: true,
 			parallax: true,
 			autoplay: {
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			},
 			speed: 1000,
 			mousewheelControl: true
-		})
+		});
 	}
 	if (blogSlider) {
 		var swiper = new Swiper('.blog-slider', {
@@ -111,16 +111,16 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	if (mapContainer) {
 		function init() {
-			var myMap = new ymaps.Map("map", {
+			const myMap = new ymaps.Map("map", {
 				center: [47.5396, 42.0151],
 				controls: ['typeSelector', 'fullscreenControl', 'geolocationControl',
 					'rulerControl', 'routeButtonControl'
 				],
 				zoom: 16
 			});
-			var control = myMap.controls.get('routeButtonControl');
+			const control = myMap.controls.get('routeButtonControl');
 			control.routePanel.state.set('from', 'Романовская союзный 97а');
-			var myPlacemark = new ymaps.Placemark([47.5398, 42.0153], {
+			const myPlacemark = new ymaps.Placemark([47.5398, 42.0153], {
 				hintContent: 'Ул. Союзная 97а',
 				balloonContent: 'Поликлиника'
 			}, {
@@ -145,17 +145,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	// Hamburger
-	var wrapperMenu = document.querySelector('.wrapper-menu');
-	var sidenav = document.querySelector('.sidenav');
-	var overlay = document.querySelector('.sidenav-overlay');
+	const wrapperMenu = document.querySelector('.wrapper-menu');
+	const sidenav = document.querySelector('.sidenav');
+	const overlay = document.querySelector('.sidenav-overlay');
 
 	if (wrapperMenu)
-		wrapperMenu.addEventListener('click', function () {
+		wrapperMenu.addEventListener('click', () => {
 			wrapperMenu.classList.toggle('open');
 			sidenav.classList.toggle('show');
 			overlay.classList.toggle('show');
 		})
-	document.addEventListener('click', function (e) {
+	document.addEventListener('click', e => {
 		if (e.target.classList.contains('sidenav-overlay')) {
 			wrapperMenu.classList.toggle('open');
 			sidenav.classList.toggle('show');
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 	// accordion
-	var acc = document.getElementsByClassName("acc-header");
+	const acc = document.getElementsByClassName("acc-header");
 	var i;
 
 	for (i = 0; i < acc.length; i++) {
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			this.classList.toggle("active");
 
 			/* Toggle between hiding and showing the active panel */
-			var panel = this.nextElementSibling;
+			const panel = this.nextElementSibling;
 			panel.classList.toggle('active')
 		});
 	}
@@ -245,13 +245,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		const peopleCard = document.querySelectorAll('.material-card > .mc-btn-action');
 		for (let i = 0; i < peopleCard.length; i++) {
 			peopleCard[i].addEventListener('click', function () {
-				var card = this.parentNode;
-				var icon = this.querySelector('i');
+				const card = this.parentNode;
+				const icon = this.querySelector('i');
 				icon.classList.add('fa-spin-fast');
 				if (card.classList.contains('mc-active')) {
 					card.classList.remove('mc-active');
 
-					setTimeout(function () {
+					setTimeout(() => {
 						icon.classList.remove('fa-arrow-left')
 						icon.classList.remove('fa-spin-fast')
 						icon.classList.add('fa-bars');
@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				} else {
 					card.classList.add('mc-active');
 
-					setTimeout(function () {
+					setTimeout(() => {
 						icon.classList.remove('fa-bars')
 						icon.classList.remove('fa-spin-fast')
 						icon.classList.add('fa-arrow-left');
@@ -273,18 +273,110 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	};
 	peopleCard();
-	var gallery = document.querySelector('.gallery');
+	const gallery = document.querySelector('.gallery');
 	if (gallery) {
 		baguetteBox.run('.gallery-wrap', {
 			async: true
 		});
 	}
-	var forms = document.querySelectorAll('form');
+	const forms = document.querySelectorAll('form');
 	for (let i = 0; i < forms.length; i++) {
-		forms[i].onsubmit = function (event) {
+		forms[i].onsubmit = event => {
 			event.preventDefault();
 			forms[i].classList.add('signed');
 		};
 	}
+	const nav = document.querySelector('#nav-main');
+	let topOfNav = nav.offsetTop;
 
+	function fixNav() {
+		if (window.scrollY >= topOfNav) {
+			document.body.style.paddingTop = nav.offsetHeight + 'px';
+			nav.classList.add('fixed-nav');
+		} else {
+			nav.classList.remove('fixed-nav');
+			document.body.style.paddingTop = 0;
+		}
+	}
+
+	window.addEventListener('scroll', fixNav);
 });
+((() => {
+	const backTop = document.getElementsByClassName('js-cd-top')[0];
+
+	const offset = 300;
+
+	const offsetOpacity = 1200;
+
+	const scrollDuration = 700;
+	let scrolling = false;
+	if (backTop) {
+		window.addEventListener("scroll", event => {
+			if (!scrolling) {
+				scrolling = true;
+				(!window.requestAnimationFrame) ? setTimeout(checkBackToTop, 250): window.requestAnimationFrame(
+					checkBackToTop);
+			}
+		});
+		//smooth scroll to top
+		backTop.addEventListener('click', event => {
+			event.preventDefault();
+			(!window.requestAnimationFrame) ? window.scrollTo(0, 0): scrollTop(scrollDuration);
+		});
+	}
+
+	function checkBackToTop() {
+		const windowTop = window.scrollY || document.documentElement.scrollTop;
+		(windowTop > offset) ? addClass(backTop, 'cd-top--show'): removeClass(backTop, 'cd-top--show',
+			'cd-top--fade-out');
+		(windowTop > offsetOpacity) && addClass(backTop, 'cd-top--fade-out');
+		scrolling = false;
+	}
+
+	function scrollTop(duration) {
+		const start = window.scrollY || document.documentElement.scrollTop;
+		let currentTime = null;
+
+		const animateScroll = timestamp => {
+			if (!currentTime) currentTime = timestamp;
+			const progress = timestamp - currentTime;
+			const val = Math.max(Math.easeInOutQuad(progress, start, -start, duration), 0);
+			window.scrollTo(0, val);
+			if (progress < duration) {
+				window.requestAnimationFrame(animateScroll);
+			}
+		};
+
+		window.requestAnimationFrame(animateScroll);
+	}
+
+	Math.easeInOutQuad = (t, b, c, d) => {
+		t /= d / 2;
+		if (t < 1) return c / 2 * t * t + b;
+		t--;
+		return -c / 2 * (t * (t - 2) - 1) + b;
+	};
+
+	//class manipulations - needed if classList is not supported
+	function hasClass(el, className) {
+		if (el.classList) return el.classList.contains(className);
+		else return !!el.className.match(new RegExp(`(\\s|^)${className}(\\s|$)`));
+	}
+
+	function addClass(el, className) {
+		const classList = className.split(' ');
+		if (el.classList) el.classList.add(classList[0]);
+		else if (!hasClass(el, classList[0])) el.className += ` ${classList[0]}`;
+		if (classList.length > 1) addClass(el, classList.slice(1).join(' '));
+	}
+
+	function removeClass(el, className) {
+		const classList = className.split(' ');
+		if (el.classList) el.classList.remove(classList[0]);
+		else if (hasClass(el, classList[0])) {
+			const reg = new RegExp(`(\\s|^)${classList[0]}(\\s|$)`);
+			el.className = el.className.replace(reg, ' ');
+		}
+		if (classList.length > 1) removeClass(el, classList.slice(1).join(' '));
+	}
+}))();
