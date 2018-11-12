@@ -6,26 +6,25 @@
 		position: fixed
 		top: 0
 		width: 100%
-		transition:all 0.5s
 		z-index: 60
 		box-shadow: 0 5px 0 rgba(0,0,0,0.1)
 		background-color: $accent
 		span, a
 			line-height: 42px
-	ul
+	> ul
 		display: flex
 		align-items: center
 		justify-content: center
-		.hrMenu-list
+		.hrMenu-list__item
 			position: relative
 			border-top: 1px solid $accent
 			border-bottom: 1px solid $accent
 			display: block
 			&.fixed-width
-				width: 14%
-				&:nth-child(6)
-					width: 15%
-			&:hover
+                width: calc( 100% / 7)
+			&--active
+				background-color: darken($accent, 10%)
+			&:hover,&:focus
 				.menu
 					display: block
 				.icon-menu--right-chevron
@@ -36,47 +35,24 @@
 			display: block
 			padding: 0 25px
 			color: #fff
-			font-size: 14px
+			font-size: 16px
 			line-height: 60px
 			cursor: pointer
 			transition: all 0.3s linear
 			svg
 				transition: transform .3s ease
 			&:hover
-				background-color: $accent
 				&:before
 					border-right: 15px solid #f2f2f2
 				&:after
 					border-left: 15px solid #f2f2f2
-			&.logo
-				// background: $accent
-				// width: 61px
-				// height: 61px
-				// padding: 15px 30px 15px 15px
-				// line-height: 1
-				// vertical-align: middle
-			.icon-menu--homepage
-				// width: 14px
-				// height: 14px
-				// fill: #fff
-				// transform: translateX(-5px)
 			&:hover
 				background: darken($accent, 5%)
-			img
-				width: 100px
-				position: absolute
-				display: block
-				top: 50%
-				left: 50%
-				transform: translate(-50%, -50%)
-				width: 50px
-				height: auto
 			.icon-menu--right-chevron
 				position: absolute
 				top: 50%
 				margin-top: -6px
 				right: 5px
-				display: block
 				width: 12px
 				height: 12px
 		.menu
@@ -84,18 +60,15 @@
 			position: absolute
 			top: 100%
 			width: 100%
-			border-radius: 0 0 3px 3px
-			z-index: 10
+			z-index: 20
 			li
-				display: block
-				width: 320px
+				width: 350px
 				margin: 0
 				a
 					background-color: $accent
 					padding: 0 15px
 					color: #fff
-					text-align: left
-					line-height: 40px
+					line-height: 30px
 					&::before
 						display: none
 					&:hover

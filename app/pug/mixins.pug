@@ -14,7 +14,7 @@ mixin icon(name,mod)
 		use(xlink:href="img/sprite/sprite.svg#" + name)
 
 mixin main-menu(type, link, text, icon)
-	li(class=`${type}-menu__item`)
+	li(class=`${type}-menu__item`, role="menuitem")
 		a(class=`${type}-menu__link` href= link)=text
 
 mixin downloadBadge(href, title, icon, size)
@@ -26,9 +26,9 @@ mixin downloadBadge(href, title, icon, size)
 
 mixin breadcrumbs()
 	.breadcrumb
-		a.breadcrumb__step(href='#') Главная
-		a.breadcrumb__step(href='#') Контакты
-		a.breadcrumb__step.breadcrumb__step--active(href='#') Права и обязанности пациента
+		a.breadcrumb__step(href='#', tabindex="0") Главная
+		a.breadcrumb__step(href='#', tabindex="0") Контакты
+		a.breadcrumb__step.breadcrumb__step--active(href='#', tabindex="0") Права и обязанности пациента
 
 mixin filesLink(href, icon, title, size, bigText, addons, addonsHref)
 	if(addons)

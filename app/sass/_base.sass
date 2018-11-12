@@ -20,9 +20,10 @@ body
     .footer
         flex: 0 0 auto
 .container
-    width: 100%
-    margin: 0 auto
-    padding: 0 10px
+	width: 100%
+	max-width: 1600px
+	margin: 0 auto
+	padding: 0 10px
 ul
     padding: 0
     margin: 0
@@ -89,6 +90,9 @@ a
     &:hover
         color: darken($accent, 20%)
         text-decoration: none
+    &:active
+        color: darken($accent, 80%)
+        border-bottom-color: darken($accent, 40%)
 .panel
     width: 100%
     margin: 0 auto 
@@ -108,7 +112,6 @@ a
     &.panel-list:not(:first-child)
         margin-bottom: 1px
         margin-top: 0
-
 // download
 .download
     display: flex

@@ -1,10 +1,10 @@
-nav.nav#nav-main
-  ul
-    li.hrMenu-list
-      a.logo(href='/')
+nav.nav(role="navigation")
+  ul.hrMenu-list
+    li.hrMenu-list__item.hrMenu-list__item--active
+      a.logo(href='/', role="menuitem")
         +icon('menu--homepage')
-    li.hrMenu-list.fixed-width
-      span Пациентам
+    li.hrMenu-list__item.fixed-width
+      span(tabindex="0") Пациентам
         +icon('menu--right-chevron')
       ul.menu
         +main-menu('sub', 'patientDuties.html', 'Права и обязанности пациента')
@@ -20,8 +20,8 @@ nav.nav#nav-main
         +main-menu('sub', 'jnvls.html', 'Перечень ЖНВЛС')
         +main-menu('main', 'zoj.html', 'Здоровый образ жизни')
         +main-menu('main', 'online.html', 'online консультация')
-    li.hrMenu-list.fixed-width
-      span
+    li.hrMenu-list__item.fixed-width
+      span(tabindex="0")
         | О больнице
         +icon('menu--right-chevron')
       ul.menu
@@ -37,8 +37,8 @@ nav.nav#nav-main
         +main-menu('sub', 'gallery.html', 'Галерея')
         +main-menu('main', 'docs.html', 'Нормативные документы')
         +main-menu('main', 'files.html', 'Каталог файлов')
-    li.hrMenu-list.fixed-width
-      span
+    li.hrMenu-list__item.fixed-width
+      span(tabindex="0")
         | Структура 
         +icon('menu--right-chevron')
       ul.menu
@@ -50,8 +50,8 @@ nav.nav#nav-main
         +main-menu('sub', 'clinic.html', 'Поликлиника')
         +main-menu('sub', 'ambulance.html', 'Отделение скорой помощи')
         +main-menu('sub', 'FAP.html', 'Фельдшерско-акушерские пункты')
-    li.hrMenu-list.fixed-width
-      span
+    li.hrMenu-list__item.fixed-width
+      span(tabindex="0")
         | Диагностика
         +icon('menu--right-chevron')
       ul.menu
@@ -61,20 +61,20 @@ nav.nav#nav-main
         +main-menu('sub', 'kud.html', 'Кабинет ультразвуковой диагностики')
         +main-menu('sub', 'endoscop.html', 'Эндоскопический кабинет')
         +main-menu('sub', 'fizio.html', 'Физиотерапевтические кабинеты')
-    li.hrMenu-list.fixed-width
-      span
+    li.hrMenu-list__item.fixed-width
+      span(tabindex="0")
         | Платные услуги
         +icon('menu--right-chevron')
       ul.menu
         +main-menu('sub', 'payShedule.html', 'График работы медицинского персонала')
         +main-menu('sub', 'payOrders.html', 'Приказы о платных услугах')
         +main-menu('sub', 'payOrganizations.html', 'Профосмотры для организаций')
-    li.hrMenu-list.fixed-width
+    li.hrMenu-list__item.fixed-width(role="menuitem")
       a(href='contacts.html')
         | Контакты
-    li.hrMenu-list.fixed-width
+    li.hrMenu-list__item.fixed-width(role="menuitem")
       a(href='licence.html')
         | Лицензии
-    //- li.hrMenu-list
+    //- li.hrMenu-list__item
     //-   a(href='#contact')
     //-     +icon('magnifier-tool')

@@ -9,10 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 	// END Preloader
 
-	const container = document.querySelector('.header-actions__search');
-	const search = container.querySelector('.icon-magnifier-tool');
-	const input = container.querySelector("[type=text]");
-
 	const sliderContainer = document.querySelector('.swiper-container');
 	const blogSlider = document.querySelector('.blog-slider');
 	const newsSlider = document.querySelector('.news-slider');
@@ -25,30 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const testimonialsSlider = document.querySelector('.testimonials-slider');
 
-	let search_toggle = () => {
-		search.addEventListener('click', () => {
-			toggle_search_class();
-			input.focus();
-		});
-		document.addEventListener("keydown", event => {
-			if (event.keyCode == 27) {
-				if (container.classList.contains("active")) {
-					container.classList.remove("active");
-				}
-			}
-		});
-		document.addEventListener('click', (e) => {
-			let target = e.target;
-			let its_container = target == container || container.contains(target);
-			let search_is_active = container.classList.contains('active');
-			if (!its_container && search_is_active) {
-				toggle_search_class();
-			}
-		})
-		let toggle_search_class = () => {
-			container.classList.toggle('active');
-		};
-	}
 
 	let modal = () => {
 		const overlay = document.querySelector('.modal-overlay');
@@ -71,17 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		})
 
 	}
-	// if (sliderContainer) {
-	//     new Glide(sliderContainer, {
-	//     type: 'slider',
-	//     autoplay: 8000,
-	//     keybord: true,
-	//     hoverpause: true,
-	//     rewind: true,
-	//     rewindDuration: 1000,
-	//     animationTimingFunc: 'bounce'
-	// }).mount();
-	// }
 	if (sliderContainer) {
 		const mySwiper = new Swiper('.swiper-container', {
 			loop: true,
@@ -146,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Hamburger
 	const wrapperMenu = document.querySelector('.wrapper-menu');
-	const sidenav = document.querySelector('.sidenav');
+	const sidenav = document.querySelector('.js-sidenav');
 	const overlay = document.querySelector('.sidenav-overlay');
 
 	if (wrapperMenu)
@@ -182,7 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	setTimeout(addTimeFooter, 100);
-	search_toggle();
 	modal();
 
 
