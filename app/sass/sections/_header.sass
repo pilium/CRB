@@ -43,7 +43,6 @@
                 text-transform: uppercase
                 line-height: 1
                 font-weight: bold
-                border-bottom: none
                 // &:visited
                 //     color: darken($accent, 20%)
                 &:hover
@@ -56,13 +55,13 @@
         justify-content: space-between
         &__search
             width: 300px
-            padding-left: 15px
+            padding-left: 5px
             transition: all 0.5s ease
             height: 30px
             background: #fff
             text-align: center
             line-height: 30px
-            padding-right: 35px
+            padding-right: 32px
             transition: all 0.5s ease
             border-radius: 5px
             position: relative
@@ -76,9 +75,8 @@
                 height: 30px
                 top: 0
                 right: 0
-                background-color: $accent
+                background-color: #fff
                 border: none
-                border-radius: 5px
                 svg
                     position: absolute
                     display: block
@@ -88,20 +86,18 @@
                     height: 20px
                     top: 5px
                     left: 6px
+                    fill: $accent
             input
                 border: 0px
-                border-bottom: 1px solid $accent
                 background: transparent
                 width: 100%
                 line-height: 1
-                height: 1.5rem
-                padding: 5px 0
                 padding-left: 5px
                 color: $accent
                 font-weight: bold
                 transition: all 0.3s ease
                 +placeholder()
-                    color: #fff
+                    color: rgba($accent, .8)
         &__starblind
             // position: absolute
             // top: 10px

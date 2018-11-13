@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			centeredSlides: false,
 			keyboard: true,
 			spaceBetween: 10,
-			slidesPerView: '3',
+			slidesPerView: '4',
 			speed: 300,
 			coverflowEffect: {
 				rotate: 0,
@@ -166,13 +166,14 @@ document.addEventListener("DOMContentLoaded", () => {
 				slideShadows: false
 			},
 			breakpoints: {
-				1024: {
+				1230: {
+					slidesPerView: 3
+				},
+				900: {
 					slidesPerView: 2
 				},
-				800: {
-					slidesPerView: 1
-				},
-				480: {
+				650: {
+					slidesPerView: 1,
 					spaceBetween: 0,
 					centeredSlides: true
 				}
@@ -260,6 +261,26 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	window.addEventListener('scroll', fixNav);
+
+	// scroll-down
+	var btnScrollDown = document.querySelector('.scroll-down');
+
+	function scrollDown() {
+		var windowCoords = document.documentElement.clientHeight - 50;
+		console.log(windowCoords);
+
+		(function scroll() {
+			if (window.pageYOffset < windowCoords) {
+				window.scrollBy(0, 10);
+				setTimeout(scroll, 0);
+			}
+			if (window.pageYOffset > windowCoords) {
+				window.scrollTo(0, windowCoords);
+			}
+		})();
+	}
+
+	btnScrollDown.addEventListener('click', scrollDown);
 });
 ((() => {
 	const backTop = document.getElementsByClassName('js-cd-top')[0];

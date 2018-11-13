@@ -33,3 +33,45 @@
         display: block
     &__text
       font-size: rem(18)
+button.scroll-down
+  position: absolute
+  margin-left: auto
+  margin-right: auto
+  left: 0
+  right: 0
+  height: 50px
+  width: 30px
+  bottom: 60px
+  background-color: transparent
+  border: 2px solid $accent
+  border-radius: 20px
+  cursor: pointer
+  outline: none
+  z-index: 30
+  &:before
+    position: absolute
+    top: 10px
+    left: 50%
+    content: ''
+    width: 6px
+    height: 6px
+    margin-left: -3px
+    background-color: $accent
+    border-radius: 100%
+    animation: scroll_down_btn-animation 2s infinite
+    box-sizing: border-box
+
+@keyframes scroll_down_btn-animation
+  0%
+    transform: translate(0, 0)
+    opacity: 0
+
+  40%
+    opacity: 1
+
+  80%
+    transform: translate(0, 20px)
+    opacity: 0
+
+  100%
+    opacity: 0
