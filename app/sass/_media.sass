@@ -33,6 +33,10 @@
 		display: none
 	.wrapper-menu
 		display: flex
+	.slider-slide
+		width: auto
+		margin-left: 0
+		transform: translate3d(0,0,0)!important
 @media only screen and (min-width : 940px)
 	.wrapper-menu
 		display: none
@@ -92,3 +96,41 @@
 		font-size: .78rem
 		&:last-child
 			padding-right: 5px
+	.slider .slider-info__title
+        font-size: 1.9rem
+// Print style
+@media print
+  body
+    font-size: 22px
+    margin: 0
+  section
+    margin-bottom: 2cm
+    page-break-before: always
+  ul
+    page-break-inside: avoid
+  header,
+  .panel-breadcrumbs
+	  display: none
+  p
+    widows: 4
+    orphans: 2
+  table
+	  font-size: 16px
+  a[href^="http"]:not([href*="codepen.io"]):after
+    content: " (" attr(href) ")"
+  abbr[title]:after
+    content: " (" attr(title) ")"
+  .map
+    iframe
+      display: none
+    width: 400px
+    height: 300px
+    background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=Wien+Floridsdorf&zoom=13&scale=false&size=400x300&maptype=roadmap&format=png&visual_refresh=true')
+    print-color-adjust: exact
+    -webkit-print-color-adjust: exact
+  @page
+    margin: 2cm
+
+  @media (min-width: 48em)
+    body
+      max-width: 48em

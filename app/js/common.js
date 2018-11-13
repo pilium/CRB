@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 	// END Preloader
 
-	const sliderContainer = document.querySelector('.swiper-container');
+	const sliderContainer = document.querySelector('.js-hero-slider');
 	const blogSlider = document.querySelector('.blog-slider');
 	const newsSlider = document.querySelector('.news-slider');
 	const mapContainer = document.getElementById('map');
@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		const mySwiper = new Swiper('.swiper-container', {
 			loop: true,
 			parallax: true,
-			autoplay: {
-				delay: 5000,
-			},
+			// autoplay: {
+			// 	delay: 5000,
+			// },
 			speed: 1000,
 			mousewheelControl: true
 		});
