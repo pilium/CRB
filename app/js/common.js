@@ -279,8 +279,22 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		})();
 	}
+	if (btnScrollDown) {
+		btnScrollDown.addEventListener('click', scrollDown);
+	}
 
-	btnScrollDown.addEventListener('click', scrollDown);
+	const dropdownItems = document.querySelectorAll('.fixed-width');
+	for (let i = 0; i < dropdownItems.length; i++) {
+		dropdownItems[i].addEventListener('keyup', event => {
+			if (event.keyCode === 13) {
+				let subMenu = dropdownItems[i].querySelector('.menu');
+				dropdownItems[i].classList.toggle('fixed-width--show');
+				subMenu.addEventListener('blur', () => {
+					subMenu.style.display = 'none'
+				})
+			}
+		})
+	}
 });
 ((() => {
 	const backTop = document.getElementsByClassName('js-cd-top')[0];

@@ -48,16 +48,6 @@
 	height: 400px
 	transition: all .3s
 
-@media screen and (max-width: 992px)
-	.blog-slider
-		max-width: 680px
-
-@media screen and (max-width: 768px)
-	.blog-slider
-		min-height: 500px
-		height: auto
-		margin: 180px auto
-
 .blog-slider__item
 	display: flex
 	align-items: center
@@ -89,10 +79,6 @@
 			&:nth-child(10)
 				transition-delay: 1.2s
 
-@media screen and (max-width: 768px)
-	.blog-slider__item
-		flex-direction: column
-
 .blog-slider__img
 	width: 300px
 	flex-shrink: 0
@@ -109,33 +95,12 @@
 		border-radius: 20px
 		transition: all .3s
 
-@media screen and (max-width: 768px)
-	.blog-slider__img
-		transform: translateY(-50%)
-		width: 90%
-
-@media screen and (max-width: 576px)
-	.blog-slider__img
-		width: 95%
-
-
 .blog-slider__content
 	padding-right: 25px
 	> *
 		opacity: 0
 		transform: translateY(25px)
 		transition: all .4s
-
-@media screen and (max-width: 768px)
-	.blog-slider__content
-		margin-top: -80px
-		text-align: center
-		padding: 0 30px
-
-@media screen and (max-width: 576px)
-	.blog-slider__content
-		padding: 0
-
 .blog-slider__code
 	color: #7b7992
 	margin-bottom: 15px
@@ -165,10 +130,6 @@
 	text-align: center
 	letter-spacing: 1px
 
-@media screen and (max-width: 576px)
-	.blog-slider__button
-		width: 100%
-
 .blog-slider
 	.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
 		bottom: 10px
@@ -183,7 +144,7 @@
 	text-align: center
 	left: auto !important
 	top: 50%
-	bottom: auto !important
+	bottom: auto
 	transform: translateY(-50%)
 	&.swiper-pagination-bullets .swiper-pagination-bullet
 		margin: 8px 0
@@ -193,22 +154,3 @@
 		opacity: 1
 		background: $accent
 		box-shadow: 0px 0px 10px rgba($accent, 0.3)
-
-@media screen and (max-width: 768px)
-	.blog-slider__pagination
-		transform: translateX(-50%)
-		left: 50% !important
-		top: 205px
-		width: 100% !important
-		display: flex
-		justify-content: center
-		align-items: center
-
-@media screen and (max-width: 768px)
-	.blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet
-		margin: 0 5px
-
-@media screen and (max-width: 768px)
-	.blog-slider__pagination .swiper-pagination-bullet-active
-		height: 11px
-		width: 30px
