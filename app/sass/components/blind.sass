@@ -1,0 +1,91 @@
+div.starblind
+	font-family: 'Arial'
+	svg
+		display: none
+	.header
+		&-info
+			&__item-link
+				color: $main
+				border-bottom: none
+		&-actions
+			&__search
+				box-shadow: none
+				input
+					+placeholder()
+						color: $main
+				svg
+					fill: $main
+			.starblind-text__normal
+				position: absolute
+				left: -1000px
+			.starblind-text__blind
+				position: static
+		.nav
+			background-color: #fff
+			.hrMenu
+				&-list
+					li
+						&:firts-child
+							display: none
+						span, a
+							color: $main
+							&:hover,&:focus
+								background-color: #fff
+					.menu
+						li
+							a
+								background-color: #fff
+								color: $main
+								&:hover,&:focus
+									background-color: #000
+									color: #fff
+
+	.scroll-down
+		display: none
+	.quick
+		.quick-item
+			flex: 0 0 33.5%
+			&__link
+				&::before
+					width: 0
+				span
+					padding-left: 10px
+	.rhombus-title
+		> div
+			display: none
+		h5
+			margin: 0 auto
+			span
+				color: $main
+	.slider
+		.swiper-container
+			display: none
+		.slider-blind
+			background-color: #fff
+			display: block
+			text-align: center
+			padding: 40px 0
+			.slider-info__title
+				margin-bottom: 40px
+				&::after
+					display: none
+			p
+				font-size: 1.6rem
+			.btn--slider-btn
+				background-color: #fff
+				color: $main
+				box-shadow: none
+				border: 1px solid $main
+				padding: 25px
+	.sliderNews
+		img
+			display: none
+		.news__title
+			color: $main
+		.news__item:hover
+			background-color: $main
+			color: #fff
+			.news__title
+				color: #fff
+
+	

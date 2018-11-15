@@ -25,9 +25,10 @@ header.header(role="banner")
                         button(type="submit", title='Найти')
                             +icon('magnifier-tool')
                 .header-actions__starblind
-                        button.btn.btn--starblind(type="button")
+                        button.btn.btn--starblind.js-starblind-trigger(type="button", title="Версия для слабовидящих")
                             +icon('glasses')
-                            span Версия для слабовидящих
+                            span.starblind-text__normal Версия для слабовидящих
+                            span.starblind-text__blind Обычная версия
     .hrMenu-wrap
         include hrMenu.pug
 .sidenav-overlay
