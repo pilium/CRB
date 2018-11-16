@@ -6,9 +6,9 @@ section.doctorsShedule
             h1.section-title График приема специалистов поликлиники МБУЗ «ЦРБ» Волгодонского района
             ul.tabs(role="tablist")
                 li.tab-2(role="tab" aria-controls="tab2-1" aria-selected="true")
-                    label(for='tab2-1') Ст.Романовская
+                    label(for='tab2-1' tabindex="0") Ст.Романовская
                     input#tab2-1(name='tabs-two' type='radio' checked='checked')
-                    div(role="tabpanel" aria-labelledby="tab2-1" aria-hidden="false")
+                    div(role="tabpanel" aria-labelledby="tab2-1" aria-hidden="false" tabindex="0")
                         table.table.table-mc-green.table-bordered.table--doctor-shedule
                             thead
                                 tr
@@ -218,9 +218,9 @@ section.doctorsShedule
                                     td.day(data-weekday="5") 08:00 - 15:12
 
                 li.tab-2(role="tab" aria-controls="tab2-2" aria-selected="false")
-                    label(for='tab2-2') х.Рябичев, п. Победа, ст. Дубенцовская 
+                    label(for='tab2-2' tabindex="0") х.Рябичев, п. Победа, ст. Дубенцовская 
                     input#tab2-2(name='tabs-two' type='radio')
-                    div(role="tabpanel" aria-labelledby="tab2-2" aria-hidden="true")
+                    div(role="tabpanel" aria-labelledby="tab2-2" aria-hidden="true" tabindex="0")
                         table.table.table-mc-green.table-bordered.table--doctor-shedule
                             thead
                                 tr
