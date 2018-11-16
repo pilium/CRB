@@ -1,63 +1,62 @@
 .table
-	width: 90%
-	max-width: 90%
-	margin: 0 auto 3rem
-	background-color: #fff
-	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 -1px 2px 0 rgba(0, 0, 0, 0.24)
-	caption
-		caption-side: top
-		font-size: rem(20)
-		text-align: center
-		font-style: italic
-		font-weight: bold
-		color: $accent
-	&.table-col-2
-		th,td
-			width: 50%
-	tbody
-		&:hover td
-			opacity: .9
-		tr:hover td
-			color: $accent
-			text-shadow: 0 1px 0 #fff
-	th,td
-		text-align: left
-		padding: 1rem
-		vertical-align: top
-		border-top: 0
-		transition: all 0.3s ease
-	th
-		color: $accent
-		text-transform: uppercase
-		vertical-align: bottom
-		border-bottom: 1px solid rgba(0, 0, 0, 0.12)
-	.no-border
-		border: 0
+    width: 90%
+    max-width: 90%
+    margin: 0 auto 3rem
+    background-color: #fff
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 -1px 2px 0 rgba(0, 0, 0, 0.24)
+    caption
+        caption-side: top
+        font-size: rem(20)
+        text-align: center
+        font-style: italic
+        font-weight: bold
+        color: $accent
+    &.table-col-2
+        th,td
+            width: 50%
+    th,td
+        text-align: left
+        padding: 1rem
+        vertical-align: top
+        border-top: 0
+        transition: all 0.3s ease
+    th
+        color: $accent
+        text-transform: uppercase
+        vertical-align: bottom
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12)
+    .no-border
+        border: 0
 
-	&.table-condensed >
-		th, td
-			padding: 0.8rem
+    &.table-condensed >
+        th, td
+            padding: 0.8rem
 
-	&.table-bordered
-		border: 0
-		th, td
-			border: 0
-			border-bottom: 1px solid #e0e0e0
-		th
-			border-bottom: 2px solid $accent
+    &.table-bordered
+        border: 0
+        th, td
+            border: 0
+            border-bottom: 1px solid #e0e0e0
+        th
+            border-bottom: 2px solid $accent
 
-	&.table-striped > tbody > tr:nth-child(odd) >
-		td, th
-			background-color: #f5f5f5
+    &.table-striped > tbody > tr:nth-child(odd) >
+        td, th
+            background-color: #f5f5f5
 
-	tbody
-		td
-			&[rowspan]
-				vertical-align: middle
-			&.day
-				width: 10%
-			&.attention
-				color: red
-				font-weight: normal
-	table.table thead th.day
-		text-align: center
+    tbody
+        tr:nth-child(even)
+            background-color: $accent
+            color: #fff
+            a
+                color: #fff
+            td
+                &[rowspan]
+                    vertical-align: middle
+                &.day
+                    width: 10%
+                &.attention
+                    color: red
+                    font-weight: normal
+    table.table thead th.day
+        text-align: center
