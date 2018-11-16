@@ -4,257 +4,580 @@ section.clinic
     .container
         article.panel
             h1.section-title Поликлиника
-            p 
+            p.adress-info 
                 span Адрес: 
                 | Волгодонской район, ст. Романовская, пер.Союзный 97а 
-            p 
+            p.adress-info 
                 span Контактный телефон: 
                 a(href="tel:88639470141") 8 (86394) 7-01-41
-            .administration-item
-                .administration-item__img
-                    img(src="img/clinic/kozhemjakina.jpg", alt="Заведующий отделением, Врач хирург")
-                .administration-item__info.doctor
-                    p.doctor-name Кожемякина Зоя Александровна
-                    p.doctor-job Заведующая поликлиникой Врач терапевт
-                    p.doctor-edu Таджикский государственный медицинский институт  1980 г.
-                    p.doctor-lastApgrade Терапия, в 2015 году
-                    p.doctor-cert  2015 г. Терапия
-                    p.doctor-cat Высшая, 2014 г.
-            .administration-item
-                .administration-item__img
-                    img(src="img/clinic/sivakova.jpg", alt="Заведующий отделением, Врач хирург")
-                .administration-item__info.doctor
-                    p.doctor-name  Смолякова Елена Александровн
-                    p.doctor-job  Старшая медсестра поликлиники
+            .person-card__wrapper
+                .profile_card
+                    .profile_inner
+                        .profile_img.img-24
+                        .over_layer
+                            .mc-description
+                                p
+                                    span Учебное заведение: 
+                                p Таджикский государственный медицинский институт  1980 г.
+                                p
+                                    span Последнее повышение: 
+                                p Терапия, в 2015 году
+                                p
+                                    span Сертификат: 
+                                p 2015 г. Терапия
+                                p
+                                    span Категория: 
+                                p Высшая, 2014 г.
+                        .profile_contact
+                            h3 Кожемякина Зоя Александровна
+                                span Заведующая поликлиникой Врач терапевт
+                .profile_card.no-hover
+                    .profile_inner
+                        .profile_img.img-25
+                        .profile_contact
+                            h3 Смолякова Елена Александровна
+                                span Старшая медсестра поликлиники
             h2 Состав поликлиники:
             h3 Терапевтические кабинеты:
-            ul
+            ul.doctors-list
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Ледяева Людмила Васильевна
-                        p.doctor-job Врач терапевт участковый
-                        p.doctor-edu Ставропольский государственный медицинский институт, в 1974 г.
-                        p.doctor-lastApgrade Терапия, в 2015 году
-                        p.doctor-cert  2015 г. Терапия
-                        p.doctor-cat Нет
+                        p.doctor-name
+                          span ФИО: 
+                          | Ледяева Людмила Васильевна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач терапевт участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Ставропольский государственный медицинский институт, в 1974 г.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Терапия, в 2015 году
+                        p.doctor-cert
+                          span Сертфикат: 
+                          | 2015 г. Терапия
+                        p.doctor-cat
+                          span категория: 
+                          | Нет
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Казимов Аскар Казимович
-                        p.doctor-job Врач терапевт участковый
-                        p.doctor-edu Ташкентский ордена Трудового Красного Знамени государственный медицинский институт, в 1989 году.
-                        p.doctor-lastApgrade Терапия, в 2018 году
-                        p.doctor-cert  2018 г. Терапия
-                        p.doctor-cat Нет 
+                        p.doctor-name
+                          span ФИО: 
+                          | Казимов Аскар Казимович
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач терапевт участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Ташкентский ордена Трудового Красного Знамени государственный медицинский институт, в 1989 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          |Терапия, в 2018 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2018 г. Терапия
+                        p.doctor-cat
+                          span Категория:
+                          | Нет 
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Дарянов Муртаз Кирманшаевич
-                        p.doctor-job Врач терапевт участковый
-                        p.doctor-edu ГБОУ ВПО Ростовский государственный медицинский университет, в 2013 году.
-                        p.doctor-lastApgrade Терапия, в 2014 году
-                        p.doctor-cert  2014 г. Терапия
-                        p.doctor-cat Нет 
+                        p.doctor-name
+                          span ФИО: 
+                          | Дарянов Муртаз Кирманшаевич
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач терапевт участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | ГБОУ ВПО Ростовский государственный медицинский университет, в 2013 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          |Терапия, в 2014 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2014 г. Терапия
+                        p.doctor-cat
+                          span Категория:
+                          | Нет 
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Чувилов Алексей Алексеевич
-                        p.doctor-job Врач терапевт участковый
-                        p.doctor-edu  ГБОУ ВПО Ростовский государственный медицинский университет, в 1999 году.
-                        p.doctor-lastApgrade Терапия, в 2018 году
-                        p.doctor-cert  2018 г. Терапия
-                        p.doctor-cat Нет 
+                        p.doctor-name
+                          span ФИО: 
+                          | Чувилов Алексей Алексеевич
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач терапевт участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          |  ГБОУ ВПО Ростовский государственный медицинский университет, в 1999 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          |Терапия, в 2018 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2018 г. Терапия
+                        p.doctor-cat
+                          span Категория:
+                          | Нет 
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Мельникова Юлия Сергеевна
-                        p.doctor-job Врач терапевт участковый
-                        p.doctor-edu  ГБОУ ВПО "Волгоградский государственный медицинский университет", в 2014 году.
-                        p.doctor-lastApgrade Терапия, в 2015 году
-                        p.doctor-cert  2015 г. Терапия
-                        p.doctor-cat Нет  
+                        p.doctor-name
+                          span ФИО: 
+                          | Мельникова Юлия Сергеевна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач терапевт участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          |  ГБОУ ВПО "Волгоградский государственный медицинский университет", в 2014 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          |Терапия, в 2015 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2015 г. Терапия
+                        p.doctor-cat
+                          span Категория:
+                          | Нет  
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Раджапов Байрам Бахтиярович
-                        p.doctor-job Врач терапевт участковый
-                        p.doctor-edu  ГБОУ ВПО "Астраханская государственная медицинская академия", в 2014 году.
-                        p.doctor-lastApgrade Терапия, в 2015 году
-                        p.doctor-cert  2015 г. Терапия
-                        p.doctor-cat Нет   
+                        p.doctor-name
+                          span ФИО: 
+                          | Раджапов Байрам Бахтиярович
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач терапевт участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          |  ГБОУ ВПО "Астраханская государственная медицинская академия", в 2014 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          |Терапия, в 2015 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2015 г. Терапия
+                        p.doctor-cat
+                          span Категория:
+                          | Нет   
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Кац Сергей Сергеевич
-                        p.doctor-job Врач терапевт участковый
-                        p.doctor-edu  ГБОУ ВПО Ростовский государственный медицинский университет, в 2014 году.
-                        p.doctor-lastApgrade Терапия, в 2015 году
-                        p.doctor-cert  2015 г. Терапия
-                        p.doctor-cat Нет  
+                        p.doctor-name
+                          span ФИО: 
+                          | Кац Сергей Сергеевич
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач терапевт участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          |  ГБОУ ВПО Ростовский государственный медицинский университет, в 2014 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          |Терапия, в 2015 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2015 г. Терапия
+                        p.doctor-cat
+                          span Категория:
+                          | Нет  
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Арькова Юлия Сергеевна
-                        p.doctor-job Врач терапевт участковый
-                        p.doctor-edu  Волгоградский государственный медицинский университет, в 2013 году.
-                        p.doctor-lastApgrade Терапия, в 2014 году
-                        p.doctor-cert  2014 г. Терапия
-                        p.doctor-cat Нет 
+                        p.doctor-name
+                          span ФИО: 
+                          | Арькова Юлия Сергеевна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач терапевт участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          |  Волгоградский государственный медицинский университет, в 2013 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          |Терапия, в 2014 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2014 г. Терапия
+                        p.doctor-cat
+                          span Категория:
+                          | Нет 
             h3 Педиатрические кабинеты:
-            ul
+            ul.doctors-list
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Бузнякова Любовь Васильевна
-                        p.doctor-job Врач педиатр участковый
-                        p.doctor-edu Ростовский государственный медицинский институт, в 1977году.
-                        p.doctor-lastApgrade Педиатрия, в 2014 году
-                        p.doctor-cert 2014 г. Педиатрия
-                        p.doctor-cat Первая, 2014 г.
+                        p.doctor-name
+                          span ФИО: 
+                          | Бузнякова Любовь Васильевна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач педиатр участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Ростовский государственный медицинский институт, в 1977году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Педиатрия, в 2014 году
+                        p.doctor-cert
+                          span Сертификат:
+                          | 2014 г. Педиатрия
+                        p.doctor-cat
+                          span Категория:
+                          | Первая, 2014 г.
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Караваева Эльвира Викторовна
-                        p.doctor-job Врач педиатр участковый
-                        p.doctor-edu  Ростовский ордена Дружбы народов медицинский институт, в 1990 году.
-                        p.doctor-lastApgrade Педиатрия, в 2016 году
-                        p.doctor-cert  2016 г. Педиатрия
-                        p.doctor-cat Первая, 2014 г.
+                        p.doctor-name
+                          span ФИО: 
+                          | Караваева Эльвира Викторовна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач педиатр участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          |  Ростовский ордена Дружбы народов медицинский институт, в 1990 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Педиатрия, в 2016 году
+                        p.doctor-cert
+                          span Сертификат:
+                          |  2016 г. Педиатрия
+                        p.doctor-cat
+                          span Категория:
+                          | Первая, 2014 г.
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Власова Юлия Сергеевна
-                        p.doctor-job Врач педиатр участковый
-                        p.doctor-edu  Волгоградский государственный медицинский университет, в 2011 году.
-                        p.doctor-lastApgrade Педиатрия, в 2016 году
-                        p.doctor-cert  2016 г. Педиатрия
-                        p.doctor-cat Нет
+                        p.doctor-name
+                          span ФИО: 
+                          | Власова Юлия Сергеевна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач педиатр участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          |  Волгоградский государственный медицинский университет, в 2011 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Педиатрия, в 2016 году
+                        p.doctor-cert
+                          span Сертификат:
+                          |  2016 г. Педиатрия
+                        p.doctor-cat
+                          span Категория:
+                          | Нет
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Капканова Любовь Стефановна
-                        p.doctor-job Врач педиатр участковый
-                        p.doctor-edu ГБОУ ВПО Ростовский государственный медицинский университет, в 2014 году.
-                        p.doctor-lastApgrade Педиатрия, в 2015 году
-                        p.doctor-cert  2015 г. Педиатрия
-                        p.doctor-cat Нет
+                        p.doctor-name
+                          span ФИО: 
+                          | Капканова Любовь Стефановна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач педиатр участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | ГБОУ ВПО Ростовский государственный медицинский университет, в 2014 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Педиатрия, в 2015 году
+                        p.doctor-cert
+                          span Сертификат:
+                          |  2015 г. Педиатрия
+                        p.doctor-cat
+                          span Категория:
+                          | Нет
                 li
                     .administration-item__info.doctor
-                        p.doctor-name Просветова Ксения Александровна
-                        p.doctor-job Врач педиатр участковый
-                        p.doctor-edu  ФГБОУВО Ростовский государственный медицинский университет, в 2018 году.
-                        p.doctor-lastApgrade нет
-                        p.doctor-cert  2018г.  Врач-педиатр участковый
-                        p.doctor-cat Нет
+                        p.doctor-name
+                          span ФИО: 
+                          | Просветова Ксения Александровна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач педиатр участковый
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          |  ФГБОУВО Ростовский государственный медицинский университет, в 2018 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | нет
+                        p.doctor-cert
+                          span Сертификат:
+                          |  2018г.  Врач-педиатр участковый
+                        p.doctor-cat
+                          span Категория:
+                          | Нет
             h3 Неврологический кабинет:
-            ul
+            ul.doctors-list
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Рамизов Бахтиер Фарамизович
-                        p.doctor-job Врач невролог
-                        p.doctor-edu  Ташкентский государственный медицинский институт, 1995 г.
-                        p.doctor-lastApgrade Неврология, в 2018 году
-                        p.doctor-cert   2018 г. Неврология
-                        p.doctor-cat Высшая , 2015 г.
+                        p.doctor-name
+                          span ФИО: 
+                          | Рамизов Бахтиер Фарамизович
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач невролог
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          |  Ташкентский государственный медицинский институт, 1995 г.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Неврология, в 2018 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          |   2018 г. Неврология
+                        p.doctor-cat
+                          span Категория: 
+                          | Высшая , 2015 г.
             h3 Хирургический кабинет:
-            ul
+            ul.doctors-list
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Ильин Андрей Владимирович
-                        p.doctor-job Врач хирург
-                        p.doctor-edu Ростовский ордена Дружбы народов медицинский институт, 1989 г.
-                        p.doctor-lastApgrade Хирургия, в 2017 году
-                        p.doctor-cert 2017 г. Хирургия
-                        p.doctor-cat Первая , 2017 г.
+                        p.doctor-name
+                          span ФИО: 
+                          | Ильин Андрей Владимирович
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач хирург
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Ростовский ордена Дружбы народов медицинский институт, 1989 г.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Хирургия, в 2017 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2017 г. Хирургия
+                        p.doctor-cat
+                          span Категория: 
+                          | Первая , 2017 г.
             h3 Офтальмологический кабинет:
-            ul
+            ul.doctors-list
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Фадлиев  Музаффар Махсудович
-                        p.doctor-job Врач офтальмолог
-                        p.doctor-edu ГБОУ ВПО Ростовский государственный медицинский университет 2017 г.
-                        p.doctor-lastApgrade Офтальмология, в 2017 году
-                        p.doctor-cert 2017 г. Хирургия
-                        p.doctor-cat нет
+                        p.doctor-name
+                          span ФИО: 
+                          | Фадлиев  Музаффар Махсудович
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач офтальмолог
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | ГБОУ ВПО Ростовский государственный медицинский университет 2017 г.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Офтальмология, в 2017 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2017 г. Хирургия
+                        p.doctor-cat
+                          span Категория: 
+                          | нет
             h3 Акушерско-гинекологические кабинеты:
-            ul
+            ul.doctors-list
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Поднебесная Марина Васильевна
-                        p.doctor-job Врач  акушер-гинеколог
-                        p.doctor-edu Ростовский ордена Дружбы народов медицинский институт, 1993 г.
-                        p.doctor-lastApgrade Акушерство и гинекология, в 2015 году
-                        p.doctor-cert 2015г. Акушерство и гинекология
-                        p.doctor-cat Высшая, 2015 г.
+                        p.doctor-name
+                          span ФИО: 
+                          | Поднебесная Марина Васильевна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач  акушер-гинеколог
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Ростовский ордена Дружбы народов медицинский институт, 1993 г.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Акушерство и гинекология, в 2015 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2015г. Акушерство и гинекология
+                        p.doctor-cat
+                          span Категория: 
+                          | Высшая, 2015 г.
             h3 Оториноларингологический кабинет:
-            ul
+            ul.doctors-list
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Мильдзихова Альбина Бексолтановна
-                        p.doctor-job Врач  оториноларинголог 
-                        p.doctor-edu Северо-Осетинская государственная медицинская академия, 2005 г.
-                        p.doctor-lastApgrade Оториноларингология, в 2017 году
-                        p.doctor-cert 2017 г. Оториноларингология
-                        p.doctor-cat нет
+                        p.doctor-name
+                          span ФИО: 
+                          | Мильдзихова Альбина Бексолтановна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач  оториноларинголог 
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Северо-Осетинская государственная медицинская академия, 2005 г.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Оториноларингология, в 2017 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2017 г. Оториноларингология
+                        p.doctor-cat
+                          span Категория: 
+                          | нет
             h3 Кардиологический кабинет:
-            ul
+            ul.doctors-list
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Чувилов Алексей Алексеевич
-                        p.doctor-job Врач кардиолог
-                        p.doctor-edu Красноярская государственная медицинская академия, 2005 г.
-                        p.doctor-lastApgrade Кардиология , в 2016 году
-                        p.doctor-cert 2016 г. Кардиология
-                        p.doctor-cat нет
+                        p.doctor-name
+                          span ФИО: 
+                          | Чувилов Алексей Алексеевич
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач кардиолог
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Красноярская государственная медицинская академия, 2005 г.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Кардиология , в 2016 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2016 г. Кардиология
+                        p.doctor-cat
+                          span Категория: 
+                          | нет
             h3 Кабинет неотложной помощи:
-            ul
+            ul.doctors-list
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Сулацкая Валентина Ивановна
-                        p.doctor-job Фельдшер
-                        p.doctor-edu Краснотурьинское  медицинское училище, в 1958 году
-                        p.doctor-lastApgrade Скорая и неотложная помощь, в 2014 году
-                        p.doctor-cert 2014 г. Скорая и неотложная помощь
-                        p.doctor-cat Высшая, 2017 г.
+                        p.doctor-name
+                          span ФИО: 
+                          | Сулацкая Валентина Ивановна
+                        p.doctor-job
+                          span Специальность: 
+                          | Фельдшер
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Краснотурьинское  медицинское училище, в 1958 году
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Скорая и неотложная помощь, в 2014 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2014 г. Скорая и неотложная помощь
+                        p.doctor-cat
+                          span Категория: 
+                          | Высшая, 2017 г.
             h3 Стоматологические кабинеты:
-            ul
+            ul.doctors-list
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Глогусь Любовь Николаевна
-                        p.doctor-job Врач стоматолог
-                        p.doctor-edu Львовский государственный медицинский институт, в 1976 году.
-                        p.doctor-lastApgrade Стоматология терапевтическая , в 2015 году
-                        p.doctor-cert 2015 г. Стоматология терапевтическая
-                        p.doctor-cat Высшая, 2014 г.
+                        p.doctor-name
+                          span ФИО: 
+                          | Глогусь Любовь Николаевна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач стоматолог
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Львовский государственный медицинский институт, в 1976 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Стоматология терапевтическая , в 2015 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2015 г. Стоматология терапевтическая
+                        p.doctor-cat
+                          span Категория: 
+                          | Высшая, 2014 г.
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Емельянченко Людмила Николаевна
-                        p.doctor-job Врач стоматолог
-                        p.doctor-edu Кубанская государственная медицинская академия, в 1995 году.
-                        p.doctor-lastApgrade Стоматология общей практики, в 2015 году
-                        p.doctor-cert 2015 г. Стоматология общей практики
-                        p.doctor-cat Первая, 2014 г.
+                        p.doctor-name
+                          span ФИО: 
+                          | Емельянченко Людмила Николаевна
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач стоматолог
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Кубанская государственная медицинская академия, в 1995 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Стоматология общей практики, в 2015 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2015 г. Стоматология общей практики
+                        p.doctor-cat
+                          span Категория: 
+                          | Первая, 2014 г.
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Коноплев Алексей Александрович
-                        p.doctor-job Врач стоматолог
-                        p.doctor-edu ГБОУ ВПО Волгоградский государственный медицинский университет, в 2014 году. 
-                        p.doctor-lastApgrade Стоматология общей практики, в 2015 году
-                        p.doctor-cert 2015 г. Стоматология общей практики
-                        p.doctor-cat Нет
+                        p.doctor-name
+                          span ФИО: 
+                          | Коноплев Алексей Александрович
+                        p.doctor-job
+                          span Специальность: 
+                          | Врач стоматолог
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | ГБОУ ВПО Волгоградский государственный медицинский университет, в 2014 году. 
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Стоматология общей практики, в 2015 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2015 г. Стоматология общей практики
+                        p.doctor-cat
+                          span Категория: 
+                          | Нет
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Гутовская Татьяна Геннадьевна
-                        p.doctor-job Зубной врач
-                        p.doctor-edu Ростовский базовый  медицинский колледж, в 2005 году.
-                        p.doctor-lastApgrade Стоматологическая помощь населению, в 2015 году
-                        p.doctor-cert 2015 г. Стоматология
-                        p.doctor-cat Высшая, 2017 г.
+                        p.doctor-name
+                          span ФИО: 
+                          | Гутовская Татьяна Геннадьевна
+                        p.doctor-job
+                          span Специальность: 
+                          | Зубной врач
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Ростовский базовый  медицинский колледж, в 2005 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Стоматологическая помощь населению, в 2015 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2015 г. Стоматология
+                        p.doctor-cat
+                          span Категория: 
+                          | Высшая, 2017 г.
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Суворова Светлана Абрамовна
-                        p.doctor-job Зубной врач
-                        p.doctor-edu Ростовское медицинское училище, в 1971 году.
-                        p.doctor-lastApgrade Стоматологическая помощь населению, в 2014 году
-                        p.doctor-cert 2014 г. Стоматология
-                        p.doctor-cat Высшая, 2014 г.
+                        p.doctor-name
+                          span ФИО: 
+                          | Суворова Светлана Абрамовна
+                        p.doctor-job
+                          span Специальность: 
+                          | Зубной врач
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | Ростовское медицинское училище, в 1971 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Стоматологическая помощь населению, в 2014 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2014 г. Стоматология
+                        p.doctor-cat
+                          span Категория: 
+                          | Высшая, 2014 г.
                 li 
                     .administration-item__info.doctor
-                        p.doctor-name Тупалов Микаил Алимович
-                        p.doctor-job Зубной врач
-                        p.doctor-edu ГОУ ВПО Ростовский государственный университет, в 2008 году.
-                        p.doctor-lastApgrade Стоматологическая помощь населению, в 2016 году
-                        p.doctor-cert 2016 г. Стоматология
-                        p.doctor-cat Первая, 2016 г.
+                        p.doctor-name
+                          span ФИО: 
+                          | Тупалов Микаил Алимович
+                        p.doctor-job
+                          span Специальность: 
+                          | Зубной врач
+                        p.doctor-edu
+                          span Учебное заведение: 
+                          | ГОУ ВПО Ростовский государственный университет, в 2008 году.
+                        p.doctor-lastApgrade
+                          span Последнее повышение: 
+                          | Стоматологическая помощь населению, в 2016 году
+                        p.doctor-cert
+                          span Сертификат: 
+                          | 2016 г. Стоматология
+                        p.doctor-cat
+                          span Категория: 
+                          | Первая, 2016 г.
             h2 Кабинеты по обслуживанию  детей  в дошкольных общеобразовательных учреждениях, расположенных по адресам:
             table.table.table-mc-green.table-bordered.table-striped.table-col-2
                 thead

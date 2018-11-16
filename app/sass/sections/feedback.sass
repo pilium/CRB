@@ -3,7 +3,9 @@
   align-items: center
   justify-content: space-between
   flex-wrap: wrap
-  .block
+  .registration
+	  width: 70%
+  .feedback-block
     font-size: 1.4em
     width: 60%
     margin: 0 auto 1rem
@@ -44,23 +46,27 @@
           font-weight: normal
     
 @media only screen and (min-width: 650px)
-  .feedback .block
+  .feedback .feedback-block
     width: 95%
     height: 300px
     margin-bottom: 2rem
 
 @media only screen and (min-width: 1000px)
-  .feedback .block
+  .feedback .feedback-block
     width: 50%
     height: 300px
 @media only screen and (min-width: 1440px)
-  .feedback .block
+  .feedback .feedback-block
     width: 90%
     margin: 0 auto 1rem
     p
       line-height: 24px
+@media only screen and (max-width: 700px)
+	.feedback
+		.registration
+			width: 100%
 @media only screen and (max-width: 650px)
-  .feedback .block
+  .feedback .feedback-block
     width: 100%
     padding-left: 40px
     padding-right: 10px

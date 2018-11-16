@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
 	// preloader
 	const preloader = document.getElementById('preloader');
 	if (preloader) {
 		setTimeout(() => {
 			preloader.classList.add('active');
 			document.body.style.overflow = 'visible';
-		}, 3000);
+		}, 1000);
 	}
 	// END Preloader
 

@@ -1,12 +1,12 @@
 .table
-	width: 100%
-	max-width: 100%
-	margin-bottom: 3rem
+	width: 90%
+	max-width: 90%
+	margin: 0 auto 3rem
 	background-color: #fff
-	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24)
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 -1px 2px 0 rgba(0, 0, 0, 0.24)
 	caption
 		caption-side: top
-		font-size: 24px
+		font-size: rem(20)
 		text-align: center
 		font-style: italic
 		font-weight: bold
@@ -16,7 +16,7 @@
 			width: 50%
 	tbody
 		&:hover td
-			opacity: .8
+			opacity: .9
 		tr:hover td
 			color: $accent
 			text-shadow: 0 1px 0 #fff
@@ -27,7 +27,6 @@
 		border-top: 0
 		transition: all 0.3s ease
 	th
-		font-weight: bold
 		color: $accent
 		text-transform: uppercase
 		vertical-align: bottom
@@ -53,10 +52,8 @@
 
 	tbody
 		td
-			&:first-child,
-			&:nth-child(2)
-				text-align: left
-				padding-left: 10px
+			&[rowspan]
+				vertical-align: middle
 			&.day
 				width: 10%
 			&.attention

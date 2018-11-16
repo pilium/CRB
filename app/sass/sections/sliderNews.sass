@@ -47,6 +47,23 @@
   align-items: flex-start
   position: relative
   z-index: 2
+  &.news-slider__wrp--page
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-top: 20px
+    .news-slider__item
+      width: 31%
+      margin-bottom: 20px
+    .news__title
+      font-size: rem(24)
+    .news-date
+      padding-bottom: 0
+      &__title
+        display: inline
+        margin-bottom: 0
+        margin-right: 10px
 
 .news-slider__item
   width: 500px
@@ -85,6 +102,8 @@
   .icon-font
     display: inline-flex
     svg
+      width: 1.2rem
+      height: 1.2rem
       fill: #fff
   &.news-slider-prev
     left: 15px
@@ -155,7 +174,7 @@
 
 .news-date__title
   display: block
-  font-size: 32px
+  font-size: rem(34)
   margin-bottom: 10px
   font-weight: 500
 
@@ -164,11 +183,11 @@
     margin-right: 10px
 
 .news-date__txt
-  font-size: 16px
+  font-size: rem(18)
 
 .news__title
   display: block
-  font-size: 25px
+  font-size: rem(27)
   font-weight: 500
   opacity: 1
   margin-top: 10px
@@ -179,13 +198,13 @@
 
 @media screen and (max-width: 576px)
   .news__title
-    font-size: 22px
+    font-size: rem(24)
     margin-bottom: 10px
 
 .news__txt
   margin: 10px 0
   line-height: 1.6em
-  font-size: 15px
+  font-size: rem(18)
   opacity: 1
   transition: opacity .3s
 

@@ -1,7 +1,7 @@
 nav.side-menu(role="navigation")
     ul
         li.sub-menu
-            span.acc-header(href='javascript:void(0);', tabindex="0")
+            span.acc-header(tabindex="0")
                 +icon('menu--med-patient')
                 span Пациентам
                 +icon('menu--right-chevron')
@@ -19,7 +19,7 @@ nav.side-menu(role="navigation")
                 +main-menu('sub', 'dispans.html', 'Диспансеризация')               
                 +main-menu('sub', 'jnvls.html', 'Перечень ЖНВЛС')
         li.sub-menu
-            span.acc-header(href='javascript:void(0);', tabindex="0")
+            span.acc-header(tabindex="0")
                 +icon('menu--hospital')
                 span О больнице
                 +icon('menu--right-chevron')
@@ -34,7 +34,7 @@ nav.side-menu(role="navigation")
                 +main-menu('sub', 'feedback.html', 'Отзывы')
                 +main-menu('sub', 'gallery.html', 'Галерея')
         li.sub-menu
-            span.acc-header(href='javascript:void(0);', tabindex="0")
+            span.acc-header(tabindex="0")
                 +icon('menu--structure')
                 span Структура организации
                 +icon('menu--right-chevron')
@@ -48,19 +48,16 @@ nav.side-menu(role="navigation")
                 +main-menu('sub', 'ambulance.html', 'Отделение скорой помощи')
                 +main-menu('sub', 'FAP.html', 'Фельдшерско-акушерские пункты')
         li.sub-menu.sub-menu--long
-            span.acc-header(href='javascript:void(0);', tabindex="0")
+            span.acc-header(tabindex="0")
                 +icon('menu--stethoscope')
                 span Диагностические подразделения 
                 +icon('menu--right-chevron')
             ul.sub-list
                 +main-menu('sub', 'kdl.html', 'Клинико-диагностическая лаборатория')
                 +main-menu('sub', 'rentgen.html', 'Рентгеновский кабинет')
-                +main-menu('sub', 'kfd.html', 'Кабинеты функциональной диагностики')
-                +main-menu('sub', 'kud.html', 'Кабинет ультразвуковой диагностики')
-                +main-menu('sub', 'endoscop.html', 'Эндоскопический кабинет')
-                +main-menu('sub', 'fizio.html', 'Физиотерапевтические кабинеты')
+                +main-menu('sub', 'kfd.html', 'Кабинеты диагностики')
         li.sub-menu
-            span.acc-header(href='javascript:void(0);', tabindex="0")
+            span.acc-header(tabindex="0")
                 +icon('menu--credit-card')
                 span Платные услуги
                 +icon('menu--right-chevron')
@@ -69,26 +66,26 @@ nav.side-menu(role="navigation")
                 +main-menu('sub', 'payOrders.html', 'Приказы о платных услугах')
                 +main-menu('sub', 'payOrganizations.html', 'Профосмотры для организаций')
         li.sub-menu
-            span.acc-header(href='articles.html', tabindex="0")
+            a.acc-header(href='articles.html', tabindex="0")
                 +icon('menu--article')
                 span Полезные статьи
         li.sub-menu
-            span.acc-header(href='zoj.html', tabindex="0")
+            a.acc-header(href='zoj.html', tabindex="0")
                 +icon('menu--fruit')
                 span Здоровый образ жизни
         li.sub-menu
-            span.acc-header(href='docs.html', tabindex="0")
+            a.acc-header(href='docs.html', tabindex="0")
                 +icon('menu--script')
                 span Нормативные документы
         li.sub-menu
-            span.acc-header(href='files.html', tabindex="0")
+            a.acc-header(href='files.html', tabindex="0")
                 +icon('menu--catalog')
                 span Каталог файлов
         li.sub-menu
-            span.acc-header(href='online.html', tabindex="0")
+            a.acc-header(href='online.html', tabindex="0")
                 +icon('menu--consultant')
                 span online консультация
         li.sub-menu
-            span.acc-header(href='contacts.html', tabindex="0")
+            a.acc-header(href='contacts.html', tabindex="0")
                 +icon('menu--book')
                 span Контакты
