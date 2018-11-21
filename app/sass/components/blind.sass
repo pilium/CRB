@@ -3,8 +3,34 @@ body.starblind
 	*
 		letter-spacing: 0
 		font-size: 1rem
-	&.times-font
+	&.font1
+		font-family: 'Arial'
+	&.font2
 		font-family: 'Times new Roman'
+	&.kerning1
+		*:not(.blindHeaderPanel)
+			letter-spacing: 0
+	&.kerning2
+		*:not(.blindHeaderPanel)
+			letter-spacing: 3px
+	&.kerning3
+		*:not(.blindHeaderPanel)
+			letter-spacing: 5px
+	&.color1
+		background-color: #fff
+		color: $main
+	&.color2
+		background-color: $main
+		color: #fff
+	&.color3
+		background-color: #9dd1ff
+		color: #063462
+	&.color4
+		background-color: #f7f3d6
+		color: #4d4b43
+	&.color5
+		background-color: #3b2716
+		color: #a9e44d
 	svg
 		display: none
 	.header

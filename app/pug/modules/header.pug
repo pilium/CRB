@@ -9,29 +9,29 @@ header.header(role="banner")
         dl.blindHeaderFontFamily
             dt Шрифт
             dd
-                button.blindHeaderFont.blindHeaderFont--Arial.blindHeaderActive(data-value= "arial-font") Arial
+                button.blindHeaderFont.blindHeaderFont--Arial(data-test="font1" data-group="font") Arial
             dd
-                button.blindHeaderFont.blindHeaderFont--Times(data-value= "times-font") TimesNewRoman
+                button.blindHeaderFont.blindHeaderFont--Times(data-test="font2" data-group="font") TimesNewRoman
         dl.blindHeaderKerning
             dt Кернинг
             dd
-                button.blindHeaderKerning__button.blindHeaderKerning--normal.blindHeaderActive(data-value= "spacing-normal") Стандартный
+                button.blindHeaderKerning__button.blindHeaderKerning--normal(data-test="kerning1" data-group="kerning") Стандартный
             dd
-                button.blindHeaderKerning__button.blindHeaderKerning--middle(data-value= "spacing-middle") Средний
+                button.blindHeaderKerning__button.blindHeaderKerning--middle(data-test="kerning2" data-group="kerning") Средний
             dd
-                button.blindHeaderKerning__button.blindHeaderKerning--big(data-value= "spacing-big") Большой
+                button.blindHeaderKerning__button.blindHeaderKerning--big(data-test="kerning3" data-group="kerning") Большой
         dl.blindHeaderColor
             dt Цвет сайта
             dd
-                button.blindHeaderColor.blindHeaderColor--normal.blindHeaderActive(data-value= "color1") Ц
+                button.blindHeaderColor.blindHeaderColor--normal(data-test="color1" data-group="color") Ц
             dd
-                button.blindHeaderColor.blindHeaderColor--invert(data-value= "color2") Ц
+                button.blindHeaderColor.blindHeaderColor--invert(data-test="color2" data-group="color") Ц
             dd
-                button.blindHeaderColor.blindHeaderColor--blue(data-value= "color3") Ц
+                button.blindHeaderColor.blindHeaderColor--blue(data-test="color3" data-group="color") Ц
             dd
-                button.blindHeaderColor.blindHeaderColor--brown(data-value= "color4") Ц
+                button.blindHeaderColor.blindHeaderColor--brown(data-test="color4" data-group="color") Ц
             dd
-                button.blindHeaderColor.blindHeaderColor--green(data-value= "color5") Ц
+                button.blindHeaderColor.blindHeaderColor--green(data-test="color5" data-group="color") Ц
     .container
         .header-wrap
             .wrapper-menu

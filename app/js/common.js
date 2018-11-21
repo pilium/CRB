@@ -318,15 +318,20 @@ window.addEventListener('load', () => {
 
 			test();
 		});
-
 	function test() {
 		if (body.classList.contains('starblind')) {
 			let buttons = [...blindPanel.querySelectorAll('button')]
 			buttons.forEach((button) => {
 				button.addEventListener('click', () => {
-					if (button.hasAttribute('data-value')) {
-						body.classList.toggle(button.getAttribute('data-value'))
-					}
+					buttons.filter(function(obj) {
+						return button.getAttribute('data-group') == obj.getAttribute('data-group');
+					  }).map(function(obj) {
+						body.classList.remove(obj.getAttribute('data-test'));
+					  });
+				  
+					  if(button.hasAttribute('data-test')) {     
+							  body.classList.add(button.getAttribute('data-test'))
+						  }
 				})
 			})
 		}
