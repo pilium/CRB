@@ -1,0 +1,25 @@
+.blindPanel
+	.visual-info
+		p Цвет шрифта и фона
+		button.btn.btn--blindPanel.blind--active(data-label="normal") Обычный
+		button.btn.btn--blindPanel(data-label="inverse") Инверсия
+		button.btn.btn--blindPanel(data-label="comfort") Комфортный
+	.link-colors
+		p Цвет кнопок и ссылок
+		button.btn.btn--blindPanel.blind--active(data-label="#000") Обычный
+		button.btn.btn--blindPanel(data-label="red") Красный 
+		button.btn.btn--blindPanel(data-label="blue") Синий
+	.blind-img
+		p Изображения
+		button.btn.btn--blindPanel.blind--active(data-label="block") Включить
+		button.btn.btn--blindPanel(data-label="none") Выключить
+	.letter-spacing
+		p Межбуквенный интервал
+		button.btn.btn--blindPanel.blind--active(data-label="0") Обычный
+		button.btn.btn--blindPanel(data-label=".15em") Большой
+		button.btn.btn--blindPanel(data-label=".3em") Очень большой
+	.blind-font
+		p Использовать шрифт
+		button.btn.btn--blindPanel.blind--active(data-label="Arial") Arial
+		button.btn.btn--blindPanel(data-label="Times New Roman") Times New Roman
+	button.btn.btn--blindPanelUse.js-blindPanel--close(type="button" ) Закрыть панель настройки

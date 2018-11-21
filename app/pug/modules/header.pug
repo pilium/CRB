@@ -1,7 +1,40 @@
 header.header(role="banner")
+    .blindHeaderPanel.js-blindHeaderPanel
+        dl.blindHeaderFontSize
+            dt Размер шрифта: 
+            dd
+                button +
+            dd
+                button -
+        dl.blindHeaderFontFamily
+            dt Шрифт
+            dd
+                button.blindHeaderFont.blindHeaderFont--Arial.blindHeaderActive(data-value= "arial-font") Arial
+            dd
+                button.blindHeaderFont.blindHeaderFont--Times(data-value= "times-font") TimesNewRoman
+        dl.blindHeaderKerning
+            dt Кернинг
+            dd
+                button.blindHeaderKerning__button.blindHeaderKerning--normal.blindHeaderActive(data-value= "spacing-normal") Стандартный
+            dd
+                button.blindHeaderKerning__button.blindHeaderKerning--middle(data-value= "spacing-middle") Средний
+            dd
+                button.blindHeaderKerning__button.blindHeaderKerning--big(data-value= "spacing-big") Большой
+        dl.blindHeaderColor
+            dt Цвет сайта
+            dd
+                button.blindHeaderColor.blindHeaderColor--normal.blindHeaderActive(data-value= "color1") Ц
+            dd
+                button.blindHeaderColor.blindHeaderColor--invert(data-value= "color2") Ц
+            dd
+                button.blindHeaderColor.blindHeaderColor--blue(data-value= "color3") Ц
+            dd
+                button.blindHeaderColor.blindHeaderColor--brown(data-value= "color4") Ц
+            dd
+                button.blindHeaderColor.blindHeaderColor--green(data-value= "color5") Ц
     .container
         .header-wrap
-            .wrapper-menu(role="menuitemcheckbox")
+            .wrapper-menu
                 .line-menu.half.start
                 .line-menu
                 .line-menu.half.end

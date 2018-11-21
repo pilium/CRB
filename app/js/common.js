@@ -1,3 +1,7 @@
+if (localStorage.getItem('blind') === 'active') {
+	console.log('hell yeah');
+
+}
 window.addEventListener('load', () => {
 	// preloader
 	const preloader = document.getElementById('preloader');
@@ -5,7 +9,8 @@ window.addEventListener('load', () => {
 		setTimeout(() => {
 			preloader.classList.add('active');
 			document.body.style.overflow = 'visible';
-		}, 1000);
+		}, 100);
+
 	}
 	// END Preloader
 
@@ -91,7 +96,7 @@ window.addEventListener('load', () => {
 			centeredSlides: false,
 			keyboard: true,
 			spaceBetween: 10,
-			slidesPerView: '4',
+			slidesPerView: '3',
 			speed: 300,
 			coverflowEffect: {
 				rotate: 0,
@@ -249,6 +254,7 @@ window.addEventListener('load', () => {
 		});
 	}
 	// END Gallery
+
 	// FormSubmit
 	const forms = document.querySelectorAll('form');
 	for (let i = 0; i < forms.length; i++) {
@@ -275,28 +281,6 @@ window.addEventListener('load', () => {
 	window.addEventListener('scroll', fixNav);
 	// END FixedNav
 
-	// scroll-down
-	var btnScrollDown = document.querySelector('.scroll-down');
-
-	function scrollDown() {
-		var windowCoords = document.documentElement.clientHeight - 50;
-		console.log(windowCoords);
-
-		(function scroll() {
-			if (window.pageYOffset < windowCoords) {
-				window.scrollBy(0, 10);
-				setTimeout(scroll, 0);
-			}
-			if (window.pageYOffset > windowCoords) {
-				window.scrollTo(0, windowCoords);
-			}
-		})();
-	}
-	if (btnScrollDown) {
-		btnScrollDown.addEventListener('click', scrollDown);
-	}
-	// END scroll-down
-
 	// Menu dropdown
 	const dropdownItems = document.querySelectorAll('.fixed-width');
 	for (let i = 0; i < dropdownItems.length; i++) {
@@ -314,16 +298,42 @@ window.addEventListener('load', () => {
 
 	// Blind
 	const blindtrigger = document.querySelector('.js-starblind-trigger');
-	const mainWrapper = document.querySelector('.main-wrapper');
+	const body = document.querySelector('body');
+	const sliderNewsBlind = document.querySelectorAll('.js-sliderNews--blind');
+	const testimonalsBlind = document.querySelector('.js-blindTestimonials');
+	const blindPanel = document.querySelector('.js-blindHeaderPanel');
 	blindtrigger.addEventListener(
 		'click', () => {
-			mainWrapper.classList.toggle('starblind');
-			document.roo
+			localStorage.setItem('blind', 'active');
+			blindPanel.classList.toggle('blindHeaderPanel--show');
+			body.classList.toggle('starblind');
+			if (testimonalsBlind) {
+				testimonalsBlind.classList.toggle('cd-testimonials__blind--show');
+			}
+			if (sliderNewsBlind) {
+				for (let i = 0; i < sliderNewsBlind.length; i++) {
+					sliderNewsBlind[i].classList.toggle('blindSliderNews--show')
+				}
+			}
+
+			test();
 		});
+
+	function test() {
+		if (body.classList.contains('starblind')) {
+			let buttons = [...blindPanel.querySelectorAll('button')]
+			buttons.forEach((button) => {
+				button.addEventListener('click', () => {
+					if (button.hasAttribute('data-value')) {
+						body.classList.toggle(button.getAttribute('data-value'))
+					}
+				})
+			})
+		}
+	}
+
+
 });
-// var htmlElement = document.body.parentNode;
-// htmlElement.style.fontSize = '28px'
-// console.log(htmlElement);
 (() => {
 	const backTop = document.getElementsByClassName('js-cd-top')[0];
 

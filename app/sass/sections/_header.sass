@@ -116,6 +116,61 @@
                     height: 20px
                     fill: #fff
                     margin-right: 5px
-				.starblind-text__blind
-					position: absolute
-					left: -1000px
+                .starblind-text__blind
+                    position: absolute
+                    left: -1000px
+.blindHeaderPanel
+    position: relative
+    display: none
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 100%
+    margin: 0 auto 10px
+    font-family: Arial
+    background-color: #eee
+    color: $main
+    &.blindHeaderPanel--show
+        display: flex
+    dl,dt,dd
+        display: inline-block
+        margin-bottom: 0
+    dl
+        width: 25%
+        background-color: $main
+        color: #fff
+        padding: 10px
+        &:first-child
+            width: 18%
+        &:nth-child(3)
+            width: 32%
+    dt
+        margin-right: 20px
+    dd
+        margin-right: 5px
+        button
+            height: 40px
+            cursor: pointer
+            &.blindHeaderActive
+               border: 2px solid red
+            font-size: 1.2rem
+            line-height: 40px
+            &.blindHeaderColor--invert
+               background-color: #000
+               color: #fff
+            &.blindHeaderColor--blue
+               background-color: #9dd1ff
+               color: #195183
+            &.blindHeaderColor--brown
+               background-color: #f7f3d6
+               color: #4d4b43
+            &.blindHeaderColor--green
+               background-color: #3b2716
+               color: #a9e44d
+    span
+        line-height: 40px
+    
+    .blindHeaderFont,
+    .blindHeaderKerning__button
+        width: auto
+        padding: 0 10px
