@@ -136,18 +136,14 @@
         display: inline-block
         margin-bottom: 0
     dl
-        width: 25%
+        width: 50%
         background-color: $main
         color: #fff
         padding: 10px
-        &:first-child
-            width: 18%
-        &:nth-child(3)
-            width: 32%
     dt
-        margin-right: 20px
+        margin-right: 10px
     dd
-        margin-right: 5px
+        margin-right: 1px
         button
             height: 40px
             cursor: pointer
@@ -168,6 +164,21 @@
             &.blindHeaderColor--green
                background-color: #3b2716
                color: #a9e44d
+            &.blind-fontSize--low
+                width: 40px
+                height: 40px
+                span
+                    font-size: 10px
+            &.blind-fontSize--normal
+                width: 40px
+                height: 40px
+                span
+                    font-size: 14px
+            &.blind-fontSize--big
+                width: 40px
+                height: 40px
+                span
+                    font-size: 18px
     span
         line-height: 40px
     

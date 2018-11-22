@@ -1,185 +1,403 @@
-body.starblind
-	font-family: 'Arial'
-	*
-		letter-spacing: 0
-		font-size: 1rem
-	&.font1
-		font-family: 'Arial'
-	&.font2
-		font-family: 'Times new Roman'
-	&.kerning1
-		*:not(.blindHeaderPanel)
-			letter-spacing: 0
-	&.kerning2
-		*:not(.blindHeaderPanel)
-			letter-spacing: 3px
-	&.kerning3
-		*:not(.blindHeaderPanel)
-			letter-spacing: 5px
-	&.color1
-		background-color: #fff
-		color: $main
-	&.color2
-		background-color: $main
-		color: #fff
-	&.color3
-		background-color: #9dd1ff
-		color: #063462
-	&.color4
-		background-color: #f7f3d6
-		color: #4d4b43
-	&.color5
-		background-color: #3b2716
-		color: #a9e44d
-	svg
-		display: none
-	.header
-		&-info
-			&__item-link
-				color: $main
-				border-bottom: none
-		&-actions
-			&__search
-				box-shadow: none
-				input
-					+placeholder()
-						color: $main
-				svg
-					fill: $main
-			.starblind-text__normal
-				position: absolute
-				left: -1000px
-			.starblind-text__blind
-				position: static
-		.nav
-			background-color: #fff
-			.hrMenu
-				&-list
-					li
-						&:firts-child
-							display: none
-						span, a
-							color: $main
-							&:hover,&:focus
-								background-color: #fff
-					.menu
-						li
-							a
-								background-color: #fff
-								color: $main
-								&:hover,&:focus
-									background-color: #000
-									color: #fff
-	.scroll-down
-		display: none
-	.quick
-		.quick-item
-			flex: 0 0 34%
-			&__link
-				&:hover
-					background-color: #000
-					color: #fff
-				&::before
-					width: 0
-				span
-					padding-left: 10px
-	.rhombus-title
-		> div
-			display: none
-		h5
-			margin: 0 auto
-			span
-				color: $main
-	.slider,
-	.cd-testimonials-wrapper
-		.swiper-container
-			display: none
-		.slider-blind
-			background-color: #fff
-			display: block
-			text-align: center
-			padding: 40px 0
-			.slider-info__title
-				margin-bottom: 40px
-				&::after
-					display: none
-			p
-				font-size: 1.6rem
-			.btn--slider-btn
-				background-color: #fff
-				color: $main
-				box-shadow: none
-				border: 1px solid $main
-	.sliderNews,
-	.sliderArticles
-		img
-			display: none
-		.news__title
-			color: $main
-		.news__item:hover
-			background-color: $main
-			color: #fff
-			.news__title
-				color: #fff
-		.news-slider__arrows
-			display: none
-		.news-slider__show-all
-			color: $main
-	.cd-testimonials__blind,
-	.cd-testimonials-wrapper
-		display: none
-		align-items: center
-		justify-content: space-between
-		flex-wrap: wrap
-		&--show
-			display: flex
-		.swiper-slide
-			width: 49%
-			color: $main
-			min-height: 400px
-			border: 1px solid $main
-			margin-bottom: 20px
-			padding: 20px
-	.map-info
-		*
-			color: $main
-	.footer
-		background-color: #fff
-		color: #000
-		span
-			color: #000
-	section
-		.file
-			background-color: #fff
-			&-icon
-				display: none
-			&-title
-				color: $main
-		.contacts-title
-			color: $main
-		article
-			h1,h2,h3,h4,h5,
-			.section-title,
-			.table th,
-			.table caption,
-			a
-				color: $main
-			.table th
-				border-bottom: 2px solid $main
-			figure,img
-				display: none
-	.breadcrumb
-		box-shadow: none
-		&__step
-			&::before,
-			&::after
-				display: none
-			color: $main
-			&:hover,
-			&.breadcrumb__step--active
-				background-color: #fff
-				color: $main
-			&.breadcrumb__step--active
-				text-decoration: underline
-
-	
+.starblind
+    font-family: 'Arial'
+    *
+        letter-spacing: 0
+        font-size: 1rem
+    &.font1
+        font-family: 'Arial'
+    &.font2
+        font-family: 'Times new Roman'
+    &.kerning1
+        *
+            letter-spacing: 0
+    &.kerning2
+        *
+            letter-spacing: 3px
+    &.kerning3	*
+            letter-spacing: 5px
+    &.color1
+        section,
+        header,
+        .slider .slider-blind,
+        .hrMenu-list,
+        .quick-item,
+        .sliderNews .news__item,
+        .sliderArticles .news__item,
+        .map-info,
+        .footer,
+        .btn--starblind,
+        .panel,
+        .breadcrumb__step,
+        .breadcrumb__step.breadcrumb__step--active,
+        section .file,
+        .table, .table tbody tr:nth-child(odd) td,
+        .registration,
+        .pure-material-button-contained,
+        .blindHeaderPanel dl
+            background-color: #fff
+        *,
+        a,
+        .header .nav .hrMenu-list .hrMenu-list__item span,
+        .header-info__item-link,
+        .header .nav .hrMenu-list li a,
+        .sliderNews .news__item .news__title,
+        .sliderArticles .news__item .news__title,
+        .map-info > *,
+        .footer-actions__date span,
+        .rhombus-title h5 span,
+        .btn--starblind  .starblind-text__blind,
+        article *,
+        section article .section-title,
+        .breadcrumb__step.breadcrumb__step--active,
+        section .file .file-title,
+        .table thead th,
+        .table caption,
+        .pure-material-button-contained,
+        .blindHeaderPanel dl,
+        .contacts-title
+            color: $main
+    &.color2
+        section,
+        header,
+        .slider .slider-blind,
+        .hrMenu-list,
+        .quick-item,
+        .sliderNews .news__item,
+        .sliderArticles .news__item,
+        .map-info,
+        .footer,
+        .btn--starblind,
+        .panel,,
+        .contacts-title
+        .breadcrumb__step,
+        .breadcrumb__step.breadcrumb__step--active,
+        section .file,
+        .table, .table tbody tr:nth-child(odd) td,
+        .registration,
+        .pure-material-button-contained,
+        .blindHeaderPanel dl
+            background-color: $main
+        *,
+        a,
+        .header .nav .hrMenu-list .hrMenu-list__item span,
+        .header-info__item-link,
+        .header .nav .hrMenu-list li a,
+        .sliderNews .news__item .news__title,
+        .sliderArticles .news__item .news__title,
+        .map-info > *,
+        .footer-actions__date span,
+        .rhombus-title h5 span,
+        .btn--starblind  .starblind-text__blind,
+        article *,
+        section article .section-title,
+        .breadcrumb__step.breadcrumb__step--active,
+        section .file .file-title,
+        .table thead th,
+        .table caption,
+        .pure-material-button-contained,
+        .blindHeaderPanel dl,
+        .contacts-title,
+        .contacts-title
+            color: #fff
+    &.color3
+        section,
+        header,
+        .slider .slider-blind,
+        .hrMenu-list,
+        .quick-item,
+        .sliderNews .news__item,
+        .sliderArticles .news__item,
+        .map-info,
+        .footer,
+        .btn--starblind,
+        .panel,
+        .breadcrumb__step,
+        .breadcrumb__step.breadcrumb__step--active,
+        section .file,
+        .table, .table tbody tr:nth-child(odd) td,
+        .registration,
+        .pure-material-button-contained,
+        .blindHeaderPanel dl
+            background-color: #9dd1ff
+        *,
+        a,
+        .header .nav .hrMenu-list .hrMenu-list__item span,
+        .header-info__item-link,
+        .header .nav .hrMenu-list li a,
+        .sliderNews .news__item .news__title,
+        .sliderArticles .news__item .news__title,
+        .map-info > *,
+        .footer-actions__date span,
+        .rhombus-title h5 span,
+        .btn--starblind  .starblind-text__blind,
+        article *,
+        section article .section-title,
+        .breadcrumb__step.breadcrumb__step--active,
+        section .file .file-title,
+        .table thead th,
+        .table caption,
+        .pure-material-button-contained,
+        .blindHeaderPanel dl,
+        .contacts-title,
+        .contacts-title
+            color: #063462
+    &.color4
+        section,
+        header,
+        .slider .slider-blind,
+        .hrMenu-list,
+        .quick-item,
+        .sliderNews .news__item,
+        .sliderArticles .news__item,
+        .map-info,
+        .footer,
+        .btn--starblind,
+        .panel,
+        .breadcrumb__step,
+        .breadcrumb__step.breadcrumb__step--active,
+        section .file,
+        .table, .table tbody tr:nth-child(odd) td,
+        .registration,
+        .pure-material-button-contained,
+        .blindHeaderPanel dl
+            background-color: #f7f3d6
+        *,
+        a,
+        .header .nav .hrMenu-list .hrMenu-list__item span,
+        .header-info__item-link,
+        .header .nav .hrMenu-list li a,
+        .sliderNews .news__item .news__title,
+        .sliderArticles .news__item .news__title,
+        .map-info > *,
+        .footer-actions__date span,
+        .rhombus-title h5 span,
+        .btn--starblind  .starblind-text__blind,
+        article *,
+        section article .section-title,
+        .breadcrumb__step.breadcrumb__step--active,
+        section .file .file-title,
+        .table thead th,
+        .table caption,
+        .pure-material-button-contained,
+        .blindHeaderPanel dl,
+        .contacts-title,
+        .contacts-title
+            color: #4d4b43
+    &.color5
+        section,
+        header,
+        .slider .slider-blind,
+        .hrMenu-list,
+        .quick-item,
+        .sliderNews .news__item,
+        .sliderArticles .news__item,
+        .map-info,
+        .footer,
+        .btn--starblind,
+        .panel,
+        .breadcrumb__step,
+        .breadcrumb__step.breadcrumb__step--active,
+        section .file,
+        .table, .table tbody tr:nth-child(odd) td,
+        .registration,
+        .pure-material-button-contained,
+        .blindHeaderPanel dl
+            background-color: #3b2716
+        *,
+        a,
+        .header .nav .hrMenu-list .hrMenu-list__item span,
+        .header-info__item-link,
+        .header .nav .hrMenu-list li a,
+        .sliderNews .news__item .news__title,
+        .sliderArticles .news__item .news__title,
+        .map-info > *,
+        .footer-actions__date span,
+        .rhombus-title h5 span,
+        .btn--starblind  .starblind-text__blind,
+        article *,
+        section article .section-title,
+        .breadcrumb__step.breadcrumb__step--active,
+        section .file .file-title,
+        .table thead th,
+        .table caption,
+        .pure-material-button-contained,
+        .blindHeaderPanel dl,
+        .contacts-title,
+        .contacts-title
+            color: #a9e44d
+    svg
+        display: none!important
+    .wrapper-menu
+        display: none!important
+    .nav
+        display: block!important
+        &.fixed-nav
+           display: none!important
+        ul
+            flex-wrap: wrap
+    .header
+        &-info
+            &__item-link
+                color: $main
+                border-bottom: none
+        &-actions
+            &__search
+                box-shadow: none
+                input
+                    +placeholder()
+                        color: $main
+                svg
+                    fill: $main
+            .starblind-text__normal
+                position: absolute
+                left: -1000px
+            .starblind-text__blind
+                position: static
+        .nav
+            background-color: #fff
+            .hrMenu
+                &-list
+                    li
+                        &:firts-child
+                            display: none
+                        span, a
+                            color: $main
+                            &:hover,&:focus
+                                background-color: #fff
+                    .menu
+                        li
+                            a
+                                background-color: #fff
+                                color: $main
+                                &:hover,&:focus
+                                    background-color: #000
+                                    color: #fff
+    .scroll-down
+        display: none
+    .quick
+        .quick-item
+            flex: 0 0 34%
+            &__link
+                &:hover
+                    background-color: #000
+                    color: #fff
+                &::before
+                    width: 0
+                span
+                    padding-left: 10px
+    .rhombus-title
+        > div
+            display: none
+        h5
+            margin: 10px auto
+            span
+                color: $main
+    .slider,
+    .cd-testimonials-wrapper
+        .swiper-container
+            display: none
+        .slider-blind
+            background-color: #fff
+            display: block
+            text-align: center
+            padding: 40px 0
+            .slider-info__title
+                margin-bottom: 40px
+                &::after
+                    display: none
+            p
+                font-size: 1.6rem
+            .btn--slider-btn
+                background-color: #fff
+                color: $main
+                box-shadow: none
+                border: 1px solid $main
+    .sliderNews,
+    .sliderArticles
+        .wrapper
+            display: none
+        img
+            display: none
+        .news__title
+            color: $main
+        .news__item:hover
+            background-color: $main
+            color: #fff
+            .news__title
+                color: #fff
+        .news-slider__arrows
+            display: none
+        .news-slider__show-all
+            color: $main
+    .cd-testimonials__blind,
+    .cd-testimonials-wrapper
+        display: none
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        &--show
+            display: flex
+        .swiper-slide
+            width: 49%
+            color: $main
+            min-height: 400px
+            border: 1px solid $main
+            margin-bottom: 20px
+            padding: 20px
+    .map-info
+        &__title
+            border-bottom: none
+        *
+            color: $main
+    .footer
+        background-color: #fff
+        color: #000
+        span
+            color: #000
+    .cd-top
+        display: none
+    section
+        .file
+            background-color: #fff
+            &-icon
+                display: none
+            &-title
+                color: $main
+        .contacts-title
+            color: $main
+        article
+            h1,h2,h3,h4,h5,
+            .section-title,
+            .table th,
+            .table caption,
+            a
+                color: $main
+            .table th
+                border-bottom: 2px solid $main
+            figure,img
+                display: none
+    .breadcrumb
+        box-shadow: none
+        &__step
+            &::before,
+            &::after
+                display: none
+            color: $main
+            &:hover,
+            &.breadcrumb__step--active
+                background-color: #fff
+                color: $main
+            &.breadcrumb__step--active
+                text-decoration: underline
+    .organizations-wrap
+        display: none
+    .profile_card
+        &.big
+            .over_layer
+                height: 100%
+        .profile_img
+            background-image: none
+        .over_layer
+            height: 86%
+            visibility: visible
+            transform: rotateY(0)

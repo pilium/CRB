@@ -126,7 +126,16 @@
 				display: none
 			&::after
 				display: none
-
+	.organizations-main__wrapper
+		.organizations-main__item
+			.organizations-main__img
+				width: 200px
+	.blind-newsItem__wrap
+		.news-slider__item
+			width: 49%
+	.blindHeaderPanel dl
+		width: 90%
+		margin: 0 auto
 @media only screen and (max-width : 820px)
 	.blog-slider__img
 		width: 250px
@@ -152,6 +161,9 @@
 		width: 49%
 	.map-info > div a
 		font-size: 1rem
+	.cd-testimonials__blind
+		> div
+			width: 49%
 @media only screen and (max-width : 768px)
 	.blog-slider
 		min-height: 500px
@@ -227,6 +239,14 @@
 			th,td
 				&:first-child
 					display: none
+	.organizations-main__wrapper
+		.organizations-main__item
+			flex-direction: column
+			.organizations-main__img
+				margin: 10px auto
+				transform: none
+			.organizations-main__info
+				text-align: center
 @media only screen and (max-width : 576px)
 	.blog-slider__img
 		width: 95%

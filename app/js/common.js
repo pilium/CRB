@@ -1,7 +1,3 @@
-if (localStorage.getItem('blind') === 'active') {
-	console.log('hell yeah');
-
-}
 window.addEventListener('load', () => {
 	// preloader
 	const preloader = document.getElementById('preloader');
@@ -10,7 +6,6 @@ window.addEventListener('load', () => {
 			preloader.classList.add('active');
 			document.body.style.overflow = 'visible';
 		}, 100);
-
 	}
 	// END Preloader
 
@@ -298,46 +293,71 @@ window.addEventListener('load', () => {
 
 	// Blind
 	const blindtrigger = document.querySelector('.js-starblind-trigger');
-	const body = document.querySelector('body');
+	const body = document.querySelector('.main-wrapper');
 	const sliderNewsBlind = document.querySelectorAll('.js-sliderNews--blind');
 	const testimonalsBlind = document.querySelector('.js-blindTestimonials');
+	const organizationBlind = document.querySelector('.js-organizationBlind');
 	const blindPanel = document.querySelector('.js-blindHeaderPanel');
-	blindtrigger.addEventListener(
-		'click', () => {
-			localStorage.setItem('blind', 'active');
-			blindPanel.classList.toggle('blindHeaderPanel--show');
-			body.classList.toggle('starblind');
-			if (testimonalsBlind) {
-				testimonalsBlind.classList.toggle('cd-testimonials__blind--show');
+	blindtrigger.addEventListener('click', () => {
+		localStorage.setItem('blind', 'active');
+		blindPanel.classList.toggle('blindHeaderPanel--show');
+		body.classList.toggle('starblind');
+		if (testimonalsBlind) {
+			testimonalsBlind.classList.toggle('cd-testimonials__blind--show');
+		}
+		if (sliderNewsBlind) {
+			for (let i = 0; i < sliderNewsBlind.length; i++) {
+				sliderNewsBlind[i].classList.toggle('blindSliderNews--show');
 			}
-			if (sliderNewsBlind) {
-				for (let i = 0; i < sliderNewsBlind.length; i++) {
-					sliderNewsBlind[i].classList.toggle('blindSliderNews--show')
-				}
-			}
+		}
+		if (organizationBlind) {
+			organizationBlind.classList.toggle('organizations-main__wrapper--blind');
+		}
 
-			test();
-		});
+		test();
+	});
+
 	function test() {
 		if (body.classList.contains('starblind')) {
-			let buttons = [...blindPanel.querySelectorAll('button')]
-			buttons.forEach((button) => {
+			let buttons = [...blindPanel.querySelectorAll('button')];
+			let buttonLowFontSize = blindPanel.querySelector('.blind-fontSize--low');
+			let buttonNormalFontSize = blindPanel.querySelector('.blind-fontSize--normal');
+			let buttonBigFontSize = blindPanel.querySelector('.blind-fontSize--big');
+			let htmlElem = document.querySelector('html');
+			var style = window.getComputedStyle(htmlElem, null).getPropertyValue('font-size');
+			var defaultFontSize = parseFloat(style);
+			// now you have a proper float for the font size (yes, it can be a float, not just an integer)
+			// htmlElem.style.fontSize = (defaultFontSize + 10) + 'px';
+			console.log(defaultFontSize);
+
+			buttons.forEach(button => {
 				button.addEventListener('click', () => {
-					buttons.filter(function(obj) {
-						return button.getAttribute('data-group') == obj.getAttribute('data-group');
-					  }).map(function(obj) {
-						body.classList.remove(obj.getAttribute('data-test'));
-					  });
-				  
-					  if(button.hasAttribute('data-test')) {     
-							  body.classList.add(button.getAttribute('data-test'))
-						  }
-				})
-			})
+					buttons
+						.filter(function (obj) {
+							return (
+								button.getAttribute('data-group') == obj.getAttribute('data-group')
+							);
+						})
+						.map(function (obj) {
+							body.classList.remove(obj.getAttribute('data-test'));
+						});
+
+					if (button.hasAttribute('data-test')) {
+						body.classList.add(button.getAttribute('data-test'));
+					}
+				});
+			});
+			buttonLowFontSize.onclick = () => {
+				htmlElem.style.fontSize = (defaultFontSize - 2) + 'px';
+			};
+			buttonNormalFontSize.onclick = () => {
+				htmlElem.style.fontSize = (defaultFontSize) + 'px';
+			};
+			buttonBigFontSize.onclick = () => {
+				htmlElem.style.fontSize = (defaultFontSize + 6) + 'px';
+			}
 		}
 	}
-
-
 });
 (() => {
 	const backTop = document.getElementsByClassName('js-cd-top')[0];
