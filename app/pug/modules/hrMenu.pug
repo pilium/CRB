@@ -1,12 +1,12 @@
-nav.nav#nav-main(role="navigation")
+nav.nav#nav-main(role="menu")
   ul.hrMenu-list
     li.hrMenu-list__item.hrMenu-list__item--active
-      a.logo(href='/', role="menuitem")
+      a.logo(href='/')
         +icon('menu--homepage')
     li.hrMenu-list__item.fixed-width
       span(tabindex="0") Пациентам
         +icon('menu--right-chevron')
-      ul.menu
+      ul.menu(role="menu")
         +main-menu('sub', 'patientDuties.html', 'Права и обязанности пациента')
         +main-menu('sub', 'writeRules.html', 'Правила записи на прием')
         +main-menu('sub', 'prepareRules.html', 'Правила подготовки к исследованиям')
@@ -24,7 +24,7 @@ nav.nav#nav-main(role="navigation")
       span(tabindex="0")
         | О больнице
         +icon('menu--right-chevron')
-      ul.menu
+      ul.menu(role="menu")
         +main-menu('sub', 'history.html', 'История больницы')
         +main-menu('sub', 'news.html', 'Новости')
         +main-menu('sub', 'roadmap.html', 'Дорожная карта')
@@ -42,7 +42,7 @@ nav.nav#nav-main(role="navigation")
       span(tabindex="0")
         | Структура 
         +icon('menu--right-chevron')
-      ul.menu
+      ul.menu(role="menu")
         +main-menu('sub', 'administration.html', 'Администрация')
         +main-menu('sub', 'surgeon.html', 'Хирургическое отделение')
         +main-menu('sub', 'neurologist.html', 'Неврологическое отделение')
@@ -55,7 +55,7 @@ nav.nav#nav-main(role="navigation")
       span(tabindex="0")
         | Диагностика
         +icon('menu--right-chevron')
-      ul.menu
+      ul.menu(role="menu")
         +main-menu('sub', 'kdl.html', 'Клинико-диагностическая лаборатория')
         +main-menu('sub', 'rentgen.html', 'Рентгеновский кабинет')
         +main-menu('sub', 'kfd.html', 'Кабинеты диагностики')
@@ -63,16 +63,11 @@ nav.nav#nav-main(role="navigation")
       span(tabindex="0")
         | Платные услуги
         +icon('menu--right-chevron')
-      ul.menu
+      ul.menu(role="menu")
         +main-menu('sub', 'payShedule.html', 'График работы медицинского персонала')
         +main-menu('sub', 'payOrders.html', 'Приказы о платных услугах')
         +main-menu('sub', 'payOrganizations.html', 'Профосмотры для организаций')
-    li.hrMenu-list__item.fixed-width(role="menuitem")
-      a(href='contacts.html')
-        | Контакты
-    li.hrMenu-list__item.fixed-width(role="menuitem")
-      a(href='licence.html')
-        | Лицензии
-    //- li.hrMenu-list__item
-    //-   a(href='#contact')
-    //-     +icon('magnifier-tool')
+    li.hrMenu-list__item.fixed-width
+      a(href='contacts.html') Контакты
+    li.hrMenu-list__item.fixed-width
+      a(href='licence.html') Лицензии
