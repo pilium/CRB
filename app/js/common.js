@@ -298,8 +298,18 @@ window.addEventListener('load', () => {
 	const testimonalsBlind = document.querySelector('.js-blindTestimonials');
 	const organizationBlind = document.querySelector('.js-organizationBlind');
 	const blindPanel = document.querySelector('.js-blindHeaderPanel');
+
+	if (!localStorage.getItem("blindClasses")) {
+		let arr = ['font1', 'kerning1', 'color1'];
+		let classArr = JSON.stringify(arr)
+		localStorage.setItem('blindClasses', classArr)
+		for (let i = 0; i < arr.length; i++) {
+			body.classList.add(arr[i]);
+		}
+
+	}
+
 	blindtrigger.addEventListener('click', () => {
-		localStorage.setItem('blind', 'active');
 		blindPanel.classList.toggle('blindHeaderPanel--show');
 		body.classList.toggle('starblind');
 		if (testimonalsBlind) {
