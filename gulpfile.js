@@ -48,10 +48,10 @@ gulp.task('js', function () {
 		.pipe(babel({
 			presets: ['@babel/env']
 		}))
-		.pipe(sourcemaps.init())
+		// .pipe(sourcemaps.init())
 		.pipe(concat('scripts.min.js'))
 		.pipe(uglify()) // Минимизировать весь js (на выбор)
-		.pipe(sourcemaps.write())
+		// .pipe(sourcemaps.write())
 		.pipe(gulp.dest('app/js'))
 		.pipe(browserSync.reload({
 			stream: true
@@ -71,7 +71,7 @@ gulp.task('browser-sync', function () {
 
 gulp.task('sass', function () {
 	return gulp.src('app/sass/main.sass')
-		.pipe(sourcemaps.init())
+		// .pipe(sourcemaps.init())
 		.pipe(sass({
 			outputStyle: 'expand'
 		}).on('error', notify.onError()))
@@ -81,7 +81,7 @@ gulp.task('sass', function () {
 		}))
 		.pipe(autoprefixer(['last 15 versions']))
 		.pipe(cleanCSS()) // Опционально, закомментировать при отладке
-		.pipe(sourcemaps.write())
+		// .pipe(sourcemaps.write())
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({
 			stream: true

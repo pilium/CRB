@@ -4,7 +4,7 @@
   left: 50%
   z-index: 1000
   transform: translate(-50%, -50%)
-  width: 70%
+  width: 50%
   opacity: 0
   border-radius: 10px
   background: #fff
@@ -12,6 +12,8 @@
   pointer-events: none
   will-change: opacity
   transition: opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946)
+  .registration
+	  padding: 5px 25px
   #form-container
     width: 100%
   &.modal-show
@@ -20,8 +22,8 @@
     transition: opacity 0.4s cubic-bezier(0.465, 0.183, 0.153, 0.946)
   &-close__btn
     position: absolute
-    top: 5px
-    right: 5px
+    top: 10px
+    right: 20px
     z-index: 10
     border: none
     display: block

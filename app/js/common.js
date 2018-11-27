@@ -1,16 +1,14 @@
 window.addEventListener('load', () => {
-	// preloader
-	const preloader = document.getElementById('preloader');
-	if (preloader) {
-		setTimeout(() => {
-			preloader.classList.add('active');
-			document.body.style.overflow = 'visible';
-		}, 100);
-	}
-	// END Preloader
+	// // preloader
+	// const preloader = document.getElementById('preloader');
+	// if (preloader) {
+	// 	setTimeout(() => {
+	// 		preloader.classList.add('active');
+	// 		document.body.style.overflow = 'visible';
+	// 	}, 100);
+	// }
+	// // END Preloader
 
-	const sliderContainer = document.querySelector('.js-hero-slider');
-	const blogSlider = document.querySelector('.blog-slider');
 	const newsSlider = document.querySelector('.news-slider');
 	const mapContainer = document.getElementById('map');
 
@@ -24,8 +22,6 @@ window.addEventListener('load', () => {
 	const overlay = document.querySelector('.sidenav-overlay');
 
 	const acc = document.getElementsByClassName('acc-header');
-
-	const testimonialsSlider = document.querySelector('.testimonials-slider');
 
 	const gallery = document.querySelector('.gallery');
 
@@ -56,33 +52,6 @@ window.addEventListener('load', () => {
 	// END Modal
 
 	// Sliders
-	if (sliderContainer) {
-		const mySwiper = new Swiper('.swiper-container', {
-			loop: true,
-			parallax: true,
-			autoplay: {
-				delay: 5000,
-			},
-			speed: 1000,
-			mousewheelControl: true,
-		});
-	}
-	if (blogSlider) {
-		const swiper = new Swiper('.blog-slider', {
-			spaceBetween: 30,
-			effect: 'fade',
-			loop: true,
-			grabCursor: true,
-			autoplay: {
-				delay: 7000,
-			},
-			// autoHeight: true,
-			pagination: {
-				el: '.blog-slider__pagination',
-				clickable: true,
-			},
-		});
-	}
 	if (newsSlider) {
 		const newsSwiper = new Swiper('.news-slider', {
 			effect: 'coverflow',
@@ -124,47 +93,37 @@ window.addEventListener('load', () => {
 			},
 		});
 	}
-	if (testimonialsSlider) {
-		const feedSwiper = new Swiper(testimonialsSlider, {
-			autoHeight: true,
-			loop: true,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-		});
-	}
 	// END Sliders
 
-	// Map
-	if (mapContainer) {
-		function init() {
-			const myMap = new ymaps.Map('map', {
-				center: [47.5396, 42.0151],
-				controls: [
-					'typeSelector',
-					'fullscreenControl',
-					'geolocationControl',
-					'rulerControl',
-					'routeButtonControl',
-				],
-				zoom: 16,
-			});
-			const control = myMap.controls.get('routeButtonControl');
-			control.routePanel.state.set('from', 'Романовская союзный 97а');
-			const myPlacemark = new ymaps.Placemark(
-				[47.5398, 42.0153], {
-					hintContent: 'Ул. Союзная 97а',
-					balloonContent: 'Поликлиника',
-				}, {
-					preset: 'islands#blueMedicalIcon',
-				},
-			);
-			myMap.geoObjects.add(myPlacemark);
-		}
-		ymaps.ready(init);
-	}
-	// END Map
+	// // Map
+	// if (mapContainer) {
+	// 	function init() {
+	// 		const myMap = new ymaps.Map('map', {
+	// 			center: [47.5396, 42.0151],
+	// 			controls: [
+	// 				'typeSelector',
+	// 				'fullscreenControl',
+	// 				'geolocationControl',
+	// 				'rulerControl',
+	// 				'routeButtonControl',
+	// 			],
+	// 			zoom: 16,
+	// 		});
+	// 		const control = myMap.controls.get('routeButtonControl');
+	// 		control.routePanel.state.set('from', 'Романовская союзный 97а');
+	// 		const myPlacemark = new ymaps.Placemark(
+	// 			[47.5398, 42.0153], {
+	// 				hintContent: 'Ул. Союзная 97а',
+	// 				balloonContent: 'Поликлиника',
+	// 			}, {
+	// 				preset: 'islands#blueMedicalIcon',
+	// 			},
+	// 		);
+	// 		myMap.geoObjects.add(myPlacemark);
+	// 	}
+	// 	ymaps.ready(init);
+	// }
+	// // END Map
 
 	// Time to footer
 	function addTimeFooter() {
@@ -295,8 +254,6 @@ window.addEventListener('load', () => {
 	const blindtrigger = document.querySelector('.js-starblind-trigger');
 	const body = document.querySelector('.main-wrapper');
 	const sliderNewsBlind = document.querySelectorAll('.js-sliderNews--blind');
-	const testimonalsBlind = document.querySelector('.js-blindTestimonials');
-	const organizationBlind = document.querySelector('.js-organizationBlind');
 	const blindPanel = document.querySelector('.js-blindHeaderPanel');
 
 	if (!localStorage.getItem("blindClasses")) {
@@ -312,18 +269,11 @@ window.addEventListener('load', () => {
 	blindtrigger.addEventListener('click', () => {
 		blindPanel.classList.toggle('blindHeaderPanel--show');
 		body.classList.toggle('starblind');
-		if (testimonalsBlind) {
-			testimonalsBlind.classList.toggle('cd-testimonials__blind--show');
-		}
 		if (sliderNewsBlind) {
 			for (let i = 0; i < sliderNewsBlind.length; i++) {
 				sliderNewsBlind[i].classList.toggle('blindSliderNews--show');
 			}
 		}
-		if (organizationBlind) {
-			organizationBlind.classList.toggle('organizations-main__wrapper--blind');
-		}
-
 		test();
 	});
 
@@ -368,6 +318,43 @@ window.addEventListener('load', () => {
 			}
 		}
 	}
+});
+document.addEventListener("DOMContentLoaded", function () {
+	let lazyImages = [].slice.call(document.querySelectorAll(".lazy-img"));
+	let active = false;
+	console.log(lazyImages);
+
+	const lazyLoad = function () {
+		if (active === false) {
+			active = true;
+
+			setTimeout(function () {
+				lazyImages.forEach(function (lazyImage) {
+					if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect()
+							.bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+						lazyImage.src = lazyImage.dataset.src;
+						lazyImage.classList.remove("lazy");
+
+						lazyImages = lazyImages.filter(function (image) {
+							return image !== lazyImage;
+						});
+
+						if (lazyImages.length === 0) {
+							document.removeEventListener("scroll", lazyLoad);
+							window.removeEventListener("resize", lazyLoad);
+							window.removeEventListener("orientationchange", lazyLoad);
+						}
+					}
+				});
+
+				active = false;
+			}, 200);
+		}
+	};
+
+	document.addEventListener("scroll", lazyLoad);
+	window.addEventListener("resize", lazyLoad);
+	window.addEventListener("orientationchange", lazyLoad);
 });
 (() => {
 	const backTop = document.getElementsByClassName('js-cd-top')[0];
