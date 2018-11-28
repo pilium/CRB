@@ -18,7 +18,7 @@
     &.color1
         section,
         header,
-        .slider .slider-blind,
+        .hero .slider-blind,
         .hrMenu-list,
         .quick-item,
         .sliderNews .news__item,
@@ -293,13 +293,16 @@
             span
                 color: $main
     .slider
-        .swiper-container
-            display: none
-        .slider-blind
+        .swiper-slide
+            background-image: none
+        &-slide
             background-color: #fff
             display: block
             text-align: center
             padding: 40px 0
+            .slider-info
+                left: 50%
+                transform: translate(-50%,-50%)
             .slider-info__title
                 margin-bottom: 40px
                 &::after
@@ -380,7 +383,7 @@
             .over_layer
                 height: 100%
         .profile_img
-            background-image: none
+            background-image: none!important
         .over_layer
             height: 86%
             visibility: visible
