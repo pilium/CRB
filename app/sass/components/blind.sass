@@ -257,7 +257,7 @@
             background-color: #fff
             .hrMenu
                 &-list
-                    li
+                    > li
                         &:first-child
                             display: none
                         span, a
@@ -292,6 +292,7 @@
             margin: 10px auto
             span
                 color: $main
+                font-size: rem(36)
     .slider
         .swiper-slide
             background-image: none
@@ -388,3 +389,7 @@
             height: 86%
             visibility: visible
             transform: rotateY(0)
+    .profile-card
+        .over_layer
+            background-color: #fff
+            color: $main
