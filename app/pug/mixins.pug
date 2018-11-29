@@ -14,7 +14,7 @@ mixin icon(name,mod)
 		use(xlink:href="img/sprite/sprite.svg#" + name)
 
 mixin main-menu(type, link, text, icon)
-	li(class=`${type}-menu__item`, role="menuitem")
+	li(class=`${type}-menu__item`)
 		a(class=`${type}-menu__link` href= link)=text
 
 mixin downloadBadge(href, title, icon, size)
@@ -115,7 +115,7 @@ mixin mainSectionTitle(first, last)
 			span
 			span
 			span
-		h5= first
+		h2= first
 			span= last
 		.rhombus.is--right
 			span

@@ -34,7 +34,6 @@ window.addEventListener('load', () => {
 			event.preventDefault();
 			popup.classList.toggle('modal-show');
 			overlay.classList.toggle('show');
-			login.focus();
 		});
 		close.addEventListener('click', event => {
 			event.preventDefault();
