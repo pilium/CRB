@@ -2,7 +2,7 @@ section.articles
     .panel.panel-breadcrumbs
         +breadcrumbs()
     .container
-        article.panel
+        article.panel.panel--noMaxWidth
             h1.section-title полезные статьи
             .news-slider__wrp.news-slider__wrp--page
                 - var n = 0;
@@ -10,11 +10,12 @@ section.articles
                     .news-slider__item
                         .news__item(href='#')
                             .news-date
-                                span.news-date__title= n++
-                                span.news-date__txt May
+                                span.news-date__title= 2*n++
+                                span.news-date__txt Октября 2017
                             a(href='#').news__title
-                                | Lorem Ipsum Dolor Sit Amed
-                            p.news__txt
-                                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s...
+                                | Сальмонеллез – опасная инфекция!
+                            p.news__txt 
+                                strong Сальмонеллез 
+                                |– это одно из наиболее опасных инфекционных заболеваний  с  преимущественным поражением  пищеварительной системы,  вызываемое большой группой сальмонелл.
                             .news__img
                                 img(src='https://res.cloudinary.com/muhammederdem/image/upload/v1537132205/news-slider/item-2.jpg' alt='news')

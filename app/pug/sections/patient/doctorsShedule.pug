@@ -2,7 +2,7 @@ section.doctorsShedule
     .panel.panel-breadcrumbs
         +breadcrumbs()
     .container
-        article.panel
+        article.panel.panel--noMaxWidth
             h1.section-title График приема специалистов поликлиники МБУЗ «ЦРБ» Волгодонского района
             ul.tabs(role="tablist")
                 li.tab-2(role="tab" aria-controls="tab2-1" aria-selected="true")
@@ -323,7 +323,14 @@ section.doctorsShedule
                                     td.day(data-weekday='4') 08:00 - 14:36
                                     td.day(data-weekday='5') 08:00 - 14:36                     
             .doctorsShedule-info
-                p В графике возможны изменения, обращаться в регистратуру:
-                p Детская регистратура ст.Романовская с 800 до 15 00 – тел 7-01-42
-                p Взрослая регистратура ст.Романовская с 800 до 15 00  – тел 7-07-22
-                p Регистратура х. Рябичев  с 800 до 15 00  – тел 7-47-80   
+                p 
+                    strong В графике возможны изменения, обращаться в регистратуру:
+                p 
+                    strong Детская регистратура ст.Романовская: 
+                    | с 08:00 до 15:00 – тел 7-01-42
+                p 
+                    strong Взрослая регистратура ст.Романовская: 
+                    | с 08:00 до 15:00 – тел 7-07-22
+                p 
+                    strong Регистратура х. Рябичев: 
+                    | с 08:00 до 15:00 – тел 7-47-80   

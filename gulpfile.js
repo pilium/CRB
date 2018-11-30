@@ -26,7 +26,7 @@ var gulp = require('gulp'),
 // Скрипты проекта
 
 // Работа с Pug
-gulp.task('pug', function() {
+gulp.task('pug', function () {
 	return gulp
 		.src('app/pug/pages/**/*.pug')
 		.pipe(plumber())
@@ -38,7 +38,7 @@ gulp.task('pug', function() {
 		)
 		.on(
 			'error',
-			notify.onError(function(error) {
+			notify.onError(function (error) {
 				return 'Message to the notifier: ' + error.message;
 			}),
 		)
@@ -46,22 +46,26 @@ gulp.task('pug', function() {
 		.pipe(gulp.dest('app'));
 });
 
-gulp.task('js', function() {
+gulp.task('js', function () {
 	return (
 		gulp
-			.src(['app/js/common.js']) // Всегда в конце
-			.pipe(plumber())
-			.pipe(babel({ presets: ['@babel/env'] }))
-			// .pipe(sourcemaps.init())
-			.pipe(uglify()) // Минимизировать весь js (на выбор)
-			.pipe(concat('scripts.min.js'))
-			// .pipe(sourcemaps.write())
-			.pipe(gulp.dest('app/js'))
-			.pipe(browserSync.reload({ stream: true }))
+		.src(['app/js/common.js']) // Всегда в конце
+		.pipe(plumber())
+		.pipe(babel({
+			presets: ['@babel/env']
+		}))
+		// .pipe(sourcemaps.init())
+		.pipe(uglify()) // Минимизировать весь js (на выбор)
+		.pipe(concat('scripts.min.js'))
+		// .pipe(sourcemaps.write())
+		.pipe(gulp.dest('app/js'))
+		.pipe(browserSync.reload({
+			stream: true
+		}))
 	);
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
 	browserSync({
 		server: {
 			baseDir: 'app',
@@ -72,42 +76,42 @@ gulp.task('browser-sync', function() {
 	});
 });
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
 	return (
 		gulp
-			.src('app/sass/main.sass')
-			// .pipe(sourcemaps.init())
-			.pipe(
-				sass({
-					outputStyle: 'expand',
-				}).on('error', notify.onError()),
-			)
-			.pipe(
-				rename({
-					suffix: '.min',
-					prefix: '',
-				}),
-			)
-			.pipe(autoprefixer(['last 15 versions']))
-			.pipe(cleanCSS()) // Опционально, закомментировать при отладке
-			// .pipe(sourcemaps.write())
-			.pipe(gulp.dest('app/css'))
-			.pipe(
-				browserSync.reload({
-					stream: true,
-				}),
-			)
+		.src('app/sass/main.sass')
+		.pipe(sourcemaps.init())
+		.pipe(
+			sass({
+				outputStyle: 'expand',
+			}).on('error', notify.onError()),
+		)
+		.pipe(
+			rename({
+				suffix: '.min',
+				prefix: '',
+			}),
+		)
+		.pipe(autoprefixer(['last 15 versions']))
+		.pipe(cleanCSS()) // Опционально, закомментировать при отладке
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest('app/css'))
+		.pipe(
+			browserSync.reload({
+				stream: true,
+			}),
+		)
 	);
 });
 
-gulp.task('watch', ['pug', 'sass', 'js', 'browser-sync'], function() {
+gulp.task('watch', ['pug', 'sass', 'js', 'browser-sync'], function () {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch('app/pug/**/*.pug', ['pug']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);
 });
 
-gulp.task('imagemin', function() {
+gulp.task('imagemin', function () {
 	return gulp
 		.src(['app/img/**/*.jpg', 'app/img/**/*.png'])
 		.pipe(cache(imagemin()))
@@ -115,11 +119,11 @@ gulp.task('imagemin', function() {
 });
 
 // Сборка спрайтов PNG
-gulp.task('cleansprite', function() {
+gulp.task('cleansprite', function () {
 	return del.sync('app/img/sprite/sprite.png');
 });
 
-gulp.task('spritemade', function() {
+gulp.task('spritemade', function () {
 	var spriteData = gulp.src('app/img/sprite/png/*.*').pipe(
 		spritesmith({
 			imgName: '../img/sprite/sprite.png',
@@ -136,10 +140,10 @@ gulp.task('spritemade', function() {
 gulp.task('sprite', ['cleansprite', 'spritemade']);
 
 // Сборка спрайтов SVG
-gulp.task('Scleansprite', function() {
+gulp.task('Scleansprite', function () {
 	return del.sync('app/img/sprite/sprite.svg');
 });
-gulp.task('svg-spritemade', function() {
+gulp.task('svg-spritemade', function () {
 	return gulp
 		.src('app/img/icons/svg/**/*.svg')
 		.pipe(
@@ -151,7 +155,7 @@ gulp.task('svg-spritemade', function() {
 		)
 		.pipe(
 			cheerio({
-				run: function($) {
+				run: function ($) {
 					$('[fill]').removeAttr('fill');
 					$('[stroke]').removeAttr('stroke');
 					$('[style]').removeAttr('style');
@@ -181,7 +185,7 @@ gulp.task('svg-spritemade', function() {
 });
 gulp.task('svg-sprite', ['Scleansprite', 'svg-spritemade']);
 
-gulp.task('build', ['removedist', 'svg-sprite', 'imagemin', 'sass', 'js'], function() {
+gulp.task('build', ['removedist', 'svg-sprite', 'imagemin', 'sass', 'js'], function () {
 	var buildHtml = gulp.src(['app/*.html']).pipe(gulp.dest('dist'));
 
 	var buildFiles = gulp.src(['app/files/**/*.*']).pipe(gulp.dest('dist/files'));
@@ -195,7 +199,7 @@ gulp.task('build', ['removedist', 'svg-sprite', 'imagemin', 'sass', 'js'], funct
 	var buildSprite = gulp.src(['app/img/sprite/sprite.svg']).pipe(gulp.dest('dist/img/sprite/'));
 });
 
-gulp.task('critical', function() {
+gulp.task('critical', function () {
 	critical.generate({
 		inline: true,
 		base: 'dist/',
@@ -205,7 +209,7 @@ gulp.task('critical', function() {
 	});
 });
 
-gulp.task('deploy', function() {
+gulp.task('deploy', function () {
 	var conn = ftp.create({
 		host: 'hostname.com',
 		user: 'username',
@@ -222,10 +226,10 @@ gulp.task('deploy', function() {
 		.pipe(conn.dest('/path/to/folder/on/server'));
 });
 
-gulp.task('removedist', function() {
+gulp.task('removedist', function () {
 	return del.sync('dist');
 });
-gulp.task('clearcache', function() {
+gulp.task('clearcache', function () {
 	return cache.clearAll();
 });
 
