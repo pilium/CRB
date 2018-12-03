@@ -12,11 +12,6 @@ window.addEventListener('load', () => {
 	const newsSlider = document.querySelector('.news-slider');
 	const mapContainer = document.getElementById('map');
 
-	const link = document.querySelector('.js-header-info__writeToUs-link');
-	const popup = document.querySelector('.modal');
-	const close = popup.querySelector('.modal-close__btn');
-	const login = popup.querySelector('[name=login]');
-
 	const wrapperMenu = document.querySelector('.wrapper-menu');
 	const sidenav = document.querySelector('.js-sidenav');
 	const overlay = document.querySelector('.sidenav-overlay');
@@ -27,8 +22,12 @@ window.addEventListener('load', () => {
 
 	const nav = document.querySelector('#nav-main');
 
+
 	// Modal
 	let modal = () => {
+		const link = document.querySelector('.js-header-info__writeToUs-link');
+		const popup = document.querySelector('.modal');
+		const close = popup.querySelector('.modal-close__btn');
 		const overlay = document.querySelector('.modal-overlay');
 		link.addEventListener('click', event => {
 			event.preventDefault();
@@ -287,7 +286,6 @@ window.addEventListener('load', () => {
 			var defaultFontSize = parseFloat(style);
 			// now you have a proper float for the font size (yes, it can be a float, not just an integer)
 			// htmlElem.style.fontSize = (defaultFontSize + 10) + 'px';
-			console.log(defaultFontSize);
 
 			buttons.forEach(button => {
 				button.addEventListener('click', () => {
@@ -321,7 +319,6 @@ window.addEventListener('load', () => {
 document.addEventListener("DOMContentLoaded", function () {
 	let lazyImages = [].slice.call(document.querySelectorAll(".lazy-img"));
 	let active = false;
-	console.log(lazyImages);
 
 	const lazyLoad = function () {
 		if (active === false) {

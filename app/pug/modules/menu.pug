@@ -1,11 +1,11 @@
 nav.side-menu
     ul
-        li.sub-menu
+        li.sub-menu(aria-haspopup="true")
             span.acc-header(tabindex="0")
                 +icon('menu--med-patient')
                 span Пациентам
                 +icon('menu--right-chevron')
-            ul.sub-list(role="menu")
+            ul.sub-list(aria-labelledby="dropdownMenuLink")
                 +main-menu('sub', 'patientDuties.html', 'Права и обязанности пациента')
                 +main-menu('sub', 'writeRules.html', 'Правила записи на прием')
                 +main-menu('sub', 'prepareRules.html', 'Правила подготовки к исследованиям')
@@ -18,12 +18,12 @@ nav.side-menu
                 +main-menu('sub', 'smo.html', 'Перечень страховых компаний')
                 +main-menu('sub', 'dispans.html', 'Диспансеризация')               
                 +main-menu('sub', 'jnvls.html', 'Перечень ЖНВЛС')
-        li.sub-menu
+        li.sub-menu(aria-haspopup="true")
             span.acc-header(tabindex="0")
                 +icon('menu--hospital')
                 span О больнице
                 +icon('menu--right-chevron')
-            ul.sub-list(role="menu")
+            ul.sub-list(aria-labelledby="dropdownMenuLink")
                 +main-menu('sub', 'history.html', 'История больницы')
                 +main-menu('sub', 'news.html', 'Новости')
                 +main-menu('sub', 'roadmap.html', 'Дорожная карта')
@@ -34,12 +34,12 @@ nav.side-menu
                 +main-menu('sub', 'vacancy.html', 'Вакансии')
                 +main-menu('sub', 'feedback.html', 'Отзывы')
                 +main-menu('sub', 'gallery.html', 'Галерея')
-        li.sub-menu
+        li.sub-menu(aria-haspopup="true")
             span.acc-header(tabindex="0")
                 +icon('menu--structure')
                 span Структура организации
                 +icon('menu--right-chevron')
-            ul.sub-list(role="menu")
+            ul.sub-list(aria-labelledby="dropdownMenuLink")
                 +main-menu('sub', 'administration.html', 'Администрация')
                 +main-menu('sub', 'surgeon.html', 'Хирургическое отделение')
                 +main-menu('sub', 'neurologist.html', 'Неврологическое отделение')
@@ -48,21 +48,21 @@ nav.side-menu
                 +main-menu('sub', 'clinic.html', 'Поликлиника')
                 +main-menu('sub', 'ambulance.html', 'Отделение скорой помощи')
                 +main-menu('sub', 'FAP.html', 'Фельдшерско-акушерские пункты')
-        li.sub-menu.sub-menu--long
+        li.sub-menu.sub-menu--long(aria-haspopup="true")
             span.acc-header(tabindex="0")
                 +icon('menu--stethoscope')
                 span Диагностические подразделения 
                 +icon('menu--right-chevron')
-            ul.sub-list(role="menu")
+            ul.sub-list(aria-labelledby="dropdownMenuLink")
                 +main-menu('sub', 'kdl.html', 'Клинико-диагностическая лаборатория')
                 +main-menu('sub', 'rentgen.html', 'Рентгеновский кабинет')
                 +main-menu('sub', 'kfd.html', 'Кабинеты диагностики')
-        li.sub-menu
+        li.sub-menu(aria-haspopup="true")
             span.acc-header(tabindex="0")
                 +icon('menu--credit-card')
                 span Платные услуги
                 +icon('menu--right-chevron')
-            ul.sub-list(role="menu")
+            ul.sub-list(aria-labelledby="dropdownMenuLink")
                 +main-menu('sub', 'payShedule.html', 'График работы медицинского персонала')
                 +main-menu('sub', 'payOrders.html', 'Приказы о платных услугах')
                 +main-menu('sub', 'payOrganizations.html', 'Профосмотры для организаций')

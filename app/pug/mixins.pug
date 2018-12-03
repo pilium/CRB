@@ -25,10 +25,10 @@ mixin downloadBadge(href, title, icon, size)
 			span= size
 
 mixin breadcrumbs()
-	.breadcrumb
+	nav.breadcrumb(aria-label="breadcrumb")
 		a.breadcrumb__step(href='#', tabindex="0") Главная
 		a.breadcrumb__step(href='#', tabindex="0") Контакты
-		a.breadcrumb__step.breadcrumb__step--active(href='#', tabindex="0") Права и обязанности пациента
+		a.breadcrumb__step.breadcrumb__step--active(href='#', tabindex="0" aria-current="page") Права и обязанности пациента
 
 mixin filesLink(href, icon, title, size, bigText, addons, addonsHref)
 	if(addons)

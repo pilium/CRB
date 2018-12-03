@@ -3,7 +3,7 @@ nav.nav#nav-main
     li.hrMenu-list__item.hrMenu-list__item--active
       a.logo(href='/' aria-label="на главную")
         +icon('menu--homepage')
-    li.hrMenu-list__item.fixed-width
+    li.hrMenu-list__item.fixed-width(aria-haspopup="true")
       span(tabindex="0") Пациентам
         +icon('menu--right-chevron')
       ul.menu(role="menu")
@@ -20,7 +20,7 @@ nav.nav#nav-main
         +main-menu('sub', 'jnvls.html', 'Перечень ЖНВЛС')
         +main-menu('main', 'zoj.html', 'Здоровый образ жизни')
         +main-menu('main', 'online.html', 'online консультация')
-    li.hrMenu-list__item.fixed-width
+    li.hrMenu-list__item.fixed-width(aria-haspopup="true")
       span(tabindex="0")
         | О больнице
         +icon('menu--right-chevron')
@@ -38,7 +38,7 @@ nav.nav#nav-main
         +main-menu('sub', 'gallery.html', 'Галерея')
         +main-menu('main', 'docs.html', 'Нормативные документы')
         +main-menu('main', 'files.html', 'Каталог файлов')
-    li.hrMenu-list__item.fixed-width
+    li.hrMenu-list__item.fixed-width(aria-haspopup="true")
       span(tabindex="0")
         | Структура 
         +icon('menu--right-chevron')
@@ -51,7 +51,7 @@ nav.nav#nav-main
         +main-menu('sub', 'clinic.html', 'Поликлиника')
         +main-menu('sub', 'ambulance.html', 'Отделение скорой помощи')
         +main-menu('sub', 'FAP.html', 'Фельдшерско-акушерские пункты')
-    li.hrMenu-list__item.fixed-width
+    li.hrMenu-list__item.fixed-width(aria-haspopup="true")
       span(tabindex="0")
         | Диагностика
         +icon('menu--right-chevron')
@@ -59,7 +59,7 @@ nav.nav#nav-main
         +main-menu('sub', 'kdl.html', 'Клинико-диагностическая лаборатория')
         +main-menu('sub', 'rentgen.html', 'Рентгеновский кабинет')
         +main-menu('sub', 'kfd.html', 'Кабинеты диагностики')
-    li.hrMenu-list__item.fixed-width.big-item
+    li.hrMenu-list__item.fixed-width.big-item(aria-haspopup="true")
       span(tabindex="0")
         | Платные услуги
         +icon('menu--right-chevron')

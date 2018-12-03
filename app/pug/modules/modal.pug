@@ -1,27 +1,28 @@
-.modal
-	button.modal-close__btn(type="button" tabindex="0" aria-label="Закрыть модальное окно")
-	form.registration.registration-modal(method="post" action="#")
-		h2 Ваш вопрос
-		fieldset
-			label.pure-material-textfield-outlined
-				input(placeholder="Ваша фамилия" type="text" name="modal[surname]" required)
-				span Ваша фамилия
-			label.pure-material-textfield-outlined
-				input(placeholder="Ваше имя" type="text" name="modal[name]" required)
-				span Ваше имя
-			label.pure-material-textfield-outlined
-				input(placeholder="Ваша электронная почта" type="email" name="modal[email]" required)
-				span Ваш Email
-			label.pure-material-textfield-outlined
-				input(placeholder="Тема вопроса" type="text" name="modal[subject]" required)
-				span Тема вопроса
-			label.pure-material-textfield-outlined
-				textarea(placeholder="Ваш вопрос" required name="modal[text]" rows='8')
-				span Текст вопроса
-		button.pure-material-button-contained(type="submit") Отправить
-		.done
-			h3 Ответ будет выслан Вам на электронную почту в ближайшее время
-			a.pure-material-button-text(href="javascript:window.location.reload(true)") назад
-		.progress
-			progress.pure-material-progress-circular
+.modal(tabindex="-1" role="dialog")
+    .modal-dialog(role="document")
+        button.modal-close__btn(type="button" tabindex="0" aria-label="Закрыть модальное окно" aria-hidden="true")
+        form.registration.registration-modal(method="post" action="#")
+            h2 Ваш вопрос
+            fieldset
+                label.pure-material-textfield-outlined
+                    input(placeholder="Ваша фамилия" type="text" name="modal[surname]" required)
+                    span Ваша фамилия
+                label.pure-material-textfield-outlined
+                    input(placeholder="Ваше имя" type="text" name="modal[name]" required)
+                    span Ваше имя
+                label.pure-material-textfield-outlined
+                    input(placeholder="Ваша электронная почта" type="email" name="modal[email]" required)
+                    span Ваш Email
+                label.pure-material-textfield-outlined
+                    input(placeholder="Тема вопроса" type="text" name="modal[subject]" required)
+                    span Тема вопроса
+                label.pure-material-textfield-outlined
+                    textarea(placeholder="Ваш вопрос" required name="modal[text]" rows='8')
+                    span Текст вопроса
+            button.pure-material-button-contained(type="submit") Отправить
+            .done
+                h3 Ответ будет выслан Вам на электронную почту в ближайшее время
+                a.pure-material-button-text(href="javascript:window.location.reload(true)") назад
+            .progress
+                progress.pure-material-progress-circular
 .modal-overlay
