@@ -80,7 +80,7 @@ gulp.task('sass', function () {
 	return (
 		gulp
 		.src('app/sass/main.sass')
-		.pipe(sourcemaps.init())
+		// .pipe(sourcemaps.init())
 		.pipe(
 			sass({
 				outputStyle: 'expand',
@@ -94,7 +94,7 @@ gulp.task('sass', function () {
 		)
 		.pipe(autoprefixer(['last 15 versions']))
 		.pipe(cleanCSS()) // Опционально, закомментировать при отладке
-		.pipe(sourcemaps.write())
+		// .pipe(sourcemaps.write())
 		.pipe(gulp.dest('app/css'))
 		.pipe(
 			browserSync.reload({

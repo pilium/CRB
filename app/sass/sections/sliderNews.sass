@@ -1,6 +1,9 @@
 .sliderNews,
 .sliderArticles
   background-color: #fff
+.sliderArticles
+	.wrapper
+		margin-bottom: 30px
 .wrapper
     position: relative
     width: 100%
@@ -125,11 +128,15 @@
 .news__item
   padding: 30px
   border-radius: 10px
-  display: block
+  display: flex
+  flex-direction: column
+  align-items: baseline
+  justify-content: flex-start
   transition: all .3s
   background-color: #fff
   color: $main
   transition: all .3s linear
+  min-height: 660px
   &:hover
     background-color: $accent
     color: #fff
@@ -211,8 +218,7 @@
   border-radius: 10px
   box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25)
   height: 200px
-  margin-top: 30px
-  width: 100%
+  margin-top: auto
   transition: all .3s
   transform-origin: 0% 0%
   img

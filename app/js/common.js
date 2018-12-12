@@ -49,50 +49,6 @@ window.addEventListener('load', () => {
 	modal();
 	// END Modal
 
-	// Sliders
-	if (newsSlider) {
-		const newsSwiper = new Swiper('.news-slider', {
-			effect: 'coverflow',
-			grabCursor: true,
-			loop: false,
-			centeredSlides: false,
-			keyboard: true,
-			spaceBetween: 10,
-			slidesPerView: '3',
-			speed: 300,
-			coverflowEffect: {
-				rotate: 0,
-				stretch: 0,
-				depth: 0,
-				modifier: 1,
-				slideShadows: false,
-			},
-			breakpoints: {
-				1230: {
-					slidesPerView: 3,
-				},
-				900: {
-					slidesPerView: 2,
-				},
-				650: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					centeredSlides: true,
-				},
-			},
-			simulateTouch: true,
-			navigation: {
-				nextEl: '.news-slider-next',
-				prevEl: '.news-slider-prev',
-			},
-			pagination: {
-				el: '.news-slider__pagination',
-				clickable: true,
-			},
-		});
-	}
-	// END Sliders
-
 	// // Map
 	// if (mapContainer) {
 	// 	function init() {
@@ -251,7 +207,6 @@ window.addEventListener('load', () => {
 	// Blind
 	const blindtrigger = document.querySelector('.js-starblind-trigger');
 	const body = document.querySelector('.main-wrapper');
-	const sliderNewsBlind = document.querySelectorAll('.js-sliderNews--blind');
 	const blindPanel = document.querySelector('.js-blindHeaderPanel');
 
 	if (!localStorage.getItem("blindClasses")) {
@@ -267,11 +222,6 @@ window.addEventListener('load', () => {
 	blindtrigger.addEventListener('click', () => {
 		blindPanel.classList.toggle('blindHeaderPanel--show');
 		body.classList.toggle('starblind');
-		if (sliderNewsBlind) {
-			for (let i = 0; i < sliderNewsBlind.length; i++) {
-				sliderNewsBlind[i].classList.toggle('blindSliderNews--show');
-			}
-		}
 		test();
 	});
 
