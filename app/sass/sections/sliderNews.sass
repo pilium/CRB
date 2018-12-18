@@ -7,7 +7,7 @@
 .wrapper
     position: relative
     width: 100%
-    height: 780px
+    min-height: 768px
     overflow: hidden
 .icon-slider
   display: inline-block
@@ -40,6 +40,8 @@
 @media screen and (max-width: 1300px)
   .news-slider
     max-width: 1000px
+  .news-slider__wrp
+	  flex-wrap: wrap
 
 @media screen and (max-width: 576px)
   .news-slider
@@ -48,6 +50,7 @@
 .news-slider__wrp
   display: flex
   align-items: flex-start
+  justify-content: space-around
   position: relative
   z-index: 2
   &.news-slider__wrp--page
@@ -69,20 +72,22 @@
         margin-right: 10px
 
 .news-slider__item
-  width: 500px
+  width: 32%
   flex-shrink: 0
   &.swiper-slide
     opacity: 1
     pointer-events: auto
     transition: all .3s
 
-@media screen and (max-width: 992px)
+@media screen and (max-width: 1400px)
   .news-slider__item
-    width: 340px
+    width: 49%
 
 .news-slider__ctr
-  position: relative
+  position: absolute
   top: 26px
+  left: 50%
+  transform: translateX(-50%)
   z-index: 9
 
 .news-slider__arrow
@@ -116,10 +121,7 @@
     transform: translateY(-50%)
 
 .news-slider__show-all
-  position: absolute
-  top: -14px
-  left: 50%
-  transform: translateX(-50%)
+  white-space: nowrap
   text-transform: uppercase
   font-size: rem(20)
   color: $accent
@@ -231,13 +233,3 @@
   .news__img
     height: 180px
     margin-top: 20px
-
-.blind-newsItem__wrap
-	display: none
-	align-items: center
-	justify-content: space-between
-	flex-wrap: wrap
-	&.blindSliderNews--show
-		display: flex
-	.news-slider__item
-		width: 33%

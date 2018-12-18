@@ -9,8 +9,7 @@ window.addEventListener('load', () => {
 	// }
 	// // END Preloader
 
-	const newsSlider = document.querySelector('.news-slider');
-	const mapContainer = document.getElementById('map');
+	// const mapContainer = document.getElementById('map');
 
 	const wrapperMenu = document.querySelector('.wrapper-menu');
 	const sidenav = document.querySelector('.js-sidenav');
@@ -162,16 +161,6 @@ window.addEventListener('load', () => {
 		});
 	}
 	// END Gallery
-
-	// FormSubmit
-	const forms = document.querySelectorAll('form');
-	for (let i = 0; i < forms.length; i++) {
-		forms[i].onsubmit = event => {
-			event.preventDefault();
-			forms[i].classList.add('signed');
-		};
-	}
-	// END FormSubmit
 
 	// FixedNav
 	let topOfNav = nav.offsetTop;
