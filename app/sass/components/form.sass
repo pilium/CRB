@@ -13,193 +13,35 @@
 		textarea
 			resize: none
 			font-size: rem(14)
-	h3
-		margin: 32px 0
+	h2
+		margin: 10px 0
 		font-family: Kurale, "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system
 		font-weight: normal
 		text-align: center
-
-	> label
+.form-group
+	margin-bottom: 1rem
+	label
+		display: inline-block
+    	margin-bottom: .5rem
+	.form-control
 		display: block
-		margin: 24px auto
-		width: 90%
-	
-	textarea
 		width: 100%
-
-	button
-		display: block
-		margin: 10px auto
-
-.left-footer, .right-footer
-	position: fixed
-	padding: 14px
-	bottom: 14px
-	color: #555
-	background-color: #eee
-	font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system
-	font-size: 14px
-	line-height: 1.5
-	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
-
-.left-footer
-	left: 0
-	border-radius: 0 4px 4px 0
-	text-align: left
-
-.right-footer
-	right: 0
-	border-radius: 4px 0 0 4px
-	text-align: right
-
-.left-footer > a, .right-footer > a
-  	color: black
-
-.left-footer > a:hover, .right-footer > a:hover
-  	text-decoration: underline
-
-// textfield
-.pure-material-textfield-outlined
-	position: relative
-	display: inline-block
-	width: 100%
-	padding-top: 6px
-	font-family: "Kurale", "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system
-	font-size: 16px
-	line-height: 1.5
-	overflow: hidden
-	input:valid, textarea:valid
-		border-color: $accent
-		border-top-color: transparent
-		+ span
-			color: $accent
-			&::before, &::after
-				border-color: $accent
-	input.invalid
-		border-color: red
-		border-top-color: transparent
-		+ span
-			color: red
-			&::before, &::after
-				border-color: red
-	>
-		input, textarea
-			box-sizing: border-box
-			margin: 0
-			border: solid 1px
-			border-color: rgba(0, 0, 0, 0.6)
-			border-top-color: transparent
-			border-radius: 4px
-			padding: 10px 13px 10px
-			width: 100%
-			height: inherit
+		height: calc(2.25rem + 2px)
+		padding: .375rem .75rem
+		font-size: 1rem
+		line-height: 1.5
+		color: #495057
+		background-color: #fff
+		background-clip: padding-box
+		border: 1px solid #ced4da
+		border-radius: .25rem
+		transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+		&:focus
 			color: $main
-			background-color: transparent
-			box-shadow: none
-			font-family: inherit
-			font-size: inherit
-			font-weight: bold
-			caret-color: $accent
-			transition: border 0.2s, box-shadow 0.2s
-		input + span, textarea + span
-			position: absolute
-			top: 0
-			left: 0
-			display: flex
-			border-color: rgba(0, 0, 0, 0.6)
-			width: 100%
-			max-height: 100%
-			color: rgba(0, 0, 0, 0.6)
-			font-size: 75%
-			line-height: 15px
-			cursor: text
-			transition: color 0.2s, font-size 0.2s, line-height 0.2s
-		input + span
-			&::before, &::after
-				content: ""
-				display: block
-				box-sizing: border-box
-				margin-top: 6px
-				border-top: solid 1px
-				border-top-color: rgba(0, 0, 0, 0.6)
-				min-width: 10px
-				height: 8px
-				pointer-events: none
-				box-shadow: inset 0 1px transparent
-				transition: border-color 0.2s, box-shadow 0.2s
-		textarea + span
-			&::before, &::after
-				content: ""
-				display: block
-				box-sizing: border-box
-				margin-top: 6px
-				border-top: solid 1px
-				border-top-color: rgba(0, 0, 0, 0.6)
-				min-width: 10px
-				height: 8px
-				pointer-events: none
-				box-shadow: inset 0 1px transparent
-				transition: border-color 0.2s, box-shadow 0.2s
-		input + span::before, textarea + span::before
-			margin-right: 4px
-			border-left: solid 1px transparent
-			border-radius: 4px 0
-		input + span::after, textarea + span::after
-			flex-grow: 1
-			margin-left: 4px
-			border-right: solid 1px transparent
-			border-radius: 0 4px
-  	&:hover >
-		input, textarea
-			border-color: rgba(0, 0, 0, 0.87)
-			border-top-color: transparent
-		input + span::before, textarea + span::before, input + span::after, textarea + span::after
-			border-top-color: rgba(0, 0, 0, 0.87)
-		input:not(:focus):placeholder-shown, textarea:not(:focus):placeholder-shown
-			border-color: rgba(0, 0, 0, 0.87)
-  	>
-		input:not(:focus):placeholder-shown, textarea:not(:focus):placeholder-shown
-			border-top-color: rgba(0, 0, 0, 0.6)
-		input:not(:focus):placeholder-shown + span, textarea:not(:focus):placeholder-shown + span
-			font-size: inherit
-			line-height: 52px
-		input:not(:focus):placeholder-shown + span::before, textarea:not(:focus):placeholder-shown + span::before, input:not(:focus):placeholder-shown + span::after, textarea:not(:focus):placeholder-shown + span::after
-			border-top-color: transparent
-		input:focus, textarea:focus
+			background-color: #fff
 			border-color: $accent
-			border-top-color: transparent
-			box-shadow: inset 1px 0 $accent, inset -1px 0 $accent, inset 0 -1px $accent
-			outline: none
-		input:focus + span, textarea:focus + span
-			color: $accent
-		input:focus + span
-			&::before, &::after
-				border-top-color: $accent !important
-				box-shadow: inset 0 1px $accent
-		textarea:focus + span
-			&::before, &::after
-				border-top-color: $accent !important
-				box-shadow: inset 0 1px $accent
-		input:disabled, textarea:disabled
-			border-color: rgba(0, 0, 0, 0.38)
-			color: rgba(0, 0, 0, 0.38)
-			pointer-events: none
-			+ span
-				border-color: rgba(0, 0, 0, 0.38)
-				color: rgba(0, 0, 0, 0.38)
-				pointer-events: none
-
-/* Faster transition in Safari for less noticable fractional font-size issue
-@media not all and (min-resolution: 0.001dpcm)
-  @supports (-webkit-appearance: none)
-    .pure-material-textfield-outlined >
-      	input, textarea
-        	transition-duration: 0.1s
-        	+ span
-          		transition-duration: 0.1s
-		input + span
-			&::before, &::after
-				transition-duration: 0.1s
-		textarea + span
-			&::before, &::after
-				transition-duration: 0.1s
+			outline: 0
+			box-shadow: 0 0 0 0.2rem rgba($accent,.1)
+	textarea.form-control
+		height: auto
+		height: calc(6.25rem + 2px)

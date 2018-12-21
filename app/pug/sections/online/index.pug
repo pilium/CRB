@@ -18,19 +18,15 @@ section.online
                 p В ситуациях, требующих быстрой медицинской помощи, вызывайте «скорую помощь» (звоните «03»).
                 form.registration(method="post" action="#")
                     h2 Ваш вопрос
-                    label.pure-material-textfield-outlined
-                        input(placeholder="Ваша фамилия" type="text" name="online[surname]" required)
-                        span Ваша фамилия
-                    label.pure-material-textfield-outlined
-                        input(placeholder="Ваше имя" type="text" name="online[name]" required)
-                        span Ваше имя
-                    label.pure-material-textfield-outlined
-                        input(placeholder="Ваша электронная почта" type="email" name="online[email]" required)
-                        span Ваш Email
-                    label.pure-material-textfield-outlined
-                        input(placeholder="Тема вопроса" type="text" name="online[subject]" required)
-                        span Тема вопроса
-                    label.pure-material-textfield-outlined
-                        textarea(placeholder="Ваш вопрос" name="online[text]" required)
-                        span Текст вопроса
+                    
+                    .form-group
+                        label(for="formGroupExampleInput") Example label
+                        input(type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input")
+                    .form-group
+                        label(for="formGroupExampleInput2") Example label
+                        input(type="text" class="form-control" id="formGroupExampleInput2" placeholder="Example input")
+                    .form-group
+                        label(for="formGroupExampleInput3") Example label
+                        textarea(class="form-control" id="formGroupExampleInput3" placeholder="Example input" rows="8")
+                    
                     button.pure-material-button-contained(type="submit") Отправить
