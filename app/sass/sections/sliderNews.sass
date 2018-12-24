@@ -67,7 +67,7 @@
     .news-date
       padding-bottom: 0
       &__title
-        display: inline
+        display: inline-block
         margin-bottom: 0
         margin-right: 10px
 
@@ -79,13 +79,9 @@
     pointer-events: auto
     transition: all .3s
 
-@media screen and (max-width: 1400px)
-  .news-slider__item
-    width: 49%
-
 .news-slider__ctr
   position: absolute
-  top: 26px
+  top: 15px
   left: 50%
   transform: translateX(-50%)
   z-index: 9
@@ -138,7 +134,8 @@
   background-color: #fff
   color: $main
   transition: all .3s linear
-  min-height: 660px
+  height: 600px
+  min-height: 600px
   &:hover
     background-color: $accent
     color: #fff
@@ -181,7 +178,6 @@
     padding-bottom: 0
 
 .news-date__title
-  display: block
   font-size: rem(34)
   margin-bottom: 10px
   font-weight: 500
@@ -221,6 +217,9 @@
   box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25)
   height: 200px
   margin-top: auto
+  margin-left: auto
+  margin-right: auto
+  width: 100%
   transition: all .3s
   transform-origin: 0% 0%
   img
