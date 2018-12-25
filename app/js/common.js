@@ -290,6 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.addEventListener("scroll", lazyLoad);
 	window.addEventListener("resize", lazyLoad);
 	window.addEventListener("orientationchange", lazyLoad);
+
 });
 (() => {
 	const backTop = document.getElementsByClassName('js-cd-top')[0];

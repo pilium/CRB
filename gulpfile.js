@@ -55,7 +55,7 @@ gulp.task('js', function () {
 			presets: ['@babel/env']
 		}))
 		// .pipe(sourcemaps.init())
-		.pipe(uglify()) // Минимизировать весь js (на выбор)
+		// .pipe(uglify()) // Минимизировать весь js (на выбор)
 		.pipe(concat('scripts.min.js'))
 		// .pipe(sourcemaps.write())
 		.pipe(gulp.dest('app/js'))
