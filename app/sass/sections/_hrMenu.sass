@@ -1,77 +1,85 @@
 .nav
-	display: block
-	background-color: $accent
-	border-radius: 3px
-	&.fixed-nav
-		position: fixed
-		top: 0
-		width: 100%
-		z-index: 60
-		box-shadow: 0 5px 0 rgba(0,0,0,0.1)
-		background-color: $accent
-		span, a
-			line-height: 42px
-	> ul
-		display: flex
-		align-items: center
-		justify-content: center
-		.hrMenu-list__item
-			position: relative
-			display: block
-			&.fixed-width
+    display: block
+    background-color: $accent
+    border-radius: 3px
+    &.fixed-nav
+        position: fixed
+        top: 0
+        width: 100%
+        z-index: 60
+        box-shadow: 0 5px 0 rgba(0,0,0,0.1)
+        background-color: $accent
+        span, a
+            line-height: 42px
+    > ul
+        display: flex
+        align-items: center
+        justify-content: center
+        .hrMenu-list__item
+            position: relative
+            display: block
+            .menu-item-home
+                width: 60px
+            .menu-item i._mi
+                margin-left: -0.37em
+            &.fixed-width
                 width: calc( 100% / 7)
+                &:nth-child(3)
+                    width: 14.5%
+                &:nth-child(6)
+                    width: 18%
                 &.fixed-width--show
                     .menu
                         display: block
-			&--active
-				background-color: darken($accent, 10%)
-			&:hover,&:focus
-				.menu
-					display: block
-				.icon-menu--right-chevron
-					transform: rotateZ(90deg)
-					transition: transform .3s ease
-		a , span 
-			position: relative
-			display: block
-			padding: 0 25px
-			color: #fff
-			font-size: rem(16)
-			line-height: 50px
-			cursor: pointer
-			transition: all 0.3s linear
-			svg
-				transition: transform .3s ease
-			&:hover
-				&:before
-					border-right: 15px solid #f2f2f2
-				&:after
-					border-left: 15px solid #f2f2f2
-			&:hover
-				background: darken($accent, 5%)
-			.icon-menu--right-chevron
-				position: absolute
-				top: 50%
-				margin-top: -6px
-				right: 5px
-				width: 12px
-				height: 12px
-		.menu
-			display: none
-			position: absolute
-			top: 100%
-			width: 100%
-			z-index: 20
-			li
-				width: 400px
-				margin: 0
-				a
-					background-color: $accent
-					padding: 0 15px
-					color: #fff
-					line-height: 30px
-					&::before
-						display: none
-					&:hover
-						background-color: #eee
-						color: $accent
+            &--active
+                background-color: darken($accent, 10%)
+            &:hover,&:focus
+                .menu
+                    display: block
+                .icon-menu--right-chevron
+                    transform: rotateZ(90deg)
+                    transition: transform .3s ease
+        a , span 
+            position: relative
+            display: block
+            padding: 0 25px
+            color: #fff
+            font-size: rem(16)
+            line-height: 50px
+            cursor: pointer
+            transition: all 0.3s linear
+            svg
+                transition: transform .3s ease
+            &:hover
+                &:before
+                    border-right: 15px solid #f2f2f2
+                &:after
+                    border-left: 15px solid #f2f2f2
+            &:hover
+                background: darken($accent, 5%)
+            .icon-menu--right-chevron
+                position: absolute
+                top: 50%
+                margin-top: -6px
+                right: 5px
+                width: 12px
+                height: 12px
+        .menu
+            display: none
+            position: absolute
+            top: 100%
+            width: 100%
+            z-index: 20
+            li
+                width: 400px
+                margin: 0
+                a
+                    background-color: $accent
+                    padding: 0 15px
+                    color: #fff
+                    line-height: 30px
+                    &::before
+                        display: none
+                    &:hover
+                        background-color: #eee
+                        color: $accent
