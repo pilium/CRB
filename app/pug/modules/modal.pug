@@ -1,6 +1,6 @@
 .modal(tabindex="-1" role="dialog")
     .modal-dialog(role="document")
-        button.modal-close__btn(type="button" tabindex="0" aria-label="Закрыть модальное окно" aria-hidden="true")
+        button.modal-close__btn(type="button" tabindex="0" aria-label="Закрыть модальное окно")
         form.registration.registration-modal(method="post" action="#")
             h2 Ваш вопрос
             fieldset
@@ -21,3 +21,23 @@
                     span Текст вопроса
             button.pure-material-button-contained(type="submit") Отправить
 .modal-overlay
+
+.modal--alert.is-active
+    .modal--alert__background.is-show
+    .modal--alert__content
+        .modal--alert__box
+            h2 Уважаемые жители Волгодонского района! 
+            p В дни  Новогодних праздников в поликлинике МБУЗ «ЦРБ» Волгодонского района будут  вести  прием  врачи-педиатры и  врачи –терапевты:
+            p - ст. Романовская:
+                ul
+                    li
+                        p 2 января 2019 г.- с 8-00 ч до 12-00 ч 
+                        p 4 января 2019 г.- с 8-00 ч до 12-00 ч
+                        p 6 января 2019 г.- с 8-00 ч до 12-00 ч			  
+            p - х. Рябичев:
+                ul
+                    li
+                        p 2 января 2019 г.- с 8-00 ч до 12-00 ч 
+                        p 4 января 2019 г.- с 8-00 ч до 12-00 ч
+                        p 6 января 2019 г.- с 8-00 ч до 12-00 ч  
+    button.modal--alert__close(aria-label="Закрыть модальное окно")

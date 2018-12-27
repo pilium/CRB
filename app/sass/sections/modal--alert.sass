@@ -1,0 +1,35 @@
+.modal--alert
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	display: none
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	z-index: 61
+	&.is-active
+		display: flex
+	&__background
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		&.is-show
+			background-color: rgba(10,10,10,.86)
+	&__content
+		margin: 0 20px
+		max-height: calc(100vh - 160px)
+		overflow: auto
+		position: relative
+		width: 70%
+		text-align: center
+	&__box
+		background-color: $accent
+		border-radius: 6px
+		box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1)
+		color: #fff
+		display: block
+		padding: 2rem 10rem

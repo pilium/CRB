@@ -1,15 +1,4 @@
 window.addEventListener('load', () => {
-	// // preloader
-	// const preloader = document.getElementById('preloader');
-	// if (preloader) {
-	// 	setTimeout(() => {
-	// 		preloader.classList.add('active');
-	// 		document.body.style.overflow = 'visible';
-	// 	}, 100);
-	// }
-	// // END Preloader
-
-	// const mapContainer = document.getElementById('map');
 
 	const wrapperMenu = document.querySelector('.wrapper-menu');
 	const sidenav = document.querySelector('.js-sidenav');
@@ -21,33 +10,54 @@ window.addEventListener('load', () => {
 
 	const nav = document.querySelector('#nav-main');
 
+	// Modal
+	const link = document.querySelector('.js-header-info__writeToUs-link');
+	const popup = document.querySelector('.modal');
+	const close = popup.querySelector('.modal-close__btn');
+	const modalOverlay = document.querySelector('.modal-overlay');
+
+	// modal--alert
+	const teees = document.querySelector('.teeest');
+	const modalAlert = document.querySelector('.modal--alert');
+	const modalAlertClose = document.querySelector('.modal--alert__close');
+	const modalAlertOverlay = document.querySelector('.modal--alert__background');
 
 	// Modal
 	let modal = () => {
-		const link = document.querySelector('.js-header-info__writeToUs-link');
-		const popup = document.querySelector('.modal');
-		const close = popup.querySelector('.modal-close__btn');
-		const overlay = document.querySelector('.modal-overlay');
 		link.addEventListener('click', event => {
 			event.preventDefault();
 			popup.classList.toggle('modal-show');
-			overlay.classList.toggle('show');
+			modalOverlay.classList.toggle('show');
 		});
 		close.addEventListener('click', event => {
 			event.preventDefault();
 			popup.classList.remove('modal-show');
-			overlay.classList.toggle('show');
+			modalOverlay.classList.toggle('show');
 		});
 		document.addEventListener('click', e => {
 			if (e.target.classList.contains('modal-overlay')) {
 				popup.classList.remove('modal-show');
-				overlay.classList.toggle('show');
+				modalOverlay.classList.toggle('show');
 			}
 		});
 	};
 	modal();
 	// END Modal
 
+	// Modal--alert
+	let modalAlertInit = () => {
+		teees.addEventListener('click', event => {
+			event.preventDefault();
+			modalAlert.classList.toggle('is-active');
+			modalAlertOverlay.classList.toggle('is-show');
+		});
+		modalAlertClose.addEventListener('click', event => {
+			event.preventDefault();
+			modalAlert.classList.toggle('is-active');
+			modalAlertOverlay.classList.toggle('is-show');
+		})
+	}
+	modalAlertInit();
 	// // Map
 	// if (mapContainer) {
 	// 	function init() {
