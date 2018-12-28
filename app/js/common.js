@@ -17,10 +17,20 @@ window.addEventListener('load', () => {
 	const modalOverlay = document.querySelector('.modal-overlay');
 
 	// modal--alert
-	const teees = document.querySelector('.teeest');
 	const modalAlert = document.querySelector('.modal--alert');
 	const modalAlertClose = document.querySelector('.modal--alert__close');
 	const modalAlertOverlay = document.querySelector('.modal--alert__background');
+
+	// welcomeAlert
+	function initAlert() {
+		modalAlert.classList.add('is-active');
+		modalAlertOverlay.classList.add('is-show');
+	}
+	if (modalAlert) {
+		setTimeout(() => {
+			initAlert();
+		}, 2000);
+	}
 
 	// Modal
 	let modal = () => {
@@ -46,18 +56,22 @@ window.addEventListener('load', () => {
 
 	// Modal--alert
 	let modalAlertInit = () => {
-		teees.addEventListener('click', event => {
-			event.preventDefault();
-			modalAlert.classList.toggle('is-active');
-			modalAlertOverlay.classList.toggle('is-show');
-		});
 		modalAlertClose.addEventListener('click', event => {
 			event.preventDefault();
 			modalAlert.classList.toggle('is-active');
 			modalAlertOverlay.classList.toggle('is-show');
-		})
+		});
+		document.addEventListener('click', e => {
+			if (e.target.classList.contains('modal--alert__background')) {
+				modalAlert.classList.remove('is-active');
+				modalAlertOverlay.classList.toggle('is-show');
+			}
+		});
 	}
-	modalAlertInit();
+	if (modalAlert) {
+		modalAlertInit();
+	}
+
 	// // Map
 	// if (mapContainer) {
 	// 	function init() {
