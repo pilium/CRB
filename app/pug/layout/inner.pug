@@ -4,7 +4,7 @@ html(lang="ru-RU")
 	head
 		//- meta
 		meta(charset="utf-8")
-		meta(http-equiv='X-UA-Compatible', content="IE=edge")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
 		title
 			block title
 		meta(name="viewport" content="width=device-width,initial-scale=1")
@@ -52,7 +52,6 @@ html(lang="ru-RU")
 			src: local('Kurale Regular'), local('Kurale-Regular'), url(https://fonts.gstatic.com/s/kurale/v4/4iCs6KV9e9dXjhoKfw72.woff2) format('woff2');
 			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 			}
-					
 
 		//- favicon
 		link(rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png")
@@ -64,7 +63,7 @@ html(lang="ru-RU")
 		link(rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png")
 		link(rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png")
 		link(rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png")
-		link(rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png")
+		link(rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png")
 		link(rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png")
 		link(rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png")
 		link(rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png")
@@ -83,9 +82,8 @@ html(lang="ru-RU")
 		//- link(href="https://fonts.googleapis.com/css?family=Kurale&amp;subset=cyrillic" rel="stylesheet")
 	
 		//- Style
-		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css")
 		link(rel="stylesheet" href="css/main.min.css")
-		
 
 		//- Facebook Open Graph
 		//- TODO добавить url, img
@@ -128,7 +126,7 @@ html(lang="ru-RU")
 					padding: 100px
 				}
 
-		style(body{opacity: 0, overflow-x: hidden}, html{background-color: #1a1a1a})
+		style(body{opacity: 0 overflow-x: hidden} html{background-color: #1a1a1a})
 	body.inner
 		.main-wrapper
 			.main-content

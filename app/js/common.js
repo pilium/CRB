@@ -180,6 +180,7 @@ window.addEventListener('load', () => {
 
 	// Gallery
 	if (gallery) {
+		// eslint-disable-next-line no-undef
 		baguetteBox.run('.gallery-wrap', {
 			async: true,
 		});
@@ -326,7 +327,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const scrollDuration = 700;
 	let scrolling = false;
 	if (backTop) {
-		window.addEventListener('scroll', event => {
+		window.addEventListener('scroll', () => {
 			if (!scrolling) {
 				scrolling = true;
 				!window.requestAnimationFrame ?

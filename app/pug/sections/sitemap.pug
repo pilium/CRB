@@ -1,83 +1,86 @@
 .panel
     .sitemap
-        ul
-            li.sitemap-list__item.sitemap-list__item--home
-                a(href='http://sitetitle.com') Home
+        .sitemap-list__item.sitemap-list__item--home
+            a(href="http://sitetitle.com") Home
     ul.sitemap-list
-        li.sitemap-list__item
-            a(href='/about') About Us
-            ul
+        li.sitemap__item
+            a(href="/about") About Us
+            ul.sitemap-list--lvl1
                 li
-                    a(href='/history') Our History
+                    a(href="/history") Our History
                 li
-                    a(href='/mission') Mission Statement
+                    a(href="/mission") Mission Statement
                 li
-                    a(href='/principals') Principals
-        li.sitemap-list__item
-            a(href='/services') Services
-            ul
+                    a(href="/principals") Principals Principals
+        li.sitemap__item
+            a(href="/services") Services
+            ul.sitemap-list--lvl1
                 li
-                    a(href='/services/design') Graphic Design
+                    a(href="/services/design") Graphic Design Graphic Design
                 li
-                    a(href='/services/development') Web Development
+                    a(href="/services/development") Web Development Web Development Web Development
                 li
-                    a(href='/services/marketing') Internet Marketing
+                    a(href="/services/marketing") I nternet Marketing ntern  I nternet Marketing ntern Marketing
+                li.item-with__child
+                    a(href="/services/copywriting") Copywriting
+                    ul.sitemap-list--lvl2
+                        li
+                            a(href="/services/design") Graphic Design
+                        li
+                            a(href="/services/development") Web Development
+                        li
+                            a(href="/services/marketing") Internet Marketing
+
+                        li
+                            a(href="/services/photography") Photography
+        li.sitemap__item
+            a(href="/services") Services
+            ul.sitemap-list--lvl1
                 li
-                    a(href='/services/copywriting') Copywriting
+                    a(href="/services/design") Graphic Design
                 li
-                    a(href='/services/photography') Photography
-        li.sitemap-list__item
-            a(href='/services') Services
-            ul
+                    a(href="/services/development") Web Development
                 li
-                    a(href='/services/design') Graphic Design
+                    a(href="/services/marketing") Internet Marketing
                 li
-                    a(href='/services/development') Web Development
+                    a(href="/services/copywriting") Copywriting
                 li
-                    a(href='/services/marketing') Internet Marketing
+                    a(href="/services/photography") Photography
+        li.sitemap__item
+            a(href="/services") Services
+            ul.sitemap-list--lvl1
                 li
-                    a(href='/services/copywriting') Copywriting
+                    a(href="/services/design") Graphic Design
                 li
-                    a(href='/services/photography') Photography
-        li.sitemap-list__item
-            a(href='/services') Services
-            ul
+                    a(href="/services/development") Web Development
                 li
-                    a(href='/services/design') Graphic Design
+                    a(href="/services/marketing") Internet Marketing
                 li
-                    a(href='/services/development') Web Development
+                    a(href="/services/copywriting") Copywriting
                 li
-                    a(href='/services/marketing') Internet Marketing
+                    a(href="/services/photography") Photography
+        li.sitemap__item
+            a(href="/projects") Projects
+            ul.sitemap-list--lvl1
                 li
-                    a(href='/services/copywriting') Copywriting
+                    a(href="/projects/finance") Finance
                 li
-                    a(href='/services/photography') Photography
-        li.sitemap-list__item
-            a(href='/projects') Projects
-            ul
+                    a(href="/projects/medical") Medical
                 li
-                    a(href='/projects/finance') Finance
+                    a(href="/projects/education") Education
                 li
-                    a(href='/projects/medical') Medical
+                    a(href="/projects/professional") Professional
                 li
-                    a(href='/projects/education') Education
+                    a(href="/projects/industrial") Industrial
                 li
-                    a(href='/projects/professional') Professional
+                    a(href="/projects/commercial") Commercial
                 li
-                    a(href='/projects/industrial') Industrial
+                    a(href="/projects/energy") Energy
                 li
-                    a(href='/projects/commercial') Commercial
+                    a(href="/projects/commercial") Commercial
                 li
-                    a(href='/projects/energy') Energy
+                    a(href="/projects/energy") Energy
                 li
-                    a(href='/projects/commercial') Commercial
+                    a(href="/projects/commercial") Commercial
                 li
-                    a(href='/projects/energy') Energy
-                li
-                    a(href='/projects/commercial') Commercial
-                li
-                    a(href='/projects/energy') Energy
-        li.sitemap-list__item
-            a(href='/contact') Contact
-        li.sitemap-list__item
-            a(href='/contact') Contact
+                    a(href="/projects/energy") Energy

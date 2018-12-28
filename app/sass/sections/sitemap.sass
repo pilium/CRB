@@ -1,91 +1,70 @@
 .sitemap
-    margin: 0 0 40px 0
     width: 100%
+    .sitemap-list__item--home
+        margin-bottom: 24px
+        a
+            display: block
+            width: 100%
+            padding: 16px 0 16px 0
+            background-color: $accent
+            text-align: center
+            color: #fff
+            border-radius: 4px
     &-list
         display: flex
         align-items: flex-start
         justify-content: space-between
+        flex-wrap: wrap
         margin: 0
         width: 100%
-        .sitemap-list__item--home
-            display: block
-            background: #ffffff
-            position: relative
-            z-index: 2
-            padding: 0 0 30px 0
-    &__item
-        width: 14.2%
-        li
-            width: 100%
-.sitemap-list
-    li
-        padding: 30px 0
-        margin-top: -30px
         a
-            margin: 0 20px 0 0
-            padding: 10px 0
+            padding: 12px
             display: block
-            font-size: 14px
             font-weight: bold
             text-align: center
-            color: black
-            background: $accent
-            border: 2px solid $accent
-            -moz-border-radius: 5px
-            -webkit-border-radius: 5px
-            -webkit-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px
-            -moz-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px
-            &:hover
-                background-color: #e2f4fd
-                border-color: #97bdcf
-    a
-        &:link:before, &:visited:before
-            content: " " attr(href) " "
-            display: block
-            text-transform: uppercase
-            font-size: 10px
-            margin-bottom: 5px
-            word-wrap: break-word
-.sitemap-list li
-    a
-        &:link:before, &:visited:before
-        color: #fff
-    li
-        width: 100%
-        margin-top: 0
-        padding: 10px 0 0 0
-        background: 
-        a
-            background-color: #cee3ac
-            border-color: #b8da83
-            &:hover
-                border-color: #94b75f
-                background-color: #e7f1d7
-        &:first-child
-            padding-top: 30px
-        a
-            &:link:before, &:visited:before
-                color: #8faf5c
-        ul
-            margin: 10px 0 0 0
-            width: 100%
-            padding: 9px 0 10px 0
-            background: #ffffff
-        li
-            padding: 5px 0
-        a
-            background-color: #fff7aa
-            border-color: #e3ca4b
-            font-size: 12px
-            padding: 5px 0
-            width: 80%
             color: #fff
+            background: $accent
+            border: 2px solid $main
+            border-radius: 4px
             &:hover
-                background-color: #fffce5
-                border-color: #d1b62c
-            &:first-child
-                padding: 15px 0 5px 0
+                color: #fff
+                border-color: #fff
+    &__item
+        width: 19%
+    &-list--lvl1
+        margin: 8px 0 0 0
+        width: 100%
+        padding: 8px 0 8px 0
+        background: #ffffff
+        .item-with__child
+            > a
+                background-color: $accent
+                color: #fff
         a
-            &:link:before, &:visited:before
-                color: #ccae14
-                font-size: 9px
+            background-color: #fff
+            margin-bottom: 8px
+            color: $accent
+            &:hover
+                background-color: $accent
+                color: #fff
+    &-list--lvl2
+        width: 90%
+        a
+            display: inline-block
+            width: 100%
+            margin-left: 10%
+            padding: 8px
+@media screen and (max-width: 1600px)
+    .sitemap
+        &__item
+            width: 32%
+            margin-bottom: 24px
+@media screen and (max-width: 1600px)
+    .sitemap
+        &__item
+            width: 49%
+@media screen and (max-width: 1600px)
+    .sitemap
+        &__item
+            width: 100%
+            margin-bottom: 40px
