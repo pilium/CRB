@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 	const wrapperMenu = document.querySelector('.wrapper-menu');
 	const sidenav = document.querySelector('.js-sidenav');
