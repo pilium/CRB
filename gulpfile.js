@@ -34,7 +34,7 @@ gulp.task('pug', function () {
 		.pipe(
 			pug({
 				pretty: false, //минификация: False
-			}),
+			})
 		)
 		.on(
 			'error',
