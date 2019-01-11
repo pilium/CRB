@@ -19,11 +19,12 @@
             position: relative
             display: block
             &--home
+                background-color: darken($accent, 10%)
+                span
+                    display: none!important
                 a
-                    padding: 0 15px
                     ._svg
                         vertical-align: middle
-                        margin-left: 0.3em
                         margin-top: -0.3em
             .menu-item-home
                 width: 60px
@@ -38,8 +39,6 @@
                 &.fixed-width--show
                     .menu
                         display: block
-            &--active
-                background-color: darken($accent, 10%)
             &:hover,&:focus
                 .menu
                     display: block
