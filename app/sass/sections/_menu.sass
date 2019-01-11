@@ -4,13 +4,16 @@
         transition: height .5s
         &.active
             display: block
-        li 
+        li
             margin-bottom: 0
             margin-right: 0
             border-bottom: none
             margin-left: 15px
+            &.sub-menu__active
+                a
+                    color: $accent
             a, span
-                font-size: rem(16)
+                font-size: rem(20)
                 color: #000
     ul
         padding-right: 10px
