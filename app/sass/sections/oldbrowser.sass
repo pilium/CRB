@@ -1,0 +1,46 @@
+// .main-wrapper
+// 	*
+// 		&:not(.new-browser)
+// 			display: none
+.new-browser
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: #fff
+	color: $main
+	top: 0
+	left: 0
+	z-index: 9999
+	&__content
+		max-width: 60em
+		margin: 0 auto
+		text-align: center
+		p
+			text-align: left
+	&__list
+		padding: 10px 20px 20px
+		> li
+			margin-top: 5px
+			padding-left: 130px
+			text-align: left
+			border-bottom: 1px solid silver
+			&:last-child
+				border-bottom: none
+			&.chrome
+				background: url(../img/browsers/chrome_logo.png) no-repeat 15px center
+			&.firefox
+				background: url(../img/browsers/Mozilla-Firefox-Logo.jpg) no-repeat 15px center
+			&.opera
+				background: url(../img/browsers/Opera.png) no-repeat 15px center
+			&.yandex
+				background: url(../img/browsers/yandex.png) no-repeat 15px center
+			h2
+				margin-left: 15px
+		.description
+			margin: 5px
+		.browser-link
+			margin-left: 15px
+			a
+				color: $accent
+				text-decoration: underline
+
