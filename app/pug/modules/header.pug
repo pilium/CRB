@@ -3,40 +3,40 @@ header.header
         dl.blindHeaderFontSize
             dt Размер шрифта
             dd
-                button.js-blind-fontSize.blind-fontSize--low
+                button.btn-starblind.js-blind-fontSize.blind-fontSize--low
                     span A
             dd
-                button.js-blind-fontSize.blind-fontSize--normal
+                button.btn-starblind.js-blind-fontSize.blind-fontSize--normal
                     span A
             dd
-                button.js-blind-fontSize.blind-fontSize--big
+                button.btn-starblind.js-blind-fontSize.blind-fontSize--big
                     span A
         dl.blindHeaderFontFamily
             dt Шрифт
             dd
-                button.blindHeaderFont.blindHeaderFont--Arial(data-test="font1" data-group="font") Arial
+                button.btn-starblind.blindHeaderFont.blindHeaderFont--Arial(data-test="font1" data-group="font") Arial
             dd
-                button.blindHeaderFont.blindHeaderFont--Times(data-test="font2" data-group="font") TimesNewRoman
+                button.btn-starblind.blindHeaderFont.blindHeaderFont--Times(data-test="font2" data-group="font") TimesNewRoman
         dl.blindHeaderKerning
             dt Кернинг
             dd
-                button.blindHeaderKerning__button.blindHeaderKerning--normal(data-test="kerning1" data-group="kerning") Стандартный
+                button.btn-starblind.blindHeaderKerning__button.blindHeaderKerning--normal(data-test="kerning1" data-group="kerning") Стандартный
             dd
-                button.blindHeaderKerning__button.blindHeaderKerning--middle(data-test="kerning2" data-group="kerning") Средний
+                button.btn-starblind.blindHeaderKerning__button.blindHeaderKerning--middle(data-test="kerning2" data-group="kerning") Средний
             dd
-                button.blindHeaderKerning__button.blindHeaderKerning--big(data-test="kerning3" data-group="kerning") Большой
+                button.btn-starblind.blindHeaderKerning__button.blindHeaderKerning--big(data-test="kerning3" data-group="kerning") Большой
         dl.blindHeaderColor
             dt Цвет сайта
             dd
-                button.blindHeaderColor.blindHeaderColor--normal(data-test="color1" data-group="color") Ц
+                button.btn-starblind.blindHeaderColor.blindHeaderColor--normal(data-test="color1" data-group="color") Ц
             dd
-                button.blindHeaderColor.blindHeaderColor--invert(data-test="color2" data-group="color") Ц
+                button.btn-starblind.blindHeaderColor.blindHeaderColor--invert(data-test="color2" data-group="color") Ц
             dd
-                button.blindHeaderColor.blindHeaderColor--blue(data-test="color3" data-group="color") Ц
+                button.btn-starblind.blindHeaderColor.blindHeaderColor--blue(data-test="color3" data-group="color") Ц
             dd
-                button.blindHeaderColor.blindHeaderColor--brown(data-test="color4" data-group="color") Ц
+                button.btn-starblind.blindHeaderColor.blindHeaderColor--brown(data-test="color4" data-group="color") Ц
             dd
-                button.blindHeaderColor.blindHeaderColor--green(data-test="color5" data-group="color") Ц
+                button.btn-starblind.blindHeaderColor.blindHeaderColor--green(data-test="color5" data-group="color") Ц
     .container
         .header-wrap
             .wrapper-menu
@@ -55,7 +55,7 @@ header.header
                 li.header-info__item.header-info__writeToUs
                     .header-info__item-icon
                         +icon('email')
-                    span.header-info__item-link.js-header-info__writeToUs-link(tabindex="0") Написать нам
+                    a.header-info__item-link.js-header-info__writeToUs-link(tabindex="0") Написать нам
             .header-actions
                 .header-actions__search
                     form(action="#", method="get", role="search")
