@@ -1,7 +1,7 @@
 .wrapper
     position: relative
     width: 100%
-    min-height: 768px
+    min-height: 680px
     overflow: hidden
 .icon-slider
   display: inline-block
@@ -29,7 +29,7 @@
   z-index: 2
   margin-left: auto
   margin-right: auto
-  margin-top: 60px
+  margin-top: 56px
 
 @media screen and (max-width: 1300px)
   .news-slider
@@ -39,7 +39,7 @@
 
 @media screen and (max-width: 576px)
   .news-slider
-    margin-top: 45px
+    margin-top: 40px
 
 .news-slider__wrp
   display: flex
@@ -52,10 +52,10 @@
     align-items: center
     justify-content: space-between
     flex-wrap: wrap
-    padding-top: 20px
+    padding-top: 16px
     .news-slider__item
       width: 31%
-      margin-bottom: 20px
+      margin-bottom: 16px
     .news__title
       font-size: rem(20)
     .news-date
@@ -63,7 +63,7 @@
       &__title
         display: inline-block
         margin-bottom: 0
-        margin-right: 10px
+        margin-right: 8px
 
 .news-slider__item
   width: 32%
@@ -80,36 +80,6 @@
   transform: translateX(-50%)
   z-index: 9
 
-.news-slider__arrow
-  background: $accent
-  border: none
-  display: inline-flex
-  width: 50px
-  height: 50px
-  justify-content: center
-  align-items: center
-  box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25)
-  border-radius: 50%
-  position: absolute
-  top: 50%
-  z-index: 12
-  cursor: pointer
-  outline: none !important
-  &:focus
-    outline: none !important
-  .icon-font
-    display: inline-flex
-    svg
-      width: 1.2rem
-      height: 1.2rem
-      fill: #fff
-  &.news-slider-prev
-    left: 15px
-    transform: translateY(-50%)
-  &.news-slider-next
-    right: 15px
-    transform: translateY(-50%)
-
 .news-slider__show-all
   white-space: nowrap
   text-transform: uppercase
@@ -118,8 +88,8 @@
   cursor: pointer
 
 .news__item
-  padding: 30px
-  border-radius: 10px
+  padding: 32px
+  border-radius: 8px
   display: flex
   flex-direction: column
   align-items: baseline
@@ -149,15 +119,15 @@
 
 @media screen and (max-width: 992px)
   .news__item
-    padding: 20px
+    padding: 16px
 
 @media screen and (max-width: 576px)
   .news__item
-    padding: 10px
+    padding: 8px
 
 .news-date
-  padding-bottom: 20px
-  margin-bottom: 20px
+  padding-bottom: 16px
+  margin-bottom: 16px
   border-bottom: 2px solid
   display: inline-block
   opacity: 1
@@ -165,19 +135,19 @@
 
 @media screen and (max-width: 576px)
   .news-date
-    margin-bottom: 10px
+    margin-bottom: 8px
     display: inline-flex
     align-items: center
     padding-bottom: 0
 
 .news-date__title
   font-size: rem(28)
-  margin-bottom: 10px
+  margin-bottom: 8px
   font-weight: 500
 
 @media screen and (max-width: 576px)
   .news-date__title
-    margin-right: 10px
+    margin-right: 8px
 
 .news-date__txt
   font-size: rem(18)
@@ -187,8 +157,8 @@
   font-size: rem(24)
   font-weight: bold
   opacity: 1
-  margin-top: 10px
-  margin-bottom: 15px
+  margin-top: 8px
+  margin-bottom: 16px
   transition: opacity .3s
   cursor: pointer
   color: $accent
@@ -196,19 +166,19 @@
 @media screen and (max-width: 576px)
   .news__title
     font-size: rem(24)
-    margin-bottom: 10px
+    margin-bottom: 8px
 
 .news__txt
-  margin: 10px 0
+  margin: 8px 0
   line-height: 1.6em
   font-size: rem(18)
   opacity: 1
   transition: opacity .3s
 
 .news__img
-  border-radius: 10px
-  box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25)
-  height: 250px
+  border-radius: 8px
+  box-shadow: 0 8px 24px 8px rgba(0, 0, 0, 0.25)
+  height: 240px
   margin-top: auto
   margin-left: auto
   margin-right: auto
@@ -217,14 +187,14 @@
   transform-origin: 0% 0%
   img
     max-width: 100%
-    border-radius: 10px
+    border-radius: 8px
     height: 100%
     width: 100%
     &.img-cower
-      font-family: 'object-fit: cover';
+      font-family: 'object-fit: cover'
       object-fit: cover
 
 @media screen and (max-width: 576px)
   .news__img
     height: 180px
-    margin-top: 20px
+    margin-top: 16px
