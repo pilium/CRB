@@ -166,7 +166,13 @@
 				width: 100%
 				text-align: center
 	.modal
-		width: 95%
+		width: 100%
+		top: 125%
+		will-change: top
+		transition: top .4s ease-in-out
+		&.modal-show
+			top: 74%
+			transition: top 2s
 @media (max-width : 780px)
 	.quick-item
 		flex: 0 0 49%
@@ -181,33 +187,6 @@
 	.page-menu li
 		width: 90%
 @media (max-width : 768px)
-	// .blog-slider
-	// 	min-height: 500px
-	// 	height: auto
-	// 	margin: 88px auto
-	// .blog-slider__item
-	// 	flex-direction: column
-	// .blog-slider__img
-	// 	transform: translateY(-25%)
-	// 	width: 50%
-	// 	margin-bottom: 35px
-	// .blog-slider__content
-	// 	margin-top: -80px
-	// 	text-align: center
-	// 	padding: 0 30px
-	// .blog-slider__pagination
-	// 	transform: translateX(-50%)
-	// 	left: 50% !important
-	// 	top: auto
-	// 	width: 100% !important
-	// 	display: flex
-	// 	justify-content: center
-	// 	align-items: center
-	// .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet
-	// 	margin: 0 5px
-	// .blog-slider__pagination .swiper-pagination-bullet-active
-	// 	height: 11px
-	// 	width: 30px
 	.card-wrapper
 		width: 90%
 		margin: 0 auto
@@ -222,6 +201,12 @@
 		flex-wrap: wrap
 		.news-slider__item
 			width: 90%
+	.header-actions__search
+		width: 240px
+		padding-right: 0
+		border-right: 10px
+		button
+			display: none
 @media (max-width : 700px)
 	.map-info 
 		text-align: center
