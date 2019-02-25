@@ -1,17 +1,17 @@
 section.map
-    .map-wrapper
-        .map-container
-            #map
-                iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A86bebf603bd4cc9e5d3dcd2169312c291a2739731cc1ea174fd85e33f3027241&amp;source=constructor" width="100%" height="400" frameborder="0" tilte="Карта территории больницы")
-        .map-info
-            h2.map-info__title Муниципальное бюджетное учреждение здравоохранения<br>Центральная районная больница<br>Волгодонского района Ростовской области
-            .map-info__adress
-                +icon('menu--geo')
-                a(href="#") 347350, Ростовская область, Волгодонской район, ст-ца Романовская, пер.Союзный 97 а
-            .map-info__tel
-                +icon('phone-symbol')
-                a(href="tel:88639470141") 8 (86394) 7-06-14
-            .map-info__mail
-                +icon('email')
-                a(href="mailto:ardo0707@yandex.ru") crbvr@yandex.ru
-
+	.map-wrapper
+		.map-container
+			#map
+				iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A86bebf603bd4cc9e5d3dcd2169312c291a2739731cc1ea174fd85e33f3027241&amp;source=constructor" width="100%" height="400" frameborder="0" tilte="Карта территории больницы")
+		.map-info
+			h2.map-info__title Муниципальное бюджетное учреждение здравоохранения<br>Центральная районная больница<br>Волгодонского района Ростовской области
+			.map-info__adress
+				address
+					+icon('menu--geo')
+					a(href="#") 347350, Ростовская область, Волгодонской район, ст-ца Романовская, пер.Союзный 97 а
+			.map-info__tel
+				+icon('phone-symbol')
+				a(href="tel:88639470141") 8 (86394) 7-06-14
+			.map-info__mail
+				+icon('email')
+				a(href="mailto:ardo0707@yandex.ru") crbvr@yandex.ru
