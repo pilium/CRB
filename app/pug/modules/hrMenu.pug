@@ -1,10 +1,10 @@
 nav.nav#nav-main
   ul.hrMenu-list
     li.hrMenu-list__item.hrMenu-list__item--active
-      a.logo(href='/' aria-label="на главную")
-        +icon('menu--homepage')
+      a.logo(href="/" aria-label="на главную")
+        +icon("menu--homepage")
     li.hrMenu-list__item.fixed-width(aria-haspopup="true")
-      span(tabindex="0") Пациентам
+      a(href="page-menu.html" tabindex="0") Пациентам
         +icon('menu--right-chevron')
       ul.menu(role="menu")
         +main-menu('sub', 'patientDuties.html', 'Права и обязанности пациента')
