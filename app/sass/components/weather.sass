@@ -1,0 +1,99 @@
+.weather
+  position: fixed
+  bottom: 10%
+  right: 10px
+  display: flex
+  height: 200px
+  width: 450px
+  flex-wrap: wrap
+  transform: translateX(150%)
+  cursor: pointer
+  border-radius: 16px
+  z-index: 99
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15)
+  transition: transform linear 2s
+  &.anim
+      transform: translateX(0)
+      transition: transform linear 2s
+
+.weather__icon
+  position: relative
+  flex: 1 100%
+  height: 75%
+  border-top-left-radius: 8px
+  border-top-right-radius: 8px
+  font-family: weathericons
+  display: flex
+  align-items: center
+  justify-content: space-around
+  font-size: 100px
+  background: url('../img/sun.jpg')
+  &::after
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    display: block
+    width: 60px
+    height: 30px
+    background-color: rgba($accent, 0.3)
+    border-bottom-left-radius: 16px
+    border-top-right-radius: 16px
+  svg
+      position: absolute
+      top: 5px
+      right: 5px
+      fill: #fff
+      width: 20px
+      height: 20px
+      z-index: 9
+  .icon-refresh
+      right: 35px
+
+
+.weather__place
+  font-size: 14px
+
+.weather__condition
+  text-transform: uppercase
+  font-size: 14px
+  font-weight: 100
+
+.weather__temperature
+  flex: 0 0 40%
+  width: 100%
+  font-size: 44px
+  text-align: center
+  line-height: 1
+
+.weather__descr
+  flex: 0 60%
+  display: flex
+  flex-direction: column
+  width: 100%
+  height: 100%
+  justify-content: center
+  line-height: 1.2
+
+.weather__info
+  flex: 0 0 70%
+  height: 25%
+  padding: 8px 8px 16px
+  background-color: $accent
+  border-bottom-left-radius: 16px
+  display: flex
+  align-items: center
+  color: white
+
+.weather__date
+  flex: 0 0 30%
+  height: 25%
+  padding: 0 8px
+  background-color: darken($accent, 10%)
+  border-bottom-right-radius: 16px
+  display: flex
+  justify-content: space-around
+  align-items: center
+  color: white
+  font-size: 20px
+  font-weight: 700

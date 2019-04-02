@@ -651,3 +651,13 @@ var objectFitImages = (function () {
 	return fix;
 
 }());
+window.onload = function() {
+	const weather = document.querySelector('.weather');
+	setTimeout(() => {
+		weather.classList.add('anim')
+	}, 2000);
+	const close = document.querySelector('.icon-close');
+	close.addEventListener('click', ()=> {
+		weather.classList.remove('anim');
+	})
+}
