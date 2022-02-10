@@ -35,7 +35,7 @@
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.8",
     "gulp.spritesmith": "^6.5.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "node-status-codes": "^2.0.1",
     "nouislider": "^11.0.3",
     "svgmin": "^0.1.0",
